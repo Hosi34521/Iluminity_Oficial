@@ -2783,7 +2783,9 @@
         } catch (error) {
         }
 
-        if (link.pathname === window.location.pathname) return;
+        const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+        const targetFile = href.split('/').pop() || 'index.html';
+        if (currentFile === targetFile) return;
 
         document.body.classList.add("lang-switching");
         loader.classList.add("active");
