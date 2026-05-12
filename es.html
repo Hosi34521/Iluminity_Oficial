@@ -2749,9 +2749,13 @@
         } catch (error) {
         }
 
-        const currentFile = window.location.pathname.split('/').pop() || 'es.html';
-        const targetFile = href.split('/').pop() || 'es.html';
-        if (currentFile === targetFile) return;
+        try {
+          const currentUrl = new URL(window.location.href);
+          const targetUrl = new URL(href, window.location.href);
+          if (currentUrl.pathname === targetUrl.pathname) return;
+        } catch (error) {
+          // Fallback for invalid URLs
+        }
 
         document.body.classList.add("lang-switching");
         loader.classList.add("active");
