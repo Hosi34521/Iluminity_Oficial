@@ -5,6 +5,42 @@
       "source": "/",
       "has": [
         {
+          "type": "cookie",
+          "key": "iluminity-language",
+          "value": "br"
+        }
+      ],
+      "destination": "/index.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "cookie",
+          "key": "iluminity-language",
+          "value": "es"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "cookie",
+          "key": "iluminity-language",
+          "value": "en"
+        }
+      ],
+      "destination": "/en.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
           "type": "header",
           "key": "x-vercel-ip-country",
           "value": "BR"

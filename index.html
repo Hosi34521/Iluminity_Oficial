@@ -2780,6 +2780,7 @@
 
         try {
            localStorage.setItem("iluminity-language", link.dataset.langLink);
+          document.cookie = "iluminity-language=" + encodeURIComponent(link.dataset.langLink) + "; path=/; max-age=31536000; samesite=lax";
         } catch (error) {
         }
 
