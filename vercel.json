@@ -1,0 +1,262 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "BR"
+        }
+      ],
+      "destination": "/index.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "AR"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "BO"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "CL"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "CO"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "CR"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "CU"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "DO"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "EC"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "ES"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "GT"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "HN"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "MX"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "NI"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "PA"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "PE"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "PR"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "PY"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "SV"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "UY"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "VE"
+        }
+      ],
+      "destination": "/es.html",
+      "statusCode": 307
+    },
+    {
+      "source": "/",
+      "destination": "/en.html",
+      "statusCode": 307
+    }
+  ]
+}
