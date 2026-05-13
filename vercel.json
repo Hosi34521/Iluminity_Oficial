@@ -7,18 +7,6 @@
         {
           "type": "cookie",
           "key": "iluminity-language",
-          "value": "br"
-        }
-      ],
-      "destination": "/index.html",
-      "statusCode": 307
-    },
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "cookie",
-          "key": "iluminity-language",
           "value": "es"
         }
       ],
@@ -35,18 +23,6 @@
         }
       ],
       "destination": "/en.html",
-      "statusCode": 307
-    },
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "header",
-          "key": "x-vercel-ip-country",
-          "value": "BR"
-        }
-      ],
-      "destination": "/index.html",
       "statusCode": 307
     },
     {
