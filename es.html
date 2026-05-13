@@ -1078,13 +1078,61 @@
       right: 22px;
       bottom: 22px;
       z-index: 70;
-      width: min(360px, calc(100% - 34px));
+      display: grid;
+      justify-items: end;
+      gap: 10px;
+    }
+
+    .chat-trigger {
+      width: 64px;
+      height: 64px;
+      border-radius: 20px;
+      border: 1px solid rgba(155, 231, 255, 0.4);
+      background: linear-gradient(160deg, rgba(6, 21, 42, 0.95), rgba(2, 8, 18, 0.95));
+      box-shadow: 0 16px 34px rgba(0, 8, 20, 0.45);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .chat-trigger:hover {
+      transform: translateY(-2px);
+      border-color: rgba(155, 231, 255, 0.7);
+      box-shadow: 0 20px 40px rgba(0, 8, 20, 0.52);
+    }
+
+    .chat-trigger svg {
+      width: 34px;
+      height: 34px;
+    }
+
+    .chat-panel {
+      width: min(360px, calc(100vw - 34px));
       border: 1px solid rgba(155, 231, 255, 0.28);
       border-radius: 26px;
       background: rgba(2, 5, 10, 0.84);
       backdrop-filter: blur(20px);
       box-shadow: var(--shadow);
       overflow: hidden;
+      display: none;
+    }
+
+    .chat-float.open .chat-panel {
+      display: block;
+      animation: chat-up 0.2s ease;
+    }
+
+    @keyframes chat-up {
+      from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.98);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
 
     .chat-head {
@@ -1115,13 +1163,9 @@
     }
 
     .chat-body {
-      display: none;
+      display: grid;
       padding: 14px;
       gap: 10px;
-    }
-
-    .chat-float.open .chat-body {
-      display: grid;
     }
 
     .chat-options {
@@ -2608,27 +2652,36 @@
     </div>
 
     <div class="chat-float" id="aiChat">
-      <div class="chat-head">
-        <div class="chat-title">
-          <strong>Asesor de Soluciones</strong>
-          <small>Iluminity · respuesta en 30s</small>
-        </div>
-        <button class="btn" id="chatToggle">Abrir</button>
-      </div>
+      <button class="chat-trigger" id="chatToggle" aria-label="Abrir asesor de soluciones" title="Asesor Iluminity">
+        <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <path d="M32 5L55 18.5V45.5L32 59L9 45.5V18.5L32 5Z" stroke="#9BE7FF" stroke-width="4.5" />
+          <path d="M22 19L41 30V45L31 39V28L22 23V19Z" fill="#9BE7FF" />
+        </svg>
+      </button>
 
-      <div class="chat-body">
-        <div class="msg bot" id="chatAnswer">
-          Te recomiendo el mejor camino para tu proyecto en 3 preguntas. Elige una opción para empezar.
-        </div>
-
-        <div class="chat-options">
-          <button class="chip" data-answer="Perfecto. Para cotizar rápido: dime 1) servicio, 2) objetivo principal y 3) fecha ideal de lanzamiento. Con eso te doy rango y plan recomendado.">Quiero cotización</button>
-          <button class="chip" data-answer="Si quieres resultados rápidos, normalmente empezamos por: 1) CRM Pro (si tienes equipo comercial), 2) WhatsApp Pro (si recibes muchos leads), 3) Sitio Business (si necesitas más conversiones).">¿Qué plan necesito?</button>
-          <button class="chip" data-answer="Ejemplo recomendado: negocio de servicios con sitio + WhatsApp + CRM. Resultado típico demo: más respuestas en menos tiempo y mejor seguimiento comercial.">Ver caso similar</button>
-          <button class="chip" data-answer="Nuestro proceso: diagnóstico breve, propuesta por fases, implementación, pruebas y optimización mensual. Todo con hitos claros.">Cómo trabajamos</button>
+      <div class="chat-panel">
+        <div class="chat-head">
+          <div class="chat-title">
+            <strong>Asesor de Soluciones</strong>
+            <small>Iluminity · respuesta en 30s</small>
+          </div>
+          <button class="btn" id="chatClose">Cerrar</button>
         </div>
 
-        <button class="btn btn-primary chat-cta" id="chatHuman">Hablar con asesor por WhatsApp</button>
+        <div class="chat-body">
+          <div class="msg bot" id="chatAnswer">
+            Te recomiendo el mejor camino para tu proyecto en 3 preguntas. Elige una opción para empezar.
+          </div>
+
+          <div class="chat-options">
+            <button class="chip" data-answer="Perfecto. Para cotizar rápido: dime 1) servicio, 2) objetivo principal y 3) fecha ideal de lanzamiento. Con eso te doy rango y plan recomendado.">Quiero cotización</button>
+            <button class="chip" data-answer="Si quieres resultados rápidos, normalmente empezamos por: 1) CRM Pro (si tienes equipo comercial), 2) WhatsApp Pro (si recibes muchos leads), 3) Sitio Business (si necesitas más conversiones).">¿Qué plan necesito?</button>
+            <button class="chip" data-answer="Ejemplo recomendado: negocio de servicios con sitio + WhatsApp + CRM. Resultado típico demo: más respuestas en menos tiempo y mejor seguimiento comercial.">Ver caso similar</button>
+            <button class="chip" data-answer="Nuestro proceso: diagnóstico breve, propuesta por fases, implementación, pruebas y optimización mensual. Todo con hitos claros.">Cómo trabajamos</button>
+          </div>
+
+          <button class="btn btn-primary chat-cta" id="chatHuman">Hablar con asesor por WhatsApp</button>
+        </div>
       </div>
     </div>
 
@@ -2870,12 +2923,22 @@
 
     const chat = document.getElementById("aiChat");
     const chatToggle = document.getElementById("chatToggle");
+    const chatClose = document.getElementById("chatClose");
     const chatAnswer = document.getElementById("chatAnswer");
     const chatHuman = document.getElementById("chatHuman");
 
     chatToggle?.addEventListener("click", () => {
       chat.classList.toggle("open");
-      chatToggle.textContent = chat.classList.contains("open") ? "Cerrar" : "Abrir";
+    });
+
+    chatClose?.addEventListener("click", () => {
+      chat.classList.remove("open");
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!chat.contains(event.target)) {
+        chat.classList.remove("open");
+      }
     });
 
     document.querySelectorAll("#aiChat .chip[data-answer]").forEach((button) => {
