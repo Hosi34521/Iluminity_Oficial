@@ -1093,7 +1093,25 @@
       justify-content: space-between;
       padding: 14px 16px;
       border-bottom: 1px solid var(--line);
-      font-weight: 900;
+      gap: 12px;
+    }
+
+    .chat-title {
+      display: grid;
+      gap: 2px;
+    }
+
+    .chat-title strong {
+      font-size: 15px;
+      letter-spacing: -0.01em;
+    }
+
+    .chat-title small {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
 
     .chat-body {
@@ -1124,6 +1142,13 @@
 
     .chip:hover {
       border-color: rgba(155, 231, 255, 0.45);
+    }
+
+    .chat-cta {
+      width: 100%;
+      margin-top: 4px;
+      font-size: 13px;
+      padding: 11px 14px;
     }
 
     .modal {
@@ -2583,21 +2608,26 @@
 
     <div class="chat-float" id="aiChat">
       <div class="chat-head">
-        <span>Iluminity AI</span>
-        <button class="btn" id="chatToggle">Chat</button>
+        <div class="chat-title">
+          <strong>Solutions Advisor</strong>
+          <small>Iluminity · 30s response</small>
+        </div>
+        <button class="btn" id="chatToggle">Open</button>
       </div>
 
       <div class="chat-body">
         <div class="msg bot" id="chatAnswer">
-          Hi, I can explain services, prices and security. Choose an option.
+          I can recommend the right next step for your project in 3 quick prompts. Pick one to start.
         </div>
 
         <div class="chat-options">
-          <button class="chip" data-answer="We create CRMs, automations, websites, WhatsApp systems and AI assistants for small businesses.">Services</button>
-          <button class="chip" data-answer="Starter plans begin at USD 390–USD 590 setup. Pro packages (CRM, websites, automations) range from USD 850–USD 1,490. Custom builds start at USD 1,790–USD 2,490+ depending on scope.">Prices</button>
-          <button class="chip" data-answer="Security includes HTTPS, protected forms, limited access, privacy consent, backups and clean data handling.">Security</button>
-          <button class="chip" data-answer="A project usually starts with a strategy call, then demo, build, revision, launch and monthly support.">Process</button>
+          <button class="chip" data-answer="Great. For a fast quote, send: 1) service needed, 2) main business goal, and 3) ideal launch date. I will suggest a realistic range.">Get a quote</button>
+          <button class="chip" data-answer="If you need immediate impact, the usual sequence is: 1) CRM Pro (sales structure), 2) WhatsApp Pro (lead qualification), 3) Business Website (higher conversion).">Which plan fits me?</button>
+          <button class="chip" data-answer="Recommended case: service business with Website + WhatsApp + CRM. Typical demo outcome: faster response time and more organized follow-up.">Show similar case</button>
+          <button class="chip" data-answer="Our delivery model: quick diagnosis, phased proposal, implementation, testing, and monthly optimization with clear milestones.">How we work</button>
         </div>
+
+        <button class="btn btn-primary chat-cta" id="chatHuman">Talk to an advisor on WhatsApp</button>
       </div>
     </div>
 
@@ -2840,15 +2870,21 @@
     const chat = document.getElementById("aiChat");
     const chatToggle = document.getElementById("chatToggle");
     const chatAnswer = document.getElementById("chatAnswer");
+    const chatHuman = document.getElementById("chatHuman");
 
     chatToggle?.addEventListener("click", () => {
       chat.classList.toggle("open");
+      chatToggle.textContent = chat.classList.contains("open") ? "Close" : "Open";
     });
 
-    document.querySelectorAll(".chip").forEach((button) => {
+    document.querySelectorAll("#aiChat .chip[data-answer]").forEach((button) => {
       button.addEventListener("click", () => {
         chatAnswer.textContent = button.dataset.answer;
       });
+    });
+
+    chatHuman?.addEventListener("click", () => {
+      window.open("https://wa.me/5595984178100?text=" + encodeURIComponent("Hi, I want a recommendation for my project (CRM, website, or WhatsApp)."), "_blank");
     });
 
     const modal = document.getElementById("callModal");

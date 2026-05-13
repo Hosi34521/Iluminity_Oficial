@@ -1093,7 +1093,25 @@
       justify-content: space-between;
       padding: 14px 16px;
       border-bottom: 1px solid var(--line);
-      font-weight: 900;
+      gap: 12px;
+    }
+
+    .chat-title {
+      display: grid;
+      gap: 2px;
+    }
+
+    .chat-title strong {
+      font-size: 15px;
+      letter-spacing: -0.01em;
+    }
+
+    .chat-title small {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
 
     .chat-body {
@@ -1124,6 +1142,13 @@
 
     .chip:hover {
       border-color: rgba(155, 231, 255, 0.45);
+    }
+
+    .chat-cta {
+      width: 100%;
+      margin-top: 4px;
+      font-size: 13px;
+      padding: 11px 14px;
     }
 
     .modal {
@@ -2584,21 +2609,26 @@
 
     <div class="chat-float" id="aiChat">
       <div class="chat-head">
-        <span>Iluminity AI</span>
-        <button class="btn" id="chatToggle">Chat</button>
+        <div class="chat-title">
+          <strong>Asesor de Soluciones</strong>
+          <small>Iluminity · respuesta en 30s</small>
+        </div>
+        <button class="btn" id="chatToggle">Abrir</button>
       </div>
 
       <div class="chat-body">
         <div class="msg bot" id="chatAnswer">
-          Hola, puedo explicar servicios, precios y seguridad. Elige una opción.
+          Te recomiendo el mejor camino para tu proyecto en 3 preguntas. Elige una opción para empezar.
         </div>
 
         <div class="chat-options">
-          <button class="chip" data-answer="Creamos CRMs, automatizaciones, sitios web, sistemas WhatsApp y asistentes IA para pequeños negocios.">Servicios</button>
-          <button class="chip" data-answer="Planes básicos comienzan en USD 290–USD 490 setup. Paquetes pro (CRM, sitios, automatizaciones) varían de USD 590–USD 890. Builds personalizados comienzan en USD 1.490–USD 2.490+ dependiendo del alcance.">Precios</button>
-          <button class="chip" data-answer="Seguridad incluye HTTPS, formularios protegidos, acceso limitado, consentimiento de privacidad, respaldos y manejo limpio de datos.">Seguridad</button>
-          <button class="chip" data-answer="Un proyecto generalmente comienza con una llamada de estrategia, luego demo, construcción, revisión, lanzamiento y soporte mensual.">Proceso</button>
+          <button class="chip" data-answer="Perfecto. Para cotizar rápido: dime 1) servicio, 2) objetivo principal y 3) fecha ideal de lanzamiento. Con eso te doy rango y plan recomendado.">Quiero cotización</button>
+          <button class="chip" data-answer="Si quieres resultados rápidos, normalmente empezamos por: 1) CRM Pro (si tienes equipo comercial), 2) WhatsApp Pro (si recibes muchos leads), 3) Sitio Business (si necesitas más conversiones).">¿Qué plan necesito?</button>
+          <button class="chip" data-answer="Ejemplo recomendado: negocio de servicios con sitio + WhatsApp + CRM. Resultado típico demo: más respuestas en menos tiempo y mejor seguimiento comercial.">Ver caso similar</button>
+          <button class="chip" data-answer="Nuestro proceso: diagnóstico breve, propuesta por fases, implementación, pruebas y optimización mensual. Todo con hitos claros.">Cómo trabajamos</button>
         </div>
+
+        <button class="btn btn-primary chat-cta" id="chatHuman">Hablar con asesor por WhatsApp</button>
       </div>
     </div>
 
@@ -2841,15 +2871,21 @@
     const chat = document.getElementById("aiChat");
     const chatToggle = document.getElementById("chatToggle");
     const chatAnswer = document.getElementById("chatAnswer");
+    const chatHuman = document.getElementById("chatHuman");
 
     chatToggle?.addEventListener("click", () => {
       chat.classList.toggle("open");
+      chatToggle.textContent = chat.classList.contains("open") ? "Cerrar" : "Abrir";
     });
 
-    document.querySelectorAll(".chip").forEach((button) => {
+    document.querySelectorAll("#aiChat .chip[data-answer]").forEach((button) => {
       button.addEventListener("click", () => {
         chatAnswer.textContent = button.dataset.answer;
       });
+    });
+
+    chatHuman?.addEventListener("click", () => {
+      window.open("https://wa.me/5595984178100?text=" + encodeURIComponent("Hola, quiero una recomendación para mi proyecto (CRM, sitio o WhatsApp)."), "_blank");
     });
 
     const modal = document.getElementById("callModal");
