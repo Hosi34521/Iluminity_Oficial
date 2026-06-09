@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Iluminity Inc. crea automatizaciones con IA, sistemas CRM, sitios premium y flujos de WhatsApp para negocios en Latinoamerica."
+    content="Iluminity Inc. crea websites, sistemas CRM, automatizaciones con IA y flujos de WhatsApp para negocios de servicios."
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -1302,14 +1302,23 @@
     }
 
     @media (max-width: 560px) {
+      html,
+      body,
+      .page {
+        max-width: 100vw;
+        overflow-x: hidden;
+      }
+
       .container,
       .nav {
-        width: min(100% - 24px, 1180px);
+        width: calc(100vw - 24px) !important;
+        max-width: calc(100vw - 24px);
       }
 
       .nav {
         top: 10px;
         padding: 11px;
+        overflow: hidden;
       }
 
       .brand span {
@@ -1324,8 +1333,52 @@
         display: none;
       }
 
+      .hero-content {
+        max-width: 100%;
+      }
+
+      .pill {
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        white-space: normal;
+        justify-content: center;
+        line-height: 1.35;
+        font-size: 13px;
+      }
+
       h1 {
-        font-size: 52px;
+        font-size: 34px;
+        line-height: 0.98;
+        letter-spacing: -0.045em;
+        max-width: 100%;
+        overflow-wrap: break-word;
+      }
+
+      .hero p,
+      .trusted p {
+        max-width: 100%;
+      }
+
+      .hero-actions .btn {
+        flex: 1 1 100%;
+        min-width: 0;
+        padding-inline: 14px;
+      }
+
+      .hero-actions {
+        max-width: 280px;
+        margin-inline: auto;
+      }
+
+      .logo-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .client-logo {
+        white-space: normal;
+        text-align: center;
       }
 
       .dash-grid,
@@ -1366,9 +1419,9 @@
 
       <div class="nav-links">
         <a href="#services" data-route="home">Servicios</a>
-        <a href="#systems" data-route="home">Sistemas</a>
+        <a href="#trust" data-route="home">Confianza</a>
+        <a href="#portfolio" data-route="home">Portafolio</a>
         <a href="#pricing-page" data-route="pricing">Precios</a>
-        <a href="#security" data-route="home">Seguridad</a>
         <a href="#contact" data-route="home">Contacto</a>
       </div>
       <div style="display:flex;align-items:center;gap:10px;">
@@ -1376,7 +1429,7 @@
           <a href="./en.html?lang=en" data-lang-link="en" style="padding:7px 10px;border-radius:999px;color:var(--muted);font-weight:800;">EN</a>
           <a href="./es.html?lang=es" data-lang-link="es" style="padding:7px 10px;border-radius:999px;background:rgba(155,231,255,.2);font-weight:800;color:#fff;">ES</a>
         </div>
-        <a class="btn btn-primary" href="#contact">Empezar</a>
+        <a class="btn btn-primary" href="#contact">Solicitar Cotización</a>
       </div>
     </nav>
 
@@ -1387,30 +1440,30 @@
         <div class="container hero-content">
           <div class="pill">
             <span class="spark"></span>
-            Sistemas con IA para negocios modernos
+            Websites, CRM y automatizaciones con IA para negocios de servicios
           </div>
 
-          <h1>Operaciones Digitales Inteligentes</h1>
+          <h1>Websites + IA<br>para más leads.</h1>
 
           <p>
-            Creamos automatizaciones con IA, CRM personalizados, sitios premium y sistemas de captacion para negocios que quieren ahorrar tiempo, vender mas y crecer mejor en Latinoamerica.
+            Creamos websites y sistemas con IA que ayudan a negocios de servicios a generar más leads y automatizar operaciones.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Iniciar Proyecto</a>
-            <a class="btn" href="#services">Ver Servicios</a>
-            <a class="btn" href="https://wa.me/5595984178100" target="_blank" rel="noreferrer">WhatsApp</a>
+            <a class="btn btn-primary" href="#contact">Obtener Demo Gratis</a>
+            <a class="btn" data-route="pricing" href="#pricing-page">Solicitar Cotización</a>
+            <a class="btn" href="https://wa.me/5595984178100?text=Hola%2C%20quiero%20hablar%20sobre%20un%20website%20o%20sistema%20con%20IA." target="_blank" rel="noreferrer">Escríbenos por WhatsApp</a>
           </div>
 
           <div class="trusted">
-            <p>Creado para servicios, inmobiliarias, clinicas, ecommerce y negocios locales de habla hispana.</p>
+            <p>Para consultores, servicios locales, inmobiliarias, oficinas de impuestos, clínicas y agencias en crecimiento.</p>
 
             <div class="logo-row">
-              <span class="client-logo">Inmobiliaria</span>
-              <span class="client-logo">Clinicas</span>
-              <span class="client-logo">Ecommerce</span>
-              <span class="client-logo">Barberias</span>
-              <span class="client-logo">Agencias</span>
+              <span class="client-logo">Landing Pages</span>
+              <span class="client-logo">Websites</span>
+              <span class="client-logo">CRM</span>
+              <span class="client-logo">Flujos IA</span>
+              <span class="client-logo">Leads por WhatsApp</span>
             </div>
           </div>
         </div>
@@ -1421,53 +1474,46 @@
           <div class="container">
             <div class="section-head">
               <div class="eyebrow">Lo que creamos</div>
-              <h2>Elige un servicio y abre su demo.</h2>
+              <h2>Sistemas digitales enfocados en negocios de servicios.</h2>
               <p>
-                Cada tarjeta abre una pagina interna con ejemplos, demos, precios y una experiencia mas premium para el cliente.
+                Diseñamos la página, conectamos el flujo de leads y creamos sistemas para que tu equipo responda más rápido.
               </p>
             </div>
 
             <div class="grid services">
-              <article class="card service-link" data-route="automation">
-                <div class="icon">🤖</div>
-                <h3>Automatizaciones con IA</h3>
-                <p>Seguimiento de leads, rutas de formularios, notificaciones y flujos automaticos para ahorrar tiempo.</p>
-                <span class="mini-tag">Abrir demos de automatizacion →</span>
-              </article>
-
-              <article class="card service-link" data-route="crm">
-                <div class="icon">📊</div>
-                <h3>Sistemas CRM Personalizados</h3>
-                <p>Configuracion y desarrollo de CRM para Pipeline, Pipedrive y procesos comerciales.</p>
-                <span class="mini-tag">Abrir demos de CRM →</span>
+              <article class="card service-link" data-route="websites">
+                <div class="icon">🎯</div>
+                <h3>Landing Pages</h3>
+                <p>Páginas de una sola oferta para anuncios, captación de leads y consultas por WhatsApp.</p>
+                <span class="mini-tag">Ver ejemplos de landing →</span>
               </article>
 
               <article class="card service-link" data-route="websites">
                 <div class="icon">🌐</div>
-                <h3>Sitios Premium</h3>
-                <p>Landing pages, ecommerce, sitios corporativos y experiencias premium a medida.</p>
-                <span class="mini-tag">Abrir demos de sitios →</span>
+                <h3>Business Websites</h3>
+                <p>Sitios profesionales para marcas de servicios que necesitan confianza, claridad y conversión.</p>
+                <span class="mini-tag">Ver ejemplos web →</span>
+              </article>
+
+              <article class="card service-link" data-route="crm">
+                <div class="icon">📊</div>
+                <h3>CRM Setup</h3>
+                <p>Pipelines, etapas de leads, dashboards y seguimiento para equipos comerciales.</p>
+                <span class="mini-tag">Ver sistemas CRM →</span>
+              </article>
+
+              <article class="card service-link" data-route="automation">
+                <div class="icon">🤖</div>
+                <h3>Automatizaciones con IA</h3>
+                <p>Alertas de leads, respuestas inteligentes, tareas automáticas y flujos que reducen trabajo manual.</p>
+                <span class="mini-tag">Ver flujos de automatización →</span>
               </article>
 
               <article class="card service-link" data-route="whatsapp">
                 <div class="icon">💬</div>
-                <h3>Sistemas para WhatsApp</h3>
-                <p>Reservas, soporte, calificacion de leads y seguimiento desde WhatsApp.</p>
-                <span class="mini-tag">Abrir demos de WhatsApp →</span>
-              </article>
-
-              <article class="card service-link" data-route="assistants">
-                <div class="icon">🧠</div>
-                <h3>Asistentes con IA</h3>
-                <p>Asistentes FAQ, ventas y soporte interno entrenados con tu negocio.</p>
-                <span class="mini-tag">Abrir demos de asistentes →</span>
-              </article>
-
-              <article class="card service-link" data-route="pricing">
-                <div class="icon">💎</div>
-                <h3>Planes y Seguridad</h3>
-                <p>Precios de implementacion, planes mensuales, privacidad y seguridad.</p>
-                <span class="mini-tag">Abrir menu de precios →</span>
+                <h3>WhatsApp Lead Systems</h3>
+                <p>Embudo click-to-chat, preguntas de calificación y entrega del lead al CRM.</p>
+                <span class="mini-tag">Ver sistemas WhatsApp →</span>
               </article>
             </div>
           </div>
@@ -1476,14 +1522,14 @@
         <section id="systems" class="reveal">
           <div class="container showcase">
             <div class="section-head">
-              <div class="eyebrow">Sistema Demo</div>
-              <h2>Ejemplo: Panel CRM inteligente.</h2>
+              <div class="eyebrow">Cómo funciona</div>
+              <h2>Del visitante al lead organizado.</h2>
               <p>
-                Esta sección muestra el tipo de demo que puedes presentar a clientes potenciales incluso antes de tener muchos proyectos reales.
+                Tu website captura la consulta, tu CRM guarda el lead y las automatizaciones notifican al equipo correcto al instante.
               </p>
               <div class="inline-actions" style="justify-content: flex-start; margin-top: 24px;">
-                <a class="btn btn-primary" href="#contact">Solicitar Demo</a>
-                <a class="btn" data-route="pricing" href="#pricing-page">Ver Paquetes</a>
+                <a class="btn btn-primary" href="#contact">Obtener Demo Gratis</a>
+                <a class="btn" data-route="pricing" href="#pricing-page">Solicitar Cotización</a>
               </div>
             </div>
 
@@ -1495,115 +1541,104 @@
 
               <div class="dash-grid">
                 <div class="metric">
-                  <span>New Leads</span>
+                  <span>Nuevos Leads</span>
                   <strong>128</strong>
                   <div class="bar"><span style="--w: 82%"></span></div>
                 </div>
 
                 <div class="metric">
-                  <span>Automated Replies</span>
+                  <span>Respuestas Automáticas</span>
                   <strong>94%</strong>
                   <div class="bar"><span style="--w: 94%"></span></div>
                 </div>
 
                 <div class="metric">
-                  <span>Booked Calls</span>
+                  <span>Llamadas Agendadas</span>
                   <strong>37</strong>
                   <div class="bar"><span style="--w: 62%"></span></div>
                 </div>
 
                 <div class="metric">
-                  <span>Saved Hours</span>
+                  <span>Horas Ahorradas</span>
                   <strong>26h</strong>
                   <div class="bar"><span style="--w: 76%"></span></div>
                 </div>
               </div>
 
               <div class="timeline">
-                <div class="task"><span>New real estate lead assigned</span><em>Auto</em></div>
-                <div class="task"><span>WhatsApp follow-up scheduled</span><em>2 min ago</em></div>
-                <div class="task"><span>Client moved to “Ready to Buy”</span><em>CRM</em></div>
+                <div class="task"><span>Nuevo lead de servicio asignado</span><em>Auto</em></div>
+                <div class="task"><span>Seguimiento por WhatsApp programado</span><em>2 min</em></div>
+                <div class="task"><span>Cliente movido a Calificado</span><em>CRM</em></div>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="why" class="reveal">
+        <section id="trust" class="reveal">
           <div class="container">
             <div class="section-head">
-              <div class="eyebrow">Por Qué Iluminity</div>
-              <h2>Construido para verse premium y operar seguro.</h2>
+              <div class="eyebrow">Confianza</div>
+              <h2>Creado para velocidad, claridad y captura segura de leads.</h2>
               <p>
-                Iluminity combina UI moderna, lógica de automatización, organización CRM e implementación segura para que pequeños negocios se sientan como empresas digitales serias.
+                Todo se construye mobile-first, conectado a tu flujo de contacto y preparado para audiencias en inglés o español.
               </p>
             </div>
 
-            <div class="grid cards3">
-              <article class="card">
-                <div class="icon">⚡</div>
-                <h3>Entrega Rápida</h3>
-                <p>Lanza landing pages, CRMs y automatizaciones rápidamente con hitos claros y previsualizaciones.</p>
-              </article>
-
-              <article class="card">
-                <div class="icon">🔐</div>
-                <h3>Seguridad Primero</h3>
-                <p>Acceso basado en roles, formularios seguros, avisos de privacidad, hosting HTTPS y manejo limpio de datos.</p>
-              </article>
-
-              <article class="card">
-                <div class="icon">📈</div>
-                <h3>Enfocado en Negocios</h3>
-                <p>Cada sistema está diseñado para ahorrar tiempo, capturar leads, aumentar reservas y mejorar seguimiento.</p>
-              </article>
-            </div>
-
-            <div class="stats-row">
-              <div class="stat-card"><strong class="count" data-count="73">0</strong><span>% respuesta más rápida demo</span></div>
-              <div class="stat-card"><strong class="count" data-count="26">0</strong><span>horas ahorradas semanales demo</span></div>
-              <div class="stat-card"><strong class="count" data-count="128">0</strong><span>leads organizados demo</span></div>
-              <div class="stat-card"><strong class="count" data-count="94">0</strong><span>% cobertura de respuesta automática</span></div>
+            <div class="security-strip">
+              <div class="security-badge">Entrega rápida</div>
+              <div class="security-badge">Diseño mobile-first</div>
+              <div class="security-badge">Formularios seguros</div>
+              <div class="security-badge">Integración WhatsApp</div>
+              <div class="security-badge">Soporte inglés y español</div>
             </div>
           </div>
         </section>
 
-        <section id="case-studies" class="reveal">
+        <section id="portfolio" class="reveal">
           <div class="container">
             <div class="section-head">
-              <div class="eyebrow">Demos de Casos</div>
-              <h2>Resultados que los clientes entienden rápido.</h2>
+              <div class="eyebrow">Ejemplos de Portafolio</div>
+              <h2>Proyectos prácticos para negocios reales.</h2>
               <p>
-                Usa estos como ejemplos de casos mientras construyes resultados reales de portafolio. Son claramente ejemplos demo.
+                Estos ejemplos muestran el tipo de sistemas que Iluminity puede crear y conectar a tu proceso comercial.
               </p>
             </div>
 
             <div class="grid cards3">
-              <article class="card case-card">
-                <div>
-                  <h3>CRM Inmobiliario</h3>
-                  <p>Pipeline para leads compradores, interés en propiedad, presupuesto y programación de visitas.</p>
-                </div>
-                <div class="case-number">73%</div>
-                <p>Demo reducción en tiempo de respuesta.</p>
+              <article class="card">
+                <div class="icon">🛂</div>
+                <h3>Landing Page para Consultor Migratorio</h3>
+                <p>Página clara con formulario, CTA a WhatsApp, bloques de confianza y solicitud de consulta.</p>
               </article>
 
-              <article class="card case-card">
-                <div>
-                  <h3>Automatización Clínica</h3>
-                  <p>Solicitud de cita, recordatorios, confirmación WhatsApp y seguimiento de paciente.</p>
-                </div>
-                <div class="case-number">18h</div>
-                <p>Demo horas administrativas semanales ahorradas.</p>
+              <article class="card">
+                <div class="icon">🧾</div>
+                <h3>Website para Preparación de Impuestos</h3>
+                <p>Sitio con servicios, intake de documentos, solicitud de cita y estructura SEO local.</p>
               </article>
 
-              <article class="card case-card">
-                <div>
-                  <h3>Embudo WhatsApp</h3>
-                  <p>Calificación de leads para negocios de servicios con entrega a CRM y seguimiento.</p>
-                </div>
-                <div class="case-number">42%</div>
-                <p>Demo aumento en llamadas reservadas.</p>
+              <article class="card">
+                <div class="icon">🏠</div>
+                <h3>CRM para Real Estate</h3>
+                <p>Pipeline para compradores, interés por propiedad, presupuesto, visitas y seguimiento automático.</p>
               </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="reveal">
+          <div class="container">
+            <div class="section-head">
+              <div class="eyebrow">About Iluminity</div>
+              <h2>Un estudio de sistemas digitales para marcas de servicios.</h2>
+              <p>
+                Iluminity ayuda a convertir website, CRM y automatizaciones en un sistema limpio de captación de clientes. Creamos soluciones prácticas que se ven profesionales, cargan rápido y facilitan el seguimiento comercial.
+              </p>
+            </div>
+
+            <div class="inline-actions" style="justify-content: flex-start;">
+              <a class="btn btn-primary" href="#contact">Solicitar Cotización</a>
+              <a class="btn" href="https://wa.me/5595984178100?text=Hola%2C%20quiero%20una%20demo%20gratis%20de%20Iluminity." target="_blank" rel="noreferrer">Escríbenos por WhatsApp</a>
             </div>
           </div>
         </section>
@@ -1614,7 +1649,7 @@
               <div class="eyebrow">Capa de Seguridad</div>
               <h2>Señales de confianza para clientes serios.</h2>
               <p>
-                Esta sección da a tu agencia una sensación más profesional y segura incluso antes de que el cliente te contacte.
+                Tus formularios, automatizaciones y CRM deben recopilar solo lo necesario y enrutar la información de forma segura.
               </p>
             </div>
 
@@ -1631,13 +1666,13 @@
         <section id="portal" class="reveal">
           <div class="container showcase">
             <div class="section-head">
-              <div class="eyebrow">Demo Portal de Cliente</div>
+              <div class="eyebrow">Portal de Cliente</div>
               <h2>Un área privada para proyectos, tickets y actualizaciones.</h2>
               <p>
-                Esta es una demo visual de un futuro portal de cliente. Hace que Iluminity se sienta como una agencia de software real, incluso antes de conectar el backend.
+                En proyectos más grandes, podemos organizar tareas, solicitudes y avances en un espacio simple para el cliente.
               </p>
               <div class="inline-actions" style="justify-content: flex-start; margin-top: 24px;">
-                <button class="btn btn-primary" id="openModal">Agendar Llamada de Estrategia</button>
+                <button class="btn btn-primary" id="openModal">Obtener Demo Gratis</button>
                 <a class="btn" data-route="pricing" href="#pricing-page">Ver Planes</a>
               </div>
             </div>
@@ -1687,7 +1722,7 @@
               <div class="eyebrow">Tecnología</div>
               <h2>Stack moderno para sistemas escalables.</h2>
               <p>
-                Muestra a los clientes las herramientas detrás de la solución. Esto crea confianza y hace que el servicio se sienta más premium.
+                Usamos herramientas confiables para websites, automatizaciones, CRM, hosting e integraciones con IA.
               </p>
             </div>
 
@@ -1710,9 +1745,9 @@
           <div class="container contact-box">
             <div>
               <div class="eyebrow">Contacto</div>
-              <h2>Cuentanos que quieres construir.</h2>
+              <h2>Solicita cotización para tu website o sistema IA.</h2>
               <p style="color: var(--muted); line-height: 1.7; margin-top: 16px;">
-                Habla con nosotros por WhatsApp o correo y recibe una propuesta adaptada a tu negocio.
+                Cuéntanos qué necesitas y te recomendaremos el camino más simple para lanzar.
               </p>
               <p style="color: var(--muted); line-height: 1.7; margin-top: 10px;">WhatsApp: <a href="https://wa.me/5595984178100" target="_blank" rel="noopener noreferrer" style="color:var(--cyan)">+55 95 98417-8100</a><br>E-mail: <a href="mailto:iluminity.inc@gmail.com" style="color:var(--cyan)">iluminity.inc@gmail.com</a></p>
             </div>
@@ -1723,14 +1758,15 @@
 
               <select name="service" required>
                 <option value="">Selecciona un servicio</option>
-                <option>Automatizacion con IA</option>
-                <option>CRM Personalizado</option>
-                <option>Sitio / Landing Page</option>
-                <option>Sistema para WhatsApp</option>
+                <option>Automatización con IA</option>
+                <option>CRM Setup</option>
+                <option>Landing Page</option>
+                <option>Business Website</option>
+                <option>WhatsApp Lead System</option>
               </select>
 
-              <textarea name="message" placeholder="Cuentanos sobre tu negocio y lo que necesitas..."></textarea>
-              <button class="btn btn-primary">Enviar Solicitud</button>
+              <textarea name="message" placeholder="Cuéntanos sobre tu negocio y lo que necesitas..."></textarea>
+              <button class="btn btn-primary">Solicitar Cotización</button>
             </form>
           </div>
         </section>
@@ -2383,14 +2419,14 @@
       <section id="pricing-page" class="sub-hero">
         <div class="container">
           <div class="eyebrow">Precios 2026</div>
-          <h2>Planes de implementacion + soporte mensual.</h2>
+          <h2>Precios iniciales simples.</h2>
           <p style="color: var(--muted); font-size: 18px; line-height: 1.7; max-width: 850px;">
-            Precios pensados para Panama, Venezuela y otros mercados hispanos: accesibles, profesionales y sostenibles para crecer.
+            Empieza con lo que necesitas ahora. Después de revisar tu negocio y objetivo, recomendamos el alcance correcto.
           </p>
 
           <div class="inline-actions" style="justify-content: flex-start; margin-top: 22px;">
             <a class="btn" data-route="home" href="#services">← Volver</a>
-            <a class="btn btn-primary" href="#contact" data-route="home">Solicitar Cotizacion</a>
+            <a class="btn btn-primary" href="#contact" data-route="home">Solicitar Cotización</a>
           </div>
         </div>
       </section>
@@ -2398,193 +2434,105 @@
       <section>
         <div class="container tabs-layout">
           <aside class="sidebar">
-            <button class="btn side-btn active" data-price="crmPrice">Planes CRM</button>
-            <button class="btn side-btn" data-price="autoPrice">Automatizacion</button>
-            <button class="btn side-btn" data-price="webPrice">Sitios Web</button>
-            <button class="btn side-btn" data-price="waPrice">WhatsApp</button>
+            <button class="btn side-btn active" data-price="webPrice">Websites</button>
+            <button class="btn side-btn" data-price="crmPrice">CRM y Automatizaciones</button>
             <button class="btn side-btn" data-price="securityPrice">Seguridad y Privacidad</button>
           </aside>
 
           <div>
-            <div class="detail-panel active" id="crmPrice">
+            <div class="detail-panel active" id="webPrice">
               <div class="grid plans">
                 <article class="card">
-                  <h3>CRM Starter</h3>
-                  <div class="price">USD 490 setup</div>
-                  <p style="color:var(--muted)">Mensual: USD 59/mes</p>
+                  <h3>Landing Pages</h3>
+                  <div class="price">Desde $150</div>
+                  <p style="color:var(--muted)">Para ofertas, anuncios y captación de leads.</p>
                   <ul class="features">
-                     <li>1 pipeline de ventas</li>
-                     <li>Etapas y estados de lead</li>
-                     <li>Dashboard básico</li>
-                     <li>Entrega Email / WhatsApp</li>
+                     <li>Diseño responsive de una página</li>
+                     <li>Sección de captura de leads</li>
+                     <li>CTA a WhatsApp</li>
+                     <li>SEO básico</li>
                   </ul>
-                  <a class="buy-btn" href="https://wa.me/5595984178100?text=Hola%20quiero%20contratar%20CRM%20Starter%20(USD%20490%20setup)" target="_blank" rel="noreferrer">🛒 Pedir por WhatsApp</a>
+                  <a class="buy-btn" href="https://wa.me/5595984178100?text=Hola%20quiero%20cotizar%20una%20Landing%20Page%20con%20Iluminity." target="_blank" rel="noreferrer">Solicitar Cotización</a>
                 </article>
 
                 <article class="card" style="border-color: rgba(155, 231, 255, 0.45); box-shadow: var(--shadow);">
-                  <div class="popular-tag">⭐ Most Popular</div>
-                  <h3>CRM Pro</h3>
-                  <div class="price">USD 890 setup</div>
-                  <p style="color:var(--muted)">Mensual: USD 109/mes</p>
+                  <div class="popular-tag">Más popular</div>
+                  <h3>Business Websites</h3>
+                  <div class="price">Desde $350</div>
+                  <p style="color:var(--muted)">Para negocios de servicios que necesitan confianza y conversión.</p>
                   <ul class="features">
-                     <li>Campos y vistas personalizados</li>
-                     <li>2–3 pipelines</li>
-                     <li>Tareas y alertas automatizadas</li>
-                     <li>Integraciones Pipedrive</li>
+                     <li>Sitio multi-sección</li>
+                     <li>Diseño mobile-first</li>
+                     <li>Contacto y CTA a WhatsApp</li>
+                     <li>Estructura SEO</li>
                   </ul>
-                  <a class="buy-btn" href="https://wa.me/5595984178100?text=Hola%20quiero%20contratar%20CRM%20Pro%20(USD%20890%20setup)" target="_blank" rel="noreferrer">🛒 Pedir por WhatsApp</a>
+                  <a class="buy-btn" href="https://wa.me/5595984178100?text=Hola%20quiero%20cotizar%20un%20Business%20Website%20con%20Iluminity." target="_blank" rel="noreferrer">Solicitar Cotización</a>
                 </article>
 
                 <article class="card">
-                  <h3>CRM Custom</h3>
-                  <div class="price">USD 2,490+</div>
-                  <p style="color:var(--muted)">Mensual: USD 249/mes</p>
+                  <h3>CRM y Automatizaciones</h3>
+                  <div class="price">Cotización personalizada</div>
+                  <p style="color:var(--muted)">Para pipelines, rutas de leads y flujos con IA.</p>
                   <ul class="features">
-                     <li>Dashboard y UI personalizados</li>
-                     <li>Estructura de base de datos completa</li>
-                     <li>Roles y permisos de equipo</li>
-                     <li>Integraciones avanzadas</li>
+                     <li>Configuración CRM</li>
+                     <li>Automatizaciones con IA</li>
+                     <li>Sistemas de leads por WhatsApp</li>
+                     <li>Integraciones de flujo</li>
                   </ul>
-                  <a class="buy-btn" href="https://wa.me/5595984178100?text=Hola%20quiero%20hablar%20de%20un%20CRM%20Custom" target="_blank" rel="noreferrer">🛒 Pedir por WhatsApp</a>
+                  <a class="buy-btn" href="https://wa.me/5595984178100?text=Hola%20quiero%20cotizar%20un%20CRM%20o%20automatizacion%20con%20Iluminity." target="_blank" rel="noreferrer">Escríbenos por WhatsApp</a>
                 </article>
               </div>
             </div>
 
-            <div class="detail-panel" id="autoPrice">
+            <div class="detail-panel" id="crmPrice">
               <div class="grid plans">
                 <article class="card">
-                  <h3>Basic Flow</h3>
-                  <div class="price">USD 390 setup</div>
-                  <p style="color:var(--muted)">Mensual: USD 49/mes</p>
+                  <h3>CRM Setup</h3>
+                  <div class="price">Cotización personalizada</div>
+                  <p style="color:var(--muted)">Organiza leads, etapas y seguimiento comercial.</p>
                   <ul class="features">
-                     <li>1 automatización</li>
-                     <li>Alerta de lead instantánea</li>
-                     <li>Secuencia de seguimiento simple</li>
+                     <li>Pipeline comercial</li>
+                     <li>Campos de estado de lead</li>
+                     <li>Dashboard de ventas</li>
+                     <li>Flujo para el equipo</li>
                   </ul>
-                  <a class="buy-btn" href="https://wa.me/5595984178100?text=Hola%20quiero%20contratar%20Basic%20Flow%20(USD%20390%20setup)" target="_blank" rel="noreferrer">🛒 Pedir por WhatsApp</a>
+                  <a class="buy-btn" href="https://wa.me/5595984178100?text=Hola%20quiero%20cotizar%20un%20CRM%20Setup%20con%20Iluminity." target="_blank" rel="noreferrer">Solicitar Cotización</a>
                 </article>
 
                 <article class="card" style="border-color: rgba(155, 231, 255, 0.45); box-shadow: var(--shadow);">
-                  <div class="popular-tag">⭐ Most Popular</div>
-                  <h3>Growth Flow</h3>
-                  <div class="price">USD 790 setup</div>
-                  <p style="color:var(--muted)">Mensual: USD 95/mes</p>
+                  <div class="popular-tag">Ideal para crecer</div>
+                  <h3>Automatizaciones con IA</h3>
+                  <div class="price">Cotización personalizada</div>
+                  <p style="color:var(--muted)">Automatiza leads y tareas repetitivas.</p>
                   <ul class="features">
-                     <li>3 automatizaciones</li>
-                     <li>Conexión CRM</li>
-                     <li>Reportes de desempeño</li>
-                     <li>Notificaciones WhatsApp</li>
+                     <li>Alertas instantáneas</li>
+                     <li>Borradores de respuesta IA</li>
+                     <li>Creación automática de tareas</li>
+                     <li>Flujos de seguimiento</li>
                   </ul>
-                  <a class="buy-btn" href="https://wa.me/5595984178100?text=Hola%20quiero%20contratar%20Growth%20Flow%20(USD%20790%20setup)" target="_blank" rel="noreferrer">🛒 Pedir por WhatsApp</a>
+                  <a class="buy-btn" href="https://wa.me/5595984178100?text=Hola%20quiero%20cotizar%20una%20automatizacion%20con%20IA%20con%20Iluminity." target="_blank" rel="noreferrer">Solicitar Cotización</a>
                 </article>
 
                 <article class="card">
-                  <h3>Operations Flow</h3>
-                  <div class="price">USD 1,690+</div>
-                  <p style="color:var(--muted)">Mensual: USD 179/mes</p>
-                  <ul class="features">
-                     <li>Múltiples sistemas conectados</li>
-                     <li>Asistente IA incluido</li>
-                     <li>Monitoreo en vivo</li>
-                     <li>Soporte prioritario</li>
-                  </ul>
-                  <a class="buy-btn" href="https://wa.me/5595984178100?text=Hola%20quiero%20hablar%20de%20Operations%20Flow" target="_blank" rel="noreferrer">🛒 Pedir por WhatsApp</a>
-                </article>
-              </div>
-            </div>
-
-            <div class="detail-panel" id="webPrice">
-              <div class="grid plans">
-                <article class="card">
-                  <h3>Landing Page</h3>
-                  <div class="price">USD 350+</div>
-                  <p style="color:var(--muted)">Mensual: USD 29 hosting</p>
-                  <ul class="features">
-                     <li>1 página enfocada</li>
-                     <li>Formulario de captura de lead</li>
-                     <li>Botón CTA WhatsApp</li>
-                     <li>HTTPS + hosting rápido</li>
-                  </ul>
-                  <a class="buy-btn" href="https://wa.me/5595984178100?text=Hola%20quiero%20una%20Landing%20Page%20(USD%20350)" target="_blank" rel="noreferrer">🛒 Pedir por WhatsApp</a>
-                </article>
-
-                <article class="card" style="border-color: rgba(155, 231, 255, 0.45); box-shadow: var(--shadow);">
-                  <div class="popular-tag">⭐ Most Popular</div>
-                  <h3>Business Website</h3>
-                  <div class="price">USD 850+</div>
-                  <p style="color:var(--muted)">Mensual: USD 69 mantenimiento</p>
-                  <ul class="features">
-                     <li>Hasta 5 páginas / secciones</li>
-                     <li>Fundamentos SEO</li>
-                     <li>Diseño responsivo premium</li>
-                     <li>Configuración de Google Analytics</li>
-                  </ul>
-                  <a class="buy-btn" href="https://wa.me/5595984178100?text=Hola%20quiero%20un%20Business%20Website%20(USD%20850)" target="_blank" rel="noreferrer">🛒 Pedir por WhatsApp</a>
-                </article>
-
-                <article class="card">
-                  <h3>Premium Custom</h3>
-                  <div class="price">USD 1,790+</div>
-                  <p style="color:var(--muted)">Mensual: USD 149/mes</p>
-                  <ul class="features">
-                     <li>UI y animaciones completamente personalizadas</li>
-                     <li>Embudo multi-sección</li>
-                     <li>Formularios + hooks de automatización</li>
-                     <li>Revisiones prioritarias</li>
-                  </ul>
-                  <a class="buy-btn" href="https://wa.me/5595984178100?text=Hola%20quiero%20hablar%20de%20un%20Premium%20Custom%20Website" target="_blank" rel="noreferrer">🛒 Pedir por WhatsApp</a>
-                </article>
-              </div>
-            </div>
-
-            <div class="detail-panel" id="waPrice">
-              <div class="grid plans">
-                <article class="card">
-                  <h3>WhatsApp Starter</h3>
-                  <div class="price">USD 290+</div>
-                  <p style="color:var(--muted)">Mensual: USD 29/mes</p>
+                  <h3>WhatsApp Lead Systems</h3>
+                  <div class="price">Cotización personalizada</div>
+                  <p style="color:var(--muted)">Califica leads desde el canal que tus clientes ya usan.</p>
                   <ul class="features">
                      <li>Embudo click-to-chat</li>
-                     <li>Plantillas de mensajes</li>
-                     <li>Captura básica de leads</li>
+                     <li>Preguntas de calificación</li>
+                     <li>Entrega al CRM</li>
+                     <li>Prompts de seguimiento</li>
                   </ul>
-                  <a class="buy-btn" href="https://wa.me/5595984178100?text=Hola%20quiero%20contratar%20WhatsApp%20Starter%20(USD%20290)" target="_blank" rel="noreferrer">🛒 Pedir por WhatsApp</a>
-                </article>
-
-                <article class="card" style="border-color: rgba(155, 231, 255, 0.45); box-shadow: var(--shadow);">
-                  <div class="popular-tag">⭐ Most Popular</div>
-                  <h3>WhatsApp Pro</h3>
-                  <div class="price">USD 590+</div>
-                  <p style="color:var(--muted)">Mensual: USD 59/mes</p>
-                  <ul class="features">
-                     <li>Flujo de calificación completo</li>
-                     <li>Entrega a CRM</li>
-                     <li>Lógica de seguimiento automatizado</li>
-                     <li>Puntuación de leads</li>
-                  </ul>
-                  <a class="buy-btn" href="https://wa.me/5595984178100?text=Hola%20quiero%20contratar%20WhatsApp%20Pro%20(USD%20590)" target="_blank" rel="noreferrer">🛒 Pedir por WhatsApp</a>
-                </article>
-
-                <article class="card">
-                  <h3>AI Support System</h3>
-                  <div class="price">USD 1,490+</div>
-                  <p style="color:var(--muted)">Mensual: USD 139/mes</p>
-                  <ul class="features">
-                     <li>Flujo FAQ inteligente</li>
-                     <li>Enrutamiento a humano</li>
-                     <li>Analítica y reportes de respuestas</li>
-                     <li>Integración OpenAI</li>
-                  </ul>
-                  <a class="buy-btn" href="https://wa.me/5595984178100?text=Hola%20quiero%20hablar%20de%20AI%20Support%20System%20WhatsApp" target="_blank" rel="noreferrer">🛒 Pedir por WhatsApp</a>
+                  <a class="buy-btn" href="https://wa.me/5595984178100?text=Hola%20quiero%20cotizar%20un%20sistema%20de%20leads%20por%20WhatsApp%20con%20Iluminity." target="_blank" rel="noreferrer">Escríbenos por WhatsApp</a>
                 </article>
               </div>
             </div>
 
             <div class="detail-panel" id="securityPrice">
               <div class="card">
-                <h3>Politica de Seguridad y Privacidad</h3>
+                <h3>Política de Seguridad y Privacidad</h3>
                 <p class="policy">
-                  Los sistemas de demostración de Iluminity Inc. solo deben recopilar la información necesaria para completar una solicitud de proyecto.
+                  Los sistemas de Iluminity Inc. solo deben recopilar la información necesaria para completar una solicitud de proyecto.
                   Los datos del cliente deben almacenarse en plataformas seguras, protegidos con contraseñas fuertes, acceso basado en roles y permisos limitados de equipo.
                   La información sensible no debe venderse ni compartirse con terceros.
                   Las automatizaciones deben monitorearse para evitar enviar mensajes incorrectos.
@@ -2610,13 +2558,13 @@
                 <select id="customService" required style="margin-bottom: 10px;">
                   <option value="">Selecciona servicio base...</option>
                   <option value="Sistema CRM">Sistema CRM</option>
-                  <option value="Automatizacion IA">Automatizacion IA</option>
-                  <option value="Sitio Premium">Sitio Premium</option>
+                  <option value="Automatización IA">Automatización IA</option>
+                  <option value="Business Website">Business Website</option>
                   <option value="Embudo de WhatsApp">Embudo de WhatsApp</option>
-                  <option value="Full Stack (CRM + Sitio + Automatizacion)">Full Stack (CRM + Sitio + Automatizacion)</option>
+                  <option value="Full Stack (CRM + Website + Automatización)">Full Stack (CRM + Website + Automatización)</option>
                 </select>
                 <input type="text" id="customBudget" placeholder="Presupuesto esperado (ej. USD 900)" required style="margin-bottom: 15px;" />
-                <button type="submit" class="buy-btn" style="background: linear-gradient(135deg, #0d4b78, #0a2540); border-color: rgba(155,231,255,.55);">🛒 Pedir Plan Personalizado</button>
+                <button type="submit" class="buy-btn" style="background: linear-gradient(135deg, #0d4b78, #0a2540); border-color: rgba(155,231,255,.55);">Escríbenos por WhatsApp</button>
               </form>
             </div>
           </div>
@@ -2632,21 +2580,22 @@
         </div>
 
         <p style="color: var(--muted); line-height: 1.7; margin: 12px 0 18px;">
-          Formulario demo para agendar llamadas de consulta. Luego puedes conectar esto a Calendly, Google Calendar o tu propio CRM.
+          Comparte los detalles de tu proyecto y te recomendaremos el website, CRM o automatización más conveniente.
         </p>
 
-        <form onsubmit="event.preventDefault(); alert('Solicitud de llamada de estrategia guardada como demo.');">
+        <form onsubmit="event.preventDefault(); window.open('https://wa.me/5595984178100?text=' + encodeURIComponent('Hola! Quiero una demo gratis para: ' + this.querySelector('select').value), '_blank');">
           <input placeholder="Tu nombre" required />
           <input type="email" placeholder="Correo" required />
 
           <select>
             <option>Sistema CRM</option>
-            <option>Automatización AI</option>
-            <option>Sitio Premium</option>
-            <option>Sistema WhatsApp</option>
+            <option>Automatización con IA</option>
+            <option>Landing Page</option>
+            <option>Business Website</option>
+            <option>WhatsApp Lead System</option>
           </select>
 
-          <button class="btn btn-primary">Solicitar Llamada</button>
+          <button class="btn btn-primary">Obtener Demo Gratis</button>
         </form>
       </div>
     </div>
@@ -2678,7 +2627,7 @@
           <div class="chat-options">
             <button class="chip" data-answer="Perfecto. Para cotizar rápido: dime 1) servicio, 2) objetivo principal y 3) fecha ideal de lanzamiento. Con eso te doy rango y plan recomendado.">Quiero cotización</button>
             <button class="chip" data-answer="Si quieres resultados rápidos, normalmente empezamos por: 1) CRM Pro (si tienes equipo comercial), 2) WhatsApp Pro (si recibes muchos leads), 3) Sitio Business (si necesitas más conversiones).">¿Qué plan necesito?</button>
-            <button class="chip" data-answer="Ejemplo recomendado: negocio de servicios con sitio + WhatsApp + CRM. Resultado típico demo: más respuestas en menos tiempo y mejor seguimiento comercial.">Ver caso similar</button>
+            <button class="chip" data-answer="Ejemplo recomendado: negocio de servicios con website + WhatsApp + CRM. El objetivo es responder más rápido, ordenar el seguimiento y recibir consultas más calificadas.">Ver caso similar</button>
             <button class="chip" data-answer="Nuestro proceso: diagnóstico breve, propuesta por fases, implementación, pruebas y optimización mensual. Todo con hitos claros.">Cómo trabajamos</button>
           </div>
 
@@ -2708,7 +2657,7 @@
           <a href="#contact">Contacto</a>
         </div>
 
-        <p>© 2026 Iluminity Inc. Sitio demo. Automatización IA, sistemas CRM y web.</p>
+        <p>© 2026 Iluminity Inc. Websites, CRM y sistemas de automatización con IA.</p>
       </div>
     </footer>
   </div>
