@@ -575,11 +575,38 @@
       font-size: 13px;
     }
 
+    .code-window {
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(155, 231, 255, 0.24);
+      background: rgba(1, 8, 18, 0.72);
+      color: #d8e6f4;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 13px;
+      line-height: 1.55;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .demo-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .demo-actions .btn {
+      padding: 11px 14px;
+      font-size: 13px;
+    }
+
     .price {
-      font-size: 42px;
+      font-size: clamp(30px, 4vw, 42px);
       font-weight: 900;
-      letter-spacing: -0.06em;
+      letter-spacing: -0.04em;
       margin: 14px 0;
+      overflow-wrap: anywhere;
     }
 
     .features {
@@ -1606,22 +1633,59 @@
             </div>
 
             <div class="grid cards3">
-              <article class="card">
-                <div class="icon">🛂</div>
-                <h3>Landing Page para Consultor Migratorio</h3>
-                <p>Página clara con formulario, CTA de contacto, bloques de confianza y solicitud de consulta.</p>
+              <article class="card" style="grid-column: span 2;">
+                <div class="eyebrow">Mini demo</div>
+                <h3>Sistema para consultor migratorio</h3>
+                <div class="web-preview" style="margin-top: 18px;">
+                  <div class="web-top"><span>VisaPro Consultores</span><span>Solicitar evaluación</span></div>
+                  <div class="web-body">
+                    <div class="fake-title"></div>
+                    <div class="fake-line"></div>
+                    <div class="fake-line" style="width:70%"></div>
+                    <div class="inline-actions" style="justify-content:flex-start;margin-top:18px;">
+                      <button class="btn btn-primary">Enviar caso</button>
+                      <button class="btn">Ver requisitos</button>
+                    </div>
+                  </div>
+                </div>
               </article>
 
               <article class="card">
-                <div class="icon">🧾</div>
-                <h3>Sitio web para preparación de impuestos</h3>
-                <p>Sitio con servicios, intake de documentos, solicitud de cita y estructura SEO local.</p>
+                <div class="eyebrow">Lead capturado</div>
+                <h3>Flujo automático</h3>
+                <div class="timeline">
+                  <div class="task"><span id="demoStepOne">Formulario listo</span><em>Demo</em></div>
+                  <div class="task"><span id="demoStepTwo">CRM esperando lead</span><em>Auto</em></div>
+                  <div class="task"><span id="demoStepThree">Seguimiento pendiente</span><em>Email</em></div>
+                </div>
+                <pre class="code-window" id="portfolioCode">lead = {
+  servicio: "Consulta migratoria",
+  estado: "nuevo",
+  siguiente_paso: "capturar datos"
+}</pre>
+                <div class="demo-actions">
+                  <button class="btn" type="button" data-portfolio-demo="capture">Capturar lead</button>
+                  <button class="btn btn-primary" type="button" data-portfolio-demo="crm">Enviar al CRM</button>
+                </div>
               </article>
 
               <article class="card">
-                <div class="icon">🏠</div>
-                <h3>CRM para Real Estate</h3>
-                <p>Pipeline para compradores, interés por propiedad, presupuesto, visitas y seguimiento automático.</p>
+                <h3>Pipeline CRM</h3>
+                <div class="pipeline" style="grid-template-columns: 1fr; margin-top: 14px;">
+                  <div class="pipe-col">Nuevo lead<div class="lead">Ana · residencia</div></div>
+                  <div class="pipe-col">Calificado<div class="lead">Docs pendientes</div></div>
+                  <div class="pipe-col">Consulta<div class="lead">Viernes 10:00</div></div>
+                </div>
+              </article>
+
+              <article class="card">
+                <h3>Ejemplo fiscal</h3>
+                <p>Sitio para preparación de impuestos con lista de documentos, formulario de intake y recordatorios por email.</p>
+                <ul class="features">
+                  <li>Captura de datos</li>
+                  <li>Entrega al CRM</li>
+                  <li>Correo automático</li>
+                </ul>
               </article>
             </div>
           </div>
@@ -1750,15 +1814,21 @@
               <p style="color: var(--muted); line-height: 1.7; margin-top: 16px;">
                 Cuéntanos qué necesitas y te recomendaremos el camino más simple para lanzar.
               </p>
-              <p style="color: var(--muted); line-height: 1.7; margin-top: 10px;">Instagram: <a href="#" style="color:var(--cyan)">@iluminity</a><br>E-mail: <a href="mailto:iluminity.inc@gmail.com" style="color:var(--cyan)">iluminity.inc@gmail.com</a></p>
+              <p style="color: var(--muted); line-height: 1.7; margin-top: 10px;">
+                Instagram: <a href="https://www.instagram.com/iluminity.inc/" target="_blank" rel="noreferrer" style="color:var(--cyan)">@iluminity.inc</a><br>
+                Facebook: <a href="https://www.facebook.com/profile.php?id=61581403794288" target="_blank" rel="noreferrer" style="color:var(--cyan)">Iluminity Inc.</a><br>
+                E-mail: <a href="mailto:iluminity.inc@gmail.com" style="color:var(--cyan)">iluminity.inc@gmail.com</a><br>
+                E-mail secundario: <a href="mailto:iluminacioninc@gmail.com" style="color:var(--cyan)">iluminacioninc@gmail.com</a>
+              </p>
               <div class="grid" style="gap: 10px; margin-top: 18px;">
-                <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?subject=Solicitud%20de%20proyecto%20-%20Iluminity">Gmail: iluminity.inc@gmail.com</a>
-                <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?subject=Solicitud%20de%20proyecto%20-%20Iluminity">Segundo Gmail: agregar dirección</a>
-                <a class="buy-btn" href="#" aria-disabled="true">Instagram: agregar enlace</a>
+                <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=Solicitud%20de%20proyecto%20-%20Iluminity">Gmail: iluminity.inc@gmail.com</a>
+                <a class="buy-btn" href="mailto:iluminacioninc@gmail.com?cc=iluminity.inc@gmail.com&subject=Solicitud%20de%20proyecto%20-%20Iluminity">Gmail secundario: iluminacioninc@gmail.com</a>
+                <a class="buy-btn" href="https://www.instagram.com/iluminity.inc/" target="_blank" rel="noreferrer">Instagram: @iluminity.inc</a>
+                <a class="buy-btn" href="https://www.facebook.com/profile.php?id=61581403794288" target="_blank" rel="noreferrer">Facebook: Iluminity Inc.</a>
               </div>
             </div>
 
-            <form onsubmit="event.preventDefault(); const name=this.querySelector('[name=name]').value; const email=this.querySelector('[name=email]').value; const service=this.querySelector('[name=service]').value; const msg=this.querySelector('[name=message]').value; const text='Hola! Mi nombre es '+name+'. Servicio: '+service+'. E-mail: '+email+'. Mensaje: '+msg; window.location.href='mailto:iluminity.inc@gmail.com?subject='+encodeURIComponent('Solicitud de proyecto - '+service)+'&body='+encodeURIComponent(text);">
+            <form onsubmit="event.preventDefault(); const name=this.querySelector('[name=name]').value; const email=this.querySelector('[name=email]').value; const service=this.querySelector('[name=service]').value; const msg=this.querySelector('[name=message]').value; const text='Hola! Mi nombre es '+name+'. Servicio: '+service+'. E-mail: '+email+'. Mensaje: '+msg; window.location.href='mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject='+encodeURIComponent('Solicitud de proyecto - '+service)+'&body='+encodeURIComponent(text);">
               <input name="name" placeholder="Nombre completo" required />
               <input name="email" type="email" placeholder="Correo electronico" required />
 
@@ -1774,6 +1844,30 @@
               <textarea name="message" placeholder="Cuéntanos sobre tu negocio y lo que necesitas..."></textarea>
               <button class="btn btn-primary">Solicitar Cotización</button>
             </form>
+          </div>
+        </section>
+
+        <section id="social" class="reveal">
+          <div class="container">
+            <div class="section-head">
+              <div class="eyebrow">Redes</div>
+              <h2>Sigue a Iluminity y revisa nuestros canales oficiales.</h2>
+              <p>Usa Instagram o Facebook para ver novedades, escribirnos o compartir la página con alguien que necesite un sistema digital.</p>
+            </div>
+
+            <div class="grid cards2">
+              <a class="card" href="https://www.instagram.com/iluminity.inc/" target="_blank" rel="noreferrer">
+                <div class="icon">◎</div>
+                <h3>Instagram</h3>
+                <p>@iluminity.inc</p>
+              </a>
+
+              <a class="card" href="https://www.facebook.com/profile.php?id=61581403794288" target="_blank" rel="noreferrer">
+                <div class="icon">f</div>
+                <h3>Facebook</h3>
+                <p>Iluminity Inc.</p>
+              </a>
+            </div>
           </div>
         </section>
       </main>
@@ -2450,7 +2544,7 @@
               <div class="grid plans">
                 <article class="card">
                   <h3>Landing Pages</h3>
-                  <div class="price">Desde $150</div>
+                  <div class="price">Desde EUR 150</div>
                   <p style="color:var(--muted)">Para ofertas, anuncios y captación de leads.</p>
                   <ul class="features">
                      <li>Diseño responsive de una página</li>
@@ -2458,13 +2552,13 @@
                      <li>CTA de contacto</li>
                      <li>SEO básico</li>
                   </ul>
-                  <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?subject=Solicitud%20de%20proyecto%20-%20Iluminity">Solicitar Cotización</a>
+                  <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=Landing%20Page%20-%20EUR%20150&body=Hola%20Iluminity%2C%20quiero%20informacion%20sobre%20Landing%20Pages%20desde%20EUR%20150.%20Mi%20negocio%20es%3A%20">Solicitar Cotización</a>
                 </article>
 
                 <article class="card" style="border-color: rgba(155, 231, 255, 0.45); box-shadow: var(--shadow);">
                   <div class="popular-tag">Más popular</div>
                   <h3>Sitios Web Empresariales</h3>
-                  <div class="price">Desde $350</div>
+                  <div class="price">Desde EUR 350</div>
                   <p style="color:var(--muted)">Para negocios de servicios que necesitan confianza y conversión.</p>
                   <ul class="features">
                      <li>Sitio multi-sección</li>
@@ -2472,12 +2566,12 @@
                      <li>Contacto y CTA de contacto</li>
                      <li>Estructura SEO</li>
                   </ul>
-                  <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?subject=Solicitud%20de%20proyecto%20-%20Iluminity">Solicitar Cotización</a>
+                  <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=Sitio%20Web%20Empresarial%20-%20EUR%20350&body=Hola%20Iluminity%2C%20quiero%20informacion%20sobre%20Sitios%20Web%20Empresariales%20desde%20EUR%20350.%20Mi%20negocio%20es%3A%20">Solicitar Cotización</a>
                 </article>
 
                 <article class="card">
                   <h3>CRM y Automatizaciones</h3>
-                  <div class="price">Cotización personalizada</div>
+                  <div class="price">Desde EUR 450</div>
                   <p style="color:var(--muted)">Para pipelines, rutas de leads y flujos con IA.</p>
                   <ul class="features">
                      <li>Configuración CRM</li>
@@ -2485,7 +2579,7 @@
                      <li>Sistemas de leads</li>
                      <li>Integraciones de flujo</li>
                   </ul>
-                  <a class="buy-btn" href="#contact">Ver métodos de contacto</a>
+                  <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=CRM%20y%20Automatizaciones%20-%20desde%20EUR%20450&body=Hola%20Iluminity%2C%20quiero%20informacion%20sobre%20CRM%20y%20automatizaciones%20desde%20EUR%20450.%20Mi%20objetivo%20es%3A%20">Solicitar Cotización</a>
                 </article>
               </div>
             </div>
@@ -2494,7 +2588,7 @@
               <div class="grid plans">
                 <article class="card">
                   <h3>CRM Setup</h3>
-                  <div class="price">Cotización personalizada</div>
+                  <div class="price">Desde EUR 250</div>
                   <p style="color:var(--muted)">Organiza leads, etapas y seguimiento comercial.</p>
                   <ul class="features">
                      <li>Pipeline comercial</li>
@@ -2502,13 +2596,13 @@
                      <li>Dashboard de ventas</li>
                      <li>Flujo para el equipo</li>
                   </ul>
-                  <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?subject=Solicitud%20de%20proyecto%20-%20Iluminity">Solicitar Cotización</a>
+                  <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=CRM%20Setup%20-%20desde%20EUR%20250&body=Hola%20Iluminity%2C%20quiero%20informacion%20sobre%20CRM%20Setup%20desde%20EUR%20250.%20Mi%20negocio%20es%3A%20">Solicitar Cotización</a>
                 </article>
 
                 <article class="card" style="border-color: rgba(155, 231, 255, 0.45); box-shadow: var(--shadow);">
                   <div class="popular-tag">Ideal para crecer</div>
                   <h3>Automatizaciones con IA</h3>
-                  <div class="price">Cotización personalizada</div>
+                  <div class="price">Desde EUR 300</div>
                   <p style="color:var(--muted)">Automatiza leads y tareas repetitivas.</p>
                   <ul class="features">
                      <li>Alertas instantáneas</li>
@@ -2516,12 +2610,12 @@
                      <li>Creación automática de tareas</li>
                      <li>Flujos de seguimiento</li>
                   </ul>
-                  <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?subject=Solicitud%20de%20proyecto%20-%20Iluminity">Solicitar Cotización</a>
+                  <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=Automatizaciones%20con%20IA%20-%20desde%20EUR%20300&body=Hola%20Iluminity%2C%20quiero%20informacion%20sobre%20Automatizaciones%20con%20IA%20desde%20EUR%20300.%20Quiero%20automatizar%3A%20">Solicitar Cotización</a>
                 </article>
 
                 <article class="card">
                   <h3>Sistemas de Leads</h3>
-                  <div class="price">Cotización personalizada</div>
+                  <div class="price">Desde EUR 220</div>
                   <p style="color:var(--muted)">Califica leads desde el canal que tus clientes ya usan.</p>
                   <ul class="features">
                      <li>Embudo lead capture</li>
@@ -2529,7 +2623,7 @@
                      <li>Entrega al CRM</li>
                      <li>Prompts de seguimiento</li>
                   </ul>
-                  <a class="buy-btn" href="#contact">Ver métodos de contacto</a>
+                  <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=Sistema%20de%20Leads%20-%20desde%20EUR%20220&body=Hola%20Iluminity%2C%20quiero%20informacion%20sobre%20Sistemas%20de%20Leads%20desde%20EUR%20220.%20Mi%20canal%20principal%20es%3A%20">Solicitar Cotización</a>
                 </article>
               </div>
             </div>
@@ -2558,9 +2652,9 @@
             </div>
 
             <div class="custom-plan-box">
-              <h3>Quieres un Plan Personalizado?</h3>
+              <h3>¿Quieres un plan personalizado?</h3>
               <p style="color: var(--muted); margin-bottom: 20px; line-height: 1.7;">Combina servicios y adapta el proyecto a tu presupuesto y a tu mercado.</p>
-              <form onsubmit="event.preventDefault(); window.location.href='mailto:iluminity.inc@gmail.com?subject='+encodeURIComponent('Plan personalizado - Iluminity')+'&body='+encodeURIComponent('Servicio base: '+document.getElementById('customService').value+' | Presupuesto: '+document.getElementById('customBudget').value);">
+              <form onsubmit="event.preventDefault(); window.location.href='mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject='+encodeURIComponent('Plan personalizado - Iluminity')+'&body='+encodeURIComponent('Servicio base: '+document.getElementById('customService').value+' | Presupuesto: '+document.getElementById('customBudget').value);">
                 <select id="customService" required style="margin-bottom: 10px;">
                   <option value="">Selecciona servicio base...</option>
                   <option value="Sistema CRM">Sistema CRM</option>
@@ -2569,7 +2663,7 @@
                   <option value="Embudo de leads">Embudo de leads</option>
                   <option value="Full Stack (CRM + sitio + automatización)">Full Stack (CRM + sitio + automatización)</option>
                 </select>
-                <input type="text" id="customBudget" placeholder="Presupuesto esperado (ej. USD 900)" required style="margin-bottom: 15px;" />
+                <input type="text" id="customBudget" placeholder="Presupuesto esperado (ej. EUR 900)" required style="margin-bottom: 15px;" />
                 <button type="submit" class="buy-btn" style="background: linear-gradient(135deg, #0d4b78, #0a2540); border-color: rgba(155,231,255,.55);">Ver métodos de contacto</button>
               </form>
             </div>
@@ -2590,9 +2684,10 @@
         </p>
 
         <div class="grid" style="gap: 12px;">
-          <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?subject=Solicitud%20de%20proyecto%20-%20Iluminity">Gmail: iluminity.inc@gmail.com</a>
-          <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?subject=Solicitud%20de%20proyecto%20-%20Iluminity">Segundo Gmail: agregar dirección</a>
-          <a class="buy-btn" href="#" aria-disabled="true">Instagram: agregar enlace</a>
+          <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=Solicitud%20de%20proyecto%20-%20Iluminity">Gmail: iluminity.inc@gmail.com</a>
+          <a class="buy-btn" href="mailto:iluminacioninc@gmail.com?cc=iluminity.inc@gmail.com&subject=Solicitud%20de%20proyecto%20-%20Iluminity">Gmail secundario: iluminacioninc@gmail.com</a>
+          <a class="buy-btn" href="https://www.instagram.com/iluminity.inc/" target="_blank" rel="noreferrer">Instagram: @iluminity.inc</a>
+          <a class="buy-btn" href="https://www.facebook.com/profile.php?id=61581403794288" target="_blank" rel="noreferrer">Facebook: Iluminity Inc.</a>
         </div>
       </div>
     </div>
@@ -2807,6 +2902,42 @@
       });
     });
 
+    const portfolioDemo = {
+      capture: {
+        one: "Formulario recibido",
+        two: "Lead creado: Ana Rodriguez",
+        three: "Seguimiento listo",
+        code: `lead = {
+  nombre: "Ana Rodriguez",
+  servicio: "Consulta migratoria",
+  estado: "capturado",
+  origen: "Landing page"
+}`
+      },
+      crm: {
+        one: "Lead calificado",
+        two: "Pipeline actualizado",
+        three: "Correo de seguimiento enviado",
+        code: `crm.createDeal({
+  contacto: "Ana Rodriguez",
+  etapa: "Consulta",
+  valor_estimado: "EUR 450",
+  tarea: "Revisar documentos"
+})`
+      }
+    };
+
+    document.querySelectorAll("[data-portfolio-demo]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const state = portfolioDemo[button.dataset.portfolioDemo];
+        if (!state) return;
+        document.getElementById("demoStepOne").textContent = state.one;
+        document.getElementById("demoStepTwo").textContent = state.two;
+        document.getElementById("demoStepThree").textContent = state.three;
+        document.getElementById("portfolioCode").textContent = state.code;
+      });
+    });
+
     const revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -2906,7 +3037,7 @@
     });
 
     chatHuman?.addEventListener("click", () => {
-      window.location.href = "mailto:iluminity.inc@gmail.com?subject=Solicitud%20de%20proyecto%20-%20Iluminity";
+      window.location.href = "mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=Solicitud%20de%20proyecto%20-%20Iluminity";
     });
 
     const modal = document.getElementById("callModal");
