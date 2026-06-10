@@ -375,7 +375,7 @@
     section {
       padding: 96px 0;
       position: relative;
-      scroll-margin-top: 120px;
+      scroll-margin-top: 150px;
     }
 
     .section-head {
@@ -575,6 +575,32 @@
       font-size: 13px;
     }
 
+    .code-window {
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(155, 231, 255, 0.24);
+      background: rgba(1, 8, 18, 0.72);
+      color: #d8e6f4;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 13px;
+      line-height: 1.55;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .demo-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .demo-actions .btn {
+      padding: 11px 14px;
+      font-size: 13px;
+    }
+
     .price {
       font-size: clamp(28px, 3.4vw, 40px);
       line-height: 1.08;
@@ -634,7 +660,7 @@
 
     .sub-hero {
       padding: 160px 0 56px;
-      scroll-margin-top: 120px;
+      scroll-margin-top: 150px;
     }
 
     .tabs-layout {
@@ -1608,22 +1634,59 @@
             </div>
 
             <div class="grid cards3">
-              <article class="card">
-                <div class="icon">🛂</div>
-                <h3>Immigration Consultant Landing Page</h3>
-                <p>A clear offer page with lead form, Contact CTA, trust blocks and consultation request flow.</p>
+              <article class="card" style="grid-column: span 2;">
+                <div class="eyebrow">Mini demo</div>
+                <h3>Immigration consultant system</h3>
+                <div class="web-preview" style="margin-top: 18px;">
+                  <div class="web-top"><span>VisaPro Consultants</span><span>Request evaluation</span></div>
+                  <div class="web-body">
+                    <div class="fake-title"></div>
+                    <div class="fake-line"></div>
+                    <div class="fake-line" style="width:70%"></div>
+                    <div class="inline-actions" style="justify-content:flex-start;margin-top:18px;">
+                      <button class="btn btn-primary">Submit case</button>
+                      <button class="btn">View requirements</button>
+                    </div>
+                  </div>
+                </div>
               </article>
 
               <article class="card">
-                <div class="icon">🧾</div>
-                <h3>Tax Preparation Website</h3>
-                <p>A service website with pricing sections, document intake, appointment request and local SEO structure.</p>
+                <div class="eyebrow">Lead captured</div>
+                <h3>Automatic flow</h3>
+                <div class="timeline">
+                  <div class="task"><span id="demoStepOne">Form ready</span><em>Demo</em></div>
+                  <div class="task"><span id="demoStepTwo">CRM waiting for lead</span><em>Auto</em></div>
+                  <div class="task"><span id="demoStepThree">Follow-up pending</span><em>Email</em></div>
+                </div>
+                <pre class="code-window" id="portfolioCode">lead = {
+  service: "Immigration consultation",
+  status: "new",
+  next_step: "capture details"
+}</pre>
+                <div class="demo-actions">
+                  <button class="btn" type="button" data-portfolio-demo="capture">Capture lead</button>
+                  <button class="btn btn-primary" type="button" data-portfolio-demo="crm">Send to CRM</button>
+                </div>
               </article>
 
               <article class="card">
-                <div class="icon">🏠</div>
-                <h3>Real Estate CRM System</h3>
-                <p>A sales pipeline for buyer leads, property interest, budget, visit scheduling and automated follow-up.</p>
+                <h3>CRM Pipeline</h3>
+                <div class="pipeline" style="grid-template-columns: 1fr; margin-top: 14px;">
+                  <div class="pipe-col">New lead<div class="lead">Ana · residency</div></div>
+                  <div class="pipe-col">Qualified<div class="lead">Documents pending</div></div>
+                  <div class="pipe-col">Consultation<div class="lead">Friday 10:00</div></div>
+                </div>
+              </article>
+
+              <article class="card">
+                <h3>Tax website example</h3>
+                <p>Tax preparation website with document checklist, intake form and automated email reminders.</p>
+                <ul class="features">
+                  <li>Data intake</li>
+                  <li>CRM delivery</li>
+                  <li>Automated email</li>
+                </ul>
               </article>
             </div>
           </div>
@@ -2680,6 +2743,14 @@
     } catch (error) {
     }
 
+    function scrollToTarget(element) {
+      const nav = document.querySelector(".nav");
+      const navHeight = nav ? nav.getBoundingClientRect().height : 90;
+      const offset = navHeight + 34;
+      const top = element.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: Math.max(top, 0), behavior: "smooth" });
+    }
+
     function renderRoute(route, anchor = null) {
       const viewId = views[route] || views.home;
       const view = document.getElementById(viewId);
@@ -2704,7 +2775,7 @@
           requestAnimationFrame(() => {
             const el = document.querySelector(anchor);
             if (el) {
-              el.scrollIntoView({ behavior: "smooth" });
+              scrollToTarget(el);
             } else {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }
@@ -2805,6 +2876,42 @@
 
         button.classList.add("active");
         document.getElementById(button.dataset.price).classList.add("active");
+      });
+    });
+
+    const portfolioDemo = {
+      capture: {
+        one: "Form received",
+        two: "Lead created: Ana Rodriguez",
+        three: "Follow-up ready",
+        code: `lead = {
+  name: "Ana Rodriguez",
+  service: "Immigration consultation",
+  status: "captured",
+  source: "Landing page"
+}`
+      },
+      crm: {
+        one: "Lead qualified",
+        two: "Pipeline updated",
+        three: "Follow-up email sent",
+        code: `crm.createDeal({
+  contact: "Ana Rodriguez",
+  stage: "Consultation",
+  estimated_value: "$450",
+  task: "Review documents"
+})`
+      }
+    };
+
+    document.querySelectorAll("[data-portfolio-demo]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const state = portfolioDemo[button.dataset.portfolioDemo];
+        if (!state) return;
+        document.getElementById("demoStepOne").textContent = state.one;
+        document.getElementById("demoStepTwo").textContent = state.two;
+        document.getElementById("demoStepThree").textContent = state.three;
+        document.getElementById("portfolioCode").textContent = state.code;
       });
     });
 

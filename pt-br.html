@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Iluminity Inc. cria websites, sistemas CRM e automações com IA para negócios de serviços no Brasil."
+    content="Iluminity Inc. cria sites, sistemas CRM e automações com IA para negócios de serviços no Brasil."
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -375,7 +375,7 @@
     section {
       padding: 96px 0;
       position: relative;
-      scroll-margin-top: 120px;
+      scroll-margin-top: 150px;
     }
 
     .section-head {
@@ -575,6 +575,32 @@
       font-size: 13px;
     }
 
+    .code-window {
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(155, 231, 255, 0.24);
+      background: rgba(1, 8, 18, 0.72);
+      color: #d8e6f4;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 13px;
+      line-height: 1.55;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .demo-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .demo-actions .btn {
+      padding: 11px 14px;
+      font-size: 13px;
+    }
+
     .price {
       font-size: clamp(28px, 3.4vw, 40px);
       line-height: 1.08;
@@ -634,7 +660,7 @@
 
     .sub-hero {
       padding: 160px 0 56px;
-      scroll-margin-top: 120px;
+      scroll-margin-top: 150px;
     }
 
     .tabs-layout {
@@ -1415,7 +1441,7 @@
         </span>
         <span>
           Iluminity Inc.
-          <small>AI Solutions</small>
+          <small>Soluções com IA</small>
         </span>
       </a>
 
@@ -1443,13 +1469,13 @@
         <div class="container hero-content">
           <div class="pill">
             <span class="spark"></span>
-            Websites, CRM e automações com IA para negócios de serviços no Brasil
+            Sites, CRM e automações com IA para negócios de serviços no Brasil
           </div>
 
-          <h1>Websites + IA<br>para mais leads.</h1>
+          <h1>Sites + IA<br>para mais leads.</h1>
 
           <p>
-            Criamos websites e sistemas com IA que ajudam negócios de serviços a gerar mais leads e automatizar operações.
+            Criamos sites e sistemas com IA que ajudam negócios de serviços a gerar mais leads e automatizar operações.
           </p>
 
           <div class="hero-actions">
@@ -1463,7 +1489,7 @@
 
             <div class="logo-row">
               <span class="client-logo">Landing Pages</span>
-              <span class="client-logo">Websites</span>
+              <span class="client-logo">Sites</span>
               <span class="client-logo">CRM</span>
               <span class="client-logo">Fluxos IA</span>
               <span class="client-logo">Sistemas de leads</span>
@@ -1500,7 +1526,7 @@
 
               <article class="card service-link" data-route="pricing">
                 <div class="icon">📊</div>
-                <h3>CRM Setup</h3>
+                <h3>Configuração de CRM</h3>
                 <p>Pipelines, etapas de leads, dashboards e acompanhamento para equipes comerciais.</p>
                 <span class="mini-tag">Ver preços →</span>
               </article>
@@ -1528,7 +1554,7 @@
               <div class="eyebrow">Como funciona</div>
               <h2>Do visitante ao lead organizado.</h2>
               <p>
-                Seu website captura o contato, o CRM salva o lead e as automações notificam a pessoa certa.
+                Seu site captura o contato, o CRM salva o lead e as automações notificam a pessoa certa.
               </p>
               <div class="inline-actions" style="justify-content: flex-start; margin-top: 24px;">
                 <a class="btn btn-primary" href="#contact">Receber Demo Grátis</a>
@@ -1608,22 +1634,59 @@
             </div>
 
             <div class="grid cards3">
-              <article class="card">
-                <div class="icon">🛂</div>
-                <h3>Landing Page para Consultoria Migratória</h3>
-                <p>Página clara com formulário, CTA de contato, blocos de confiança e solicitação de consulta.</p>
+              <article class="card" style="grid-column: span 2;">
+                <div class="eyebrow">Mini demo</div>
+                <h3>Sistema para consultoria migratória</h3>
+                <div class="web-preview" style="margin-top: 18px;">
+                  <div class="web-top"><span>VisaPro Consultores</span><span>Solicitar avaliação</span></div>
+                  <div class="web-body">
+                    <div class="fake-title"></div>
+                    <div class="fake-line"></div>
+                    <div class="fake-line" style="width:70%"></div>
+                    <div class="inline-actions" style="justify-content:flex-start;margin-top:18px;">
+                      <button class="btn btn-primary">Enviar caso</button>
+                      <button class="btn">Ver requisitos</button>
+                    </div>
+                  </div>
+                </div>
               </article>
 
               <article class="card">
-                <div class="icon">🧾</div>
-                <h3>Website para Preparação de Impostos</h3>
-                <p>Site com serviços, envio de documentos, solicitação de atendimento e estrutura de SEO local.</p>
+                <div class="eyebrow">Lead capturado</div>
+                <h3>Fluxo automático</h3>
+                <div class="timeline">
+                  <div class="task"><span id="demoStepOne">Formulário pronto</span><em>Demo</em></div>
+                  <div class="task"><span id="demoStepTwo">CRM aguardando lead</span><em>Auto</em></div>
+                  <div class="task"><span id="demoStepThree">Acompanhamento pendente</span><em>Email</em></div>
+                </div>
+                <pre class="code-window" id="portfolioCode">lead = {
+  servico: "Consulta migratória",
+  status: "novo",
+  proximo_passo: "capturar dados"
+}</pre>
+                <div class="demo-actions">
+                  <button class="btn" type="button" data-portfolio-demo="capture">Capturar lead</button>
+                  <button class="btn btn-primary" type="button" data-portfolio-demo="crm">Enviar ao CRM</button>
+                </div>
               </article>
 
               <article class="card">
-                <div class="icon">🏠</div>
-                <h3>CRM para Imobiliária</h3>
-                <p>Pipeline para compradores, interesse por imóvel, orçamento, visitas e acompanhamento automático.</p>
+                <h3>Pipeline CRM</h3>
+                <div class="pipeline" style="grid-template-columns: 1fr; margin-top: 14px;">
+                  <div class="pipe-col">Novo lead<div class="lead">Ana · residência</div></div>
+                  <div class="pipe-col">Qualificado<div class="lead">Documentos pendentes</div></div>
+                  <div class="pipe-col">Consulta<div class="lead">Sexta 10:00</div></div>
+                </div>
+              </article>
+
+              <article class="card">
+                <h3>Exemplo fiscal</h3>
+                <p>Site para preparação de impostos com lista de documentos, formulário de intake e lembretes por email.</p>
+                <ul class="features">
+                  <li>Coleta de dados</li>
+                  <li>Envio ao CRM</li>
+                  <li>Email automático</li>
+                </ul>
               </article>
             </div>
           </div>
@@ -1635,7 +1698,7 @@
               <div class="eyebrow">Sobre a Iluminity</div>
               <h2>Um estúdio de sistemas digitais para marcas de serviços.</h2>
               <p>
-                A Iluminity ajuda a transformar website, CRM e automações em um sistema claro de captação de clientes. Criamos soluções práticas, profissionais, rápidas e fáceis de acompanhar.
+                A Iluminity ajuda a transformar site, CRM e automações em um sistema claro de captação de clientes. Criamos soluções práticas, profissionais, rápidas e fáceis de acompanhar.
               </p>
             </div>
 
@@ -1691,7 +1754,7 @@
 
               <div class="portal-main">
                 <div class="dash-top">
-                  <strong>Client Portal</strong>
+                  <strong>Portal do Cliente</strong>
                   <div class="dots"><span></span><span></span><span></span></div>
                 </div>
 
@@ -1725,7 +1788,7 @@
               <div class="eyebrow">Tecnologia</div>
               <h2>Stack moderno para sistemas escaláveis.</h2>
               <p>
-                Usamos ferramentas confiáveis para websites, automações, CRM, hospedagem e integrações com IA.
+                Usamos ferramentas confiáveis para sites, automações, CRM, hospedagem e integrações com IA.
               </p>
             </div>
 
@@ -1748,26 +1811,26 @@
           <div class="container contact-box">
             <div>
               <div class="eyebrow">Contato</div>
-              <h2>Solicite orçamento para seu website ou sistema com IA.</h2>
+              <h2>Solicite orçamento para seu site ou sistema com IA.</h2>
               <p style="color: var(--muted); line-height: 1.7; margin-top: 16px;">
                 Conte o que você precisa e recomendamos o caminho mais simples para lançar.
               </p>
               <p style="color: var(--muted); line-height: 1.7; margin-top: 10px;">Instagram: <a href="https://www.instagram.com/iluminity.inc/" target="_blank" rel="noreferrer" style="color:var(--cyan)">@iluminity.inc</a><br>E-mail: <a href="mailto:iluminity.inc@gmail.com" style="color:var(--cyan)">iluminity.inc@gmail.com</a><br>E-mail secundário: <a href="mailto:iluminacioninc@gmail.com" style="color:var(--cyan)">iluminacioninc@gmail.com</a><br>Facebook: <a href="https://www.facebook.com/profile.php?id=61581403794288" target="_blank" rel="noreferrer" style="color:var(--cyan)">Iluminity Inc.</a></p>
               <div class="grid" style="gap: 10px; margin-top: 18px;">
                 <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=Solicita%C3%A7%C3%A3o%20de%20projeto%20-%20Iluminity">Gmail: iluminity.inc@gmail.com</a>
-                <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=Solicita%C3%A7%C3%A3o%20de%20projeto%20-%20Iluminity">Segundo Gmail: iluminacioninc@gmail.com</a>
+                <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=Solicita%C3%A7%C3%A3o%20de%20projeto%20-%20Iluminity">Gmail secundário: iluminacioninc@gmail.com</a>
                 <a class="buy-btn" href="https://www.instagram.com/iluminity.inc/" target="_blank" rel="noreferrer">Instagram: @iluminity.inc</a>
               </div>
             </div>
 
-            <form onsubmit="event.preventDefault(); const name=this.querySelector('[name=name]').value; const email=this.querySelector('[name=email]').value; const service=this.querySelector('[name=service]').value; const msg=this.querySelector('[name=message]').value; const text='Olá! Meu nome é '+name+'. Serviço: '+service+'. E-mail: '+email+'. Mensagem: '+msg; window.location.href='mailto:iluminity.inc@gmail.com?subject='+encodeURIComponent('Solicitação de projeto - '+service)+'&body='+encodeURIComponent(text);">
+            <form onsubmit="event.preventDefault(); const name=this.querySelector('[name=name]').value; const email=this.querySelector('[name=email]').value; const service=this.querySelector('[name=service]').value; const msg=this.querySelector('[name=message]').value; const text='Olá! Meu nome é '+name+'. Serviço: '+service+'. E-mail: '+email+'. Mensagem: '+msg; window.location.href='mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject='+encodeURIComponent('Solicitação de projeto - '+service)+'&body='+encodeURIComponent(text);">
               <input name="name" placeholder="Nome completo" required />
               <input name="email" type="email" placeholder="E-mail" required />
 
               <select name="service" required>
                 <option value="">Selecione um serviço</option>
                 <option>Automação com IA</option>
-                <option>CRM Setup</option>
+                <option>Configuração de CRM</option>
                 <option>Landing Page</option>
                 <option>Site empresarial</option>
                 <option>Sistema de leads</option>
@@ -1785,7 +1848,7 @@
       <section class="sub-hero">
         <div class="container">
           <div class="eyebrow">Automações com IA</div>
-          <h2>Sin más seguimientos manuales. Todo funciona automáticamente.</h2>
+          <h2>Chega de acompanhamentos manuais. Tudo funciona automaticamente.</h2>
           <p style="color: var(--muted); font-size: 18px; line-height: 1.7; max-width: 800px;">
             Quando um cliente preenche um formulário ou solicita um serviço, nosso sistema com IA captura o lead, atualiza o CRM, alerta sua equipe e programa o acompanhamento em menos de 90 segundos.
           </p>
@@ -1801,19 +1864,19 @@
         <div class="container">
           <div class="section-head">
             <div class="eyebrow">Pipeline de Automação</div>
-            <h2>De formulario de lead a seguimiento en 90 segundos.</h2>
-            <p>Cada paso ocurre automáticamente — cero esfuerzo manual, cero leads perdidos.</p>
+            <h2>De formulário de lead a acompanhamento em 90 segundos.</h2>
+            <p>Cada etapa acontece automaticamente, sem trabalho manual e sem perder leads.</p>
           </div>
           <div style="display:flex;align-items:flex-start;gap:0;overflow-x:auto;padding-bottom:12px;margin:28px 0;">
             <div class="flow-step"><div class="step-num">1</div><div style="font-size:26px;margin-bottom:8px;">📥</div><h4>Lead chega</h4><p>Formulário, DM ou solicitação ativa o sistema</p></div>
             <div class="flow-arrow">→</div>
-            <div class="flow-step"><div class="step-num">2</div><div style="font-size:26px;margin-bottom:8px;">🤖</div><h4>IA lo Lee</h4><p>Detecta tipo de servicio, señales de presupuesto y urgencia</p></div>
+            <div class="flow-step"><div class="step-num">2</div><div style="font-size:26px;margin-bottom:8px;">🤖</div><h4>IA lê o pedido</h4><p>Detecta tipo de serviço, orçamento e urgência</p></div>
             <div class="flow-arrow">→</div>
-            <div class="flow-step"><div class="step-num">3</div><div style="font-size:26px;margin-bottom:8px;">📊</div><h4>CRM Actualizado</h4><p>Contato creado, etapa de pipeline y valor de deal</p></div>
+            <div class="flow-step"><div class="step-num">3</div><div style="font-size:26px;margin-bottom:8px;">📊</div><h4>CRM atualizado</h4><p>Contato criado, etapa do pipeline e valor estimado</p></div>
             <div class="flow-arrow">→</div>
-            <div class="flow-step"><div class="step-num">4</div><div style="font-size:26px;margin-bottom:8px;">💬</div><h4>Equipo Alertado</h4><p>Resumo enviado a la persona correcta instantly</p></div>
+            <div class="flow-step"><div class="step-num">4</div><div style="font-size:26px;margin-bottom:8px;">💬</div><h4>Equipe alertada</h4><p>Resumo enviado para a pessoa certa instantaneamente</p></div>
             <div class="flow-arrow">→</div>
-            <div class="flow-step"><div class="step-num">5</div><div style="font-size:26px;margin-bottom:8px;">🔁</div><h4>Seguimiento Activo</h4><p>Mensaje automático enviado si sin respuesta después de 24 horas</p></div>
+            <div class="flow-step"><div class="step-num">5</div><div style="font-size:26px;margin-bottom:8px;">🔁</div><h4>Acompanhamento ativo</h4><p>Mensagem automática enviada se não houver resposta em 24 horas</p></div>
           </div>
         </div>
       </section>
@@ -1821,30 +1884,30 @@
       <section>
         <div class="container demo-grid">
           <div class="bot-box" id="automationBot">
-            <div style="color:var(--cyan);font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px;">Live Automation Simulation</div>
-            <div class="msg user">11:47 PM — Client fills contact form on your website.</div>
-            <div class="msg bot">🤖 Lead captured. Analyzing: "clinic website + urgent deadline"</div>
-            <div class="msg bot">📊 Contact added to CRM — Stage: "New Lead" — Tag: Website Bundle</div>
-            <div class="msg bot">💬 Message to your team: "New lead: Maria — clinic website, urgent. Budget: $1,500"</div>
-            <div class="msg user">18 hours pass. Maria has not replied yet.</div>
-            <div class="msg bot">⏰ Follow-up triggered — Message to Maria: "Hi Maria! Just checking in 👋"</div>
-            <div class="msg bot">✅ Maria replies. CRM auto-moves her to "Qualified". Deal: $1,500.</div>
+            <div style="color:var(--cyan);font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px;">Simulação de automação ao vivo</div>
+            <div class="msg user">23:47 — Cliente preenche o formulário no site.</div>
+            <div class="msg bot">🤖 Lead capturado. Analisando: "site para clínica + prazo urgente"</div>
+            <div class="msg bot">📊 Contato adicionado ao CRM — Etapa: "Novo lead" — Tag: Pacote de site</div>
+            <div class="msg bot">💬 Mensagem para a equipe: "Novo lead: Maria — site para clínica, urgente. Orçamento: R$ 7.500"</div>
+            <div class="msg user">18 horas passam. Maria ainda não respondeu.</div>
+            <div class="msg bot">⏰ Acompanhamento acionado — Mensagem para Maria: "Olá, Maria! Passando para confirmar seu interesse."</div>
+            <div class="msg bot">✅ Maria responde. O CRM move o lead para "Qualificado". Valor: R$ 7.500.</div>
           </div>
 
           <div class="grid" style="gap:16px;">
             <article class="card" style="border-color:rgba(255,80,80,.22);background:rgba(255,80,80,.03);">
-              <h3 style="color:#ff8080;margin-bottom:12px;">Without Automation</h3>
-              <div class="x-row"><span>⏳</span><span>Reply manually to leads — avg. 4+ hours delay</span></div>
-              <div class="x-row"><span>📋</span><span>Copy contact data into CRM by hand every time</span></div>
-              <div class="x-row"><span>🔔</span><span>Text your team one by one for every new lead</span></div>
-              <div class="x-row"><span>💸</span><span>Forget to follow up — lose the deal to a competitor</span></div>
+              <h3 style="color:#ff8080;margin-bottom:12px;">Sem automação</h3>
+              <div class="x-row"><span>⏳</span><span>Responder leads manualmente, com atraso médio de 4+ horas</span></div>
+              <div class="x-row"><span>📋</span><span>Copiar dados de contato para o CRM manualmente</span></div>
+              <div class="x-row"><span>🔔</span><span>Avisar a equipe manualmente a cada novo lead</span></div>
+              <div class="x-row"><span>💸</span><span>Esquecer o acompanhamento e perder o cliente para concorrentes</span></div>
             </article>
             <article class="card" style="border-color:rgba(155,231,255,.38);background:rgba(54,163,255,.04);">
-              <h3 style="color:var(--cyan);margin-bottom:12px;">With Automation</h3>
-              <div class="x-row"><span>⚡</span><span>Lead captured and classified in seconds, 24/7</span></div>
-              <div class="x-row"><span>📊</span><span>CRM updated automatically, no manual input</span></div>
+              <h3 style="color:var(--cyan);margin-bottom:12px;">Com automação</h3>
+              <div class="x-row"><span>⚡</span><span>Lead capturado e classificado em segundos, 24/7</span></div>
+              <div class="x-row"><span>📊</span><span>CRM atualizado automaticamente, sem digitação manual</span></div>
               <div class="x-row"><span>💬</span><span>Equipe notificada com os detalhes completos do lead</span></div>
-              <div class="x-row"><span>🔁</span><span>Follow-up sequence runs automatically if no reply</span></div>
+              <div class="x-row"><span>🔁</span><span>Sequência de acompanhamento roda automaticamente se não houver resposta</span></div>
             </article>
           </div>
         </div>
@@ -1853,45 +1916,45 @@
       <section>
         <div class="container">
           <div class="section-head">
-            <div class="eyebrow">What We Automate</div>
-            <h2>6 ready-to-deploy automation examples.</h2>
+            <div class="eyebrow">O que automatizamos</div>
+            <h2>6 exemplos de automação prontos para implementar.</h2>
           </div>
           <div class="grid services">
             <article class="card">
               <div class="icon">📥</div>
-              <h3>Form to CRM to Alert</h3>
+              <h3>Formulário para CRM e alerta</h3>
               <p>O cliente preenche um formulário, os dados vão para o CRM e a equipe recebe um resumo completo do lead. Funciona 24/7 sem demora.</p>
-              <ul class="features" style="margin-top:14px;"><li>Tags lead by service type</li><li>Assigns to right sales rep</li><li>No manual copy-paste</li></ul>
+              <ul class="features" style="margin-top:14px;"><li>Classifica lead por tipo de serviço</li><li>Atribui ao responsável correto</li><li>Sem copiar e colar manualmente</li></ul>
             </article>
             <article class="card">
               <div class="icon">📞</div>
-              <h3>Missed Call Auto Follow-up</h3>
+              <h3>Acompanhamento de chamada perdida</h3>
               <p>Se você perde uma chamada, o sistema prepara um acompanhamento para retomar a conversa rapidamente.</p>
-              <ul class="features" style="margin-top:14px;"><li>Recovers 40%+ of missed leads</li><li>Personalized with your brand</li><li>Reply logged in CRM</li></ul>
+              <ul class="features" style="margin-top:14px;"><li>Ajuda a recuperar leads perdidos</li><li>Personalizado com sua marca</li><li>Resposta registrada no CRM</li></ul>
             </article>
             <article class="card">
               <div class="icon">📅</div>
-              <h3>Booking to Calendar + Reminder</h3>
-              <p>Client books a slot, calendar event is created, contact reminder sent 24h and 1h before. No-shows drop significantly.</p>
-              <ul class="features" style="margin-top:14px;"><li>Google Calendar sync</li><li>Rescheduling via bot</li><li>60%+ fewer no-shows</li></ul>
+              <h3>Agendamento, calendário e lembrete</h3>
+              <p>O cliente agenda um horário, o evento entra no calendário e os lembretes são enviados 24h e 1h antes. Isso reduz faltas e esquecimentos.</p>
+              <ul class="features" style="margin-top:14px;"><li>Sincronização com Google Calendar</li><li>Reagendamento pelo assistente</li><li>Menos faltas e atrasos</li></ul>
             </article>
             <article class="card">
               <div class="icon">🛒</div>
-              <h3>New Order to Invoice + Task</h3>
-              <p>Order placed, PDF invoice generated, fulfillment task created, shipping confirmation sent to client — all automatically.</p>
+              <h3>Novo pedido, fatura e tarefa</h3>
+              <p>Pedido recebido, fatura PDF gerada, tarefa criada e confirmação enviada ao cliente automaticamente.</p>
               <ul class="features" style="margin-top:14px;"><li>Shopify / WooCommerce</li><li>Gera faturas PDF automaticamente</li><li>Atualizações de pedidos por email/Instagram</li></ul>
             </article>
             <article class="card">
               <div class="icon">🧠</div>
-              <h3>FAQ Bot to Qualified Handoff</h3>
-              <p>Bot handles FAQs 24/7, collects name, budget and urgency — then hands off only qualified, ready-to-buy leads to your team.</p>
-              <ul class="features" style="margin-top:14px;"><li>Filters unqualified traffic</li><li>Budget-based lead scoring</li><li>Human steps in only when ready</li></ul>
+              <h3>FAQ para lead qualificado</h3>
+              <p>O assistente responde dúvidas 24/7, coleta nome, orçamento e urgência, e entrega para sua equipe apenas leads mais preparados.</p>
+              <ul class="features" style="margin-top:14px;"><li>Filtra contatos sem perfil</li><li>Pontuação por orçamento</li><li>Humano entra no momento certo</li></ul>
             </article>
             <article class="card">
               <div class="icon">🔁</div>
-              <h3>Re-engagement Sequence</h3>
-              <p>Lead went cold? System sends 3 personalized messages over 7 days to reopen the conversation — stops when the client replies.</p>
-              <ul class="features" style="margin-top:14px;"><li>Personalized per client stage</li><li>Auto-stops on reply</li><li>Tracks open and reply rates</li></ul>
+              <h3>Sequência de reativação</h3>
+              <p>O lead esfriou? O sistema envia mensagens personalizadas ao longo de 7 dias para reabrir a conversa e para quando o cliente responde.</p>
+              <ul class="features" style="margin-top:14px;"><li>Personalizado por etapa do cliente</li><li>Para automaticamente ao receber resposta</li><li>Acompanha aberturas e respostas</li></ul>
             </article>
           </div>
         </div>
@@ -1902,9 +1965,9 @@
       <section class="sub-hero">
         <div class="container">
           <div class="eyebrow">Sistemas CRM Personalizados</div>
-          <h2>Organiza cada cliente. Cierra más tratos.</h2>
+          <h2>Organize cada cliente. Feche mais negócios.</h2>
           <p style="color: var(--muted); font-size: 18px; line-height: 1.7; max-width: 850px;">
-            Un CRM (Gestión de Relaciones con Clientes) es tu centro operativo del negocio — donde cada lead, cliente y trato es rastreado. En lugar de hojas de cálculo dispersas y seguimientos olvidados, obtienes un pipeline visual mostrando exactamente dónde está cada cliente y qué debe suceder a continuación.
+            Um CRM é o centro operacional do negócio: onde cada lead, cliente e oportunidade é acompanhado. Em vez de planilhas espalhadas e retornos esquecidos, você ganha um pipeline visual que mostra onde cada cliente está e qual é o próximo passo.
           </p>
           <div class="inline-actions" style="justify-content: flex-start; margin-top: 22px;">
             <a class="btn" data-route="home" href="#services">← Voltar</a>
@@ -1917,58 +1980,58 @@
         <div class="container">
           <div class="section-head">
             <div class="eyebrow">Tipos de CRM</div>
-            <h2>5 tipos de CRM — y cuál tu negocio necesita.</h2>
-            <p>Cada tipo está diseñado para un objetivo específico. Construimos y configuramos todos ellos.</p>
+            <h2>5 tipos de CRM e qual combina com seu negócio.</h2>
+            <p>Cada tipo tem um objetivo específico. Nós configuramos o modelo certo para o seu processo comercial.</p>
           </div>
           <div class="grid services">
             <article class="crm-type">
               <div class="icon">💼</div>
-              <h4>CRM de Ventas</h4>
-              <p>Rastrea cada trato de primer contacto hasta cierre. Cada lead se mueve a través de etapas: Prospecto, Calificado, Propuesta, Negociación, Ganado. Tu equipo siempre sabe qué tratos necesitan atención y qué hacer después.</p>
+              <h4>CRM de vendas</h4>
+              <p>Acompanha cada oportunidade desde o primeiro contato até o fechamento. Cada lead passa por etapas claras: prospecto, qualificado, proposta, negociação e ganho. Sua equipe sabe o que precisa de atenção e o próximo passo.</p>
               <div style="display:flex;flex-wrap:wrap;gap:5px;margin:12px 0;">
-                <span class="stage-chip">Prospecto</span><span class="stage-chip">Calificado</span><span class="stage-chip">Propuesta</span><span class="stage-chip">Ganado / Perdido</span>
+                <span class="stage-chip">Prospecto</span><span class="stage-chip">Qualificado</span><span class="stage-chip">Proposta</span><span class="stage-chip">Ganho / Perdido</span>
               </div>
-              <p style="font-size:12px;color:var(--muted);">Mejor para: Agencias, B2B, bienes raíces, consultores</p>
+              <p style="font-size:12px;color:var(--muted);">Ideal para: agências, B2B, imobiliárias e consultores</p>
             </article>
 
             <article class="crm-type">
               <div class="icon">📣</div>
-              <h4>CRM de Marketing</h4>
-              <p>Segmenta tus contactos para envíos de email, promociones y campañas. Rastrea quién abrió, quién hizo clic y quién convirtió. Te ayuda a dirigirse a la audiencia correcta con la oferta correcta en el momento correcto.</p>
+              <h4>CRM de marketing</h4>
+              <p>Segmenta contatos para emails, promoções e campanhas. Acompanha quem abriu, clicou e converteu, ajudando você a falar com a audiência certa no momento certo.</p>
               <div style="display:flex;flex-wrap:wrap;gap:5px;margin:12px 0;">
-                <span class="stage-chip">Segmento</span><span class="stage-chip">Campaña Enviada</span><span class="stage-chip">Abierto</span><span class="stage-chip">Convertido</span>
+                <span class="stage-chip">Segmento</span><span class="stage-chip">Campanha enviada</span><span class="stage-chip">Aberto</span><span class="stage-chip">Convertido</span>
               </div>
-              <p style="font-size:12px;color:var(--muted);">Mejor para: Ecommerce, coaches, negocios locales</p>
+              <p style="font-size:12px;color:var(--muted);">Ideal para: ecommerce, coaches e negócios locais</p>
             </article>
 
             <article class="crm-type">
               <div class="icon">🎫</div>
-              <h4>CRM de Soporte / Tickets</h4>
-              <p>Organiza cada queja, pregunta y solicitud. Cada ticket tiene un estado: Nuevo, Asignado, En Progreso, Resuelto. Ningún cliente se siente ignorado y ningún problema se pierde en DMs o emails.</p>
+              <h4>CRM de suporte / tickets</h4>
+              <p>Organiza cada dúvida, solicitação e problema. Cada ticket tem status claro: novo, atribuído, em andamento e resolvido. Nada se perde em DMs ou emails.</p>
               <div style="display:flex;flex-wrap:wrap;gap:5px;margin:12px 0;">
-                <span class="stage-chip">Nuevo</span><span class="stage-chip">Asignado</span><span class="stage-chip">En Progreso</span><span class="stage-chip">Resuelto</span>
+                <span class="stage-chip">Novo</span><span class="stage-chip">Atribuído</span><span class="stage-chip">Em andamento</span><span class="stage-chip">Resolvido</span>
               </div>
-              <p style="font-size:12px;color:var(--muted);">Mejor para: SaaS, compañías de productos, equipos de servicio</p>
+              <p style="font-size:12px;color:var(--muted);">Ideal para: SaaS, empresas de produto e equipes de atendimento</p>
             </article>
 
             <article class="crm-type">
               <div class="icon">📅</div>
-              <h4>CRM de Citas / Reservas</h4>
-              <p>Gestiona citas, envía recordatorios de contacto automatizados, rastrea inasistencias y maneja reprogramación. Elimina la comunicación manual de reservas por teléfono o mensaje.</p>
+              <h4>CRM de agendamentos / reservas</h4>
+              <p>Gerencia reservas, envia lembretes automáticos, acompanha faltas e facilita reagendamentos. Reduz a comunicação manual por telefone ou mensagem.</p>
               <div style="display:flex;flex-wrap:wrap;gap:5px;margin:12px 0;">
-                <span class="stage-chip">Solicitud</span><span class="stage-chip">Confirmada</span><span class="stage-chip">Lembrete enviado</span><span class="stage-chip">Completada</span>
+                <span class="stage-chip">Solicitação</span><span class="stage-chip">Confirmada</span><span class="stage-chip">Lembrete enviado</span><span class="stage-chip">Concluída</span>
               </div>
-              <p style="font-size:12px;color:var(--muted);">Mejor para: Clínicas, barberías, gimnasios, coaches</p>
+              <p style="font-size:12px;color:var(--muted);">Ideal para: clínicas, barbearias, academias e coaches</p>
             </article>
 
             <article class="crm-type">
               <div class="icon">🛒</div>
-              <h4>CRM de Ecommerce</h4>
-              <p>Rastrea historial de compras, valor de vida útil, abandono de carrito y seguimientos post-compra. Segmenta automáticamente compradores VIP vs. clientes únicos para campañas dirigidas y aumentos de venta.</p>
+              <h4>CRM de ecommerce</h4>
+              <p>Acompanha histórico de compras, valor do cliente, abandono de carrinho e pós-venda. Segmenta compradores VIP e clientes únicos para campanhas mais certeiras.</p>
               <div style="display:flex;flex-wrap:wrap;gap:5px;margin:12px 0;">
-                <span class="stage-chip">Primera Compra</span><span class="stage-chip">Repetido</span><span class="stage-chip">VIP</span><span class="stage-chip">En Riesgo</span>
+                <span class="stage-chip">Primeira compra</span><span class="stage-chip">Recorrente</span><span class="stage-chip">VIP</span><span class="stage-chip">Em risco</span>
               </div>
-              <p style="font-size:12px;color:var(--muted);">Mejor para: Tiendas en línea, productos de suscripción</p>
+              <p style="font-size:12px;color:var(--muted);">Ideal para: lojas online e produtos por assinatura</p>
             </article>
           </div>
         </div>
@@ -1977,67 +2040,67 @@
       <section>
         <div class="container">
           <div class="section-head">
-            <div class="eyebrow">Demos de Pipeline por Nicho</div>
-            <h2>Ve un pipeline CRM en vivo para tu industria.</h2>
-            <p>Haz clic en una industria para ver un ejemplo real de cómo organizamos el pipeline para ese nicho.</p>
+            <div class="eyebrow">Demos de pipeline por nicho</div>
+            <h2>Veja um pipeline de CRM aplicado ao seu setor.</h2>
+            <p>Clique em um setor para ver um exemplo de como organizamos o pipeline daquele nicho.</p>
           </div>
           <div class="tabs-layout">
             <aside class="sidebar">
-            <button class="btn side-btn active" data-tab="realestate">Bienes Raíces</button>
+            <button class="btn side-btn active" data-tab="realestate">Imobiliárias</button>
             <button class="btn side-btn" data-tab="clinics">Clínicas</button>
-            <button class="btn side-btn" data-tab="barbers">Barberías</button>
-            <button class="btn side-btn" data-tab="gyms">Gimnasios</button>
-            <button class="btn side-btn" data-tab="agencies">Agencias</button>
+            <button class="btn side-btn" data-tab="barbers">Barbearias</button>
+            <button class="btn side-btn" data-tab="gyms">Academias</button>
+            <button class="btn side-btn" data-tab="agencies">Agências</button>
           </aside>
 
           <div>
             <div class="detail-panel active" id="realestate">
               <div class="card">
-                <h3>Real Estate CRM</h3>
-                <p>Leads, property interests, budget, city, visit scheduling and pipeline from “New Lead” to “Closed Deal”.</p>
+                <h3>CRM imobiliário</h3>
+                <p>Leads, interesse por imóvel, orçamento, cidade, visitas agendadas e pipeline de “Novo lead” até “Negócio fechado”.</p>
                 <div class="pipeline">
-                  <div class="pipe-col">New Lead<div class="lead">Maria · $250k</div></div>
-                  <div class="pipe-col">Qualified<div class="lead">John · Condo</div></div>
-                  <div class="pipe-col">Visit Booked<div class="lead">Ana · Friday</div></div>
-                  <div class="pipe-col">Closing<div class="lead">David · Offer</div></div>
+                  <div class="pipe-col">Novo lead<div class="lead">Maria · $250k</div></div>
+                  <div class="pipe-col">Qualificado<div class="lead">João · apartamento</div></div>
+                  <div class="pipe-col">Visita agendada<div class="lead">Ana · sexta</div></div>
+                  <div class="pipe-col">Fechamento<div class="lead">David · proposta</div></div>
                 </div>
               </div>
             </div>
 
             <div class="detail-panel" id="clinics">
               <div class="card">
-                <h3>CRM de Citas de Clínica</h3>
-                  <p>Consultas de pacientes, solicitudes de citas, interés en tratamientos, recordatorios de contacto y seguimientos post-visita. Después de cada visita completada, se envía una solicitud de reseña automática. Reduce inasistencias significativamente.</p>
+                <h3>CRM de agendamentos para clínica</h3>
+                  <p>Consultas de pacientes, solicitações de agendamento, interesse em tratamentos, lembretes e pós-atendimento. Após cada visita concluída, o sistema pode solicitar uma avaliação automaticamente.</p>
                 <div class="pipeline">
-                  <div class="pipe-col">Consulta<div class="lead">Limpieza dental</div></div>
-                  <div class="pipe-col">Programada<div class="lead">Mañana 10AM</div></div>
+                  <div class="pipe-col">Consulta<div class="lead">Limpeza dental</div></div>
+                  <div class="pipe-col">Agendada<div class="lead">Amanhã 10h</div></div>
                   <div class="pipe-col">Lembrete enviado<div class="lead">Contato OK</div></div>
-                  <div class="pipe-col">Completada<div class="lead">Solicitud reseña</div></div>
+                  <div class="pipe-col">Concluída<div class="lead">Solicitar avaliação</div></div>
                 </div>
               </div>
             </div>
 
             <div class="detail-panel" id="barbers">
               <div class="card">
-                <h3>CRM de Reservas de Barbería</h3>
-                  <p>Clientes recurrentes, asignaciones de barbero, rastreo de lealtad y recordatorios de re-reserva automatizados. Después de 21 días, el CRM auto-envía: "¡Oye! Tiempo para un corte fresco? Reserva tu lugar ahora."</p>
+                <h3>CRM de reservas para barbearia</h3>
+                  <p>Clientes recorrentes, barbeiro responsável, fidelidade e lembretes automáticos de retorno. Após 21 dias, o CRM pode enviar uma mensagem para incentivar uma nova reserva.</p>
                 <div class="pipeline">
-                  <div class="pipe-col">Nueva Reserva<div class="lead">Skin fade</div></div>
+                  <div class="pipe-col">Nova reserva<div class="lead">Skin fade</div></div>
                   <div class="pipe-col">Confirmada<div class="lead">Alex 4PM</div></div>
-                  <div class="pipe-col">Visitada<div class="lead">Pagado</div></div>
-                  <div class="pipe-col">Re-reserva<div class="lead">En 21 días</div></div>
+                  <div class="pipe-col">Atendida<div class="lead">Pago</div></div>
+                  <div class="pipe-col">Retorno<div class="lead">Em 21 dias</div></div>
                 </div>
               </div>
             </div>
 
             <div class="detail-panel" id="gyms">
               <div class="card">
-                <h3>CRM de Membresía de Gimnasio</h3>
-                  <p>Clases de prueba, mejoras de plan, recordatorios de renovación y rastreo de participación. Auto-alertas cuando un miembro no ha visitado en 10+ días con un mensaje de recuperación para traerlo de vuelta.</p>
+                <h3>CRM de membros para academia</h3>
+                  <p>Aulas experimentais, upgrades de plano, lembretes de renovação e acompanhamento de frequência. Alertas automáticos aparecem quando um membro fica muitos dias sem visitar.</p>
                 <div class="pipeline">
-                  <div class="pipe-col">Prueba Gratuita<div class="lead">3 leads</div></div>
+                  <div class="pipe-col">Aula teste<div class="lead">3 leads</div></div>
                   <div class="pipe-col">Inscrito<div class="lead">Plano básico</div></div>
-                  <div class="pipe-col">En Riesgo<div class="lead">Sin visita 10d</div></div>
+                  <div class="pipe-col">Em risco<div class="lead">Sem visita há 10d</div></div>
                   <div class="pipe-col">Renovado<div class="lead">Anual</div></div>
                 </div>
               </div>
@@ -2045,13 +2108,13 @@
 
             <div class="detail-panel" id="agencies">
               <div class="card">
-                <h3>CRM de Ventas B2B de Agencia</h3>
-                  <p>Prospectos de alto ticket, rastreo de propuestas, estado de contrato, listas de verificación de incorporación de clientes y gestión de retención mensual — todo en un pipeline. Cuando un cliente alcanza la etapa de Retención, las facturas se generan y se envían automáticamente cada mes.</p>
+                <h3>CRM de vendas B2B de Agencia</h3>
+                  <p>Prospectos de alto valor, propostas, contratos, onboarding e retenção mensal em um único pipeline. Quando o cliente entra em retenção, tarefas e lembretes financeiros podem ser criados automaticamente.</p>
                 <div class="pipeline">
                   <div class="pipe-col">Prospecto<div class="lead">Marca Ecom</div></div>
-                  <div class="pipe-col">Propuesta<div class="lead">$900</div></div>
-                  <div class="pipe-col">Incorporación<div class="lead">Activos vencidos</div></div>
-                  <div class="pipe-col">Retención<div class="lead">Mensual</div></div>
+                  <div class="pipe-col">Proposta<div class="lead">$900</div></div>
+                  <div class="pipe-col">Onboarding<div class="lead">Materiais pendentes</div></div>
+                  <div class="pipe-col">Retenção<div class="lead">Mensal</div></div>
                 </div>
               </div>
             </div>
@@ -2065,13 +2128,13 @@
       <section class="sub-hero">
         <div class="container">
           <div class="eyebrow">Sites Premium</div>
-          <h2>5 tipos de sitios web que construimos — y lo que cada uno hace.</h2>
+          <h2>5 tipos de sites que construímos e o papel de cada um.</h2>
           <p style="color: var(--muted); font-size: 18px; line-height: 1.7; max-width: 820px;">
-            Un gran sitio web hace más que verse bien — convierte visitantes en leads o clientes. Estos son los 5 tipos principales de sitios web que construimos, cada uno diseñado para un objetivo comercial específico.
+            Um bom site faz mais do que parecer bonito: transforma visitantes em leads ou clientes. Estes são os principais tipos de sites que criamos, cada um com um objetivo comercial claro.
           </p>
           <div class="inline-actions" style="justify-content: flex-start; margin-top: 22px;">
             <a class="btn" data-route="home" href="#services">← Voltar</a>
-            <a class="btn btn-primary" data-route="pricing" href="#pricing-page">Ver planes de sitios web</a>
+            <a class="btn btn-primary" data-route="pricing" href="#pricing-page">Ver planos de sites</a>
           </div>
         </div>
       </section>
@@ -2082,24 +2145,24 @@
 
             <div class="card">
               <div class="web-preview">
-                <div class="web-top"><span>Imán de Lead</span><span style="color:var(--cyan)">Guía Gratuita</span></div>
+                <div class="web-top"><span>Isca de lead</span><span style="color:var(--cyan)">Guia gratuito</span></div>
                 <div class="web-body">
                   <div class="fake-title"></div>
-                  <div style="font-size:13px;color:var(--muted);margin-bottom:12px;line-height:1.5">Una página. Un objetivo. Un CTA. Dirigido a una oferta específica para capturar información de contacto.</div>
+                  <div style="font-size:13px;color:var(--muted);margin-bottom:12px;line-height:1.5">Uma página, um objetivo e um CTA claro para capturar informações de contato.</div>
                   <div class="fake-line" style="width:80%"></div>
-                  <button class="btn btn-primary" style="margin-top:14px;">Get Free Guide</button>
+                  <button class="btn btn-primary" style="margin-top:14px;">Receber guia</button>
                 </div>
               </div>
               <div style="padding:18px;">
-                <div class="web-ex-label">Tipo 1 — Página de Captura de Lead</div>
-                <h3>Página de conversión de enfoque único</h3>
-                <p>Usada para campañas publicitarias, lanzamientos de productos, inscripciones a webinars y ofertas gratuitas. Una página con un objetivo: obtener información de contacto del visitante. Conectada a un CRM o automatización de email para seguimiento automático.</p>
+                <div class="web-ex-label">Tipo 1 — Página de captura de lead</div>
+                <h3>Página de conversão com foco único</h3>
+                <p>Usada para anúncios, lançamentos, inscrições e ofertas gratuitas. Uma página com um objetivo: capturar o contato do visitante e enviar para CRM ou automação de email.</p>
               </div>
             </div>
 
             <div class="card">
               <div class="web-preview">
-                <div class="web-top"><span>ProServiços Agencia</span><span>Nuestros Serviços</span></div>
+                <div class="web-top"><span>Agência ProServiços</span><span>Nossos serviços</span></div>
                 <div class="web-body">
                   <div class="fake-title"></div>
                   <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px;">
@@ -2108,7 +2171,7 @@
                     <div style="height:28px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid var(--line);"></div>
                     <div style="height:28px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid var(--line);"></div>
                   </div>
-                  <button class="btn btn-primary">Book a Free Call</button>
+                  <button class="btn btn-primary">Agendar conversa</button>
                 </div>
               </div>
               <div style="padding:18px;">
@@ -2120,18 +2183,18 @@
 
             <div class="card">
               <div class="web-preview">
-                <div class="web-top"><span>Tienda Boutique</span><span>Carrito (3)</span></div>
+                <div class="web-top"><span>Loja boutique</span><span>Carrinho (3)</span></div>
                 <div class="web-body">
                   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:10px;">
                     <div style="height:48px;border-radius:8px;background:rgba(155,231,255,.08);border:1px solid var(--line);"></div>
                     <div style="height:48px;border-radius:8px;background:rgba(155,231,255,.08);border:1px solid var(--line);"></div>
                     <div style="height:48px;border-radius:8px;background:rgba(155,231,255,.08);border:1px solid var(--line);"></div>
                   </div>
-                  <button class="btn btn-primary">Shop Now</button>
+                  <button class="btn btn-primary">Comprar agora</button>
                 </div>
               </div>
               <div style="padding:18px;">
-                <div class="web-ex-label">Tipo 3 — Tienda de Ecommerce</div>
+                <div class="web-ex-label">Tipo 3 — Loja ecommerce</div>
                 <h3>Catálogo de productos con checkout</h3>
                 <p>Para moda, beleza, acessórios e produtos digitais. Inclui páginas de produto, busca, carrinho, checkout e confirmação de pedido. Pode enviar atualizações por email/Instagram.</p>
               </div>
@@ -2139,40 +2202,40 @@
 
             <div class="card">
               <div class="web-preview">
-                <div class="web-top"><span>Clínica Elite</span><span>Reservar Ahora</span></div>
+                <div class="web-top"><span>Clínica Elite</span><span>Agendar agora</span></div>
                 <div class="web-body">
                   <div class="fake-title"></div>
                   <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px;">
                     <div style="height:30px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid var(--line);display:grid;place-items:center;font-size:11px;color:var(--muted)">Dr. Ana</div>
                     <div style="height:30px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid var(--line);display:grid;place-items:center;font-size:11px;color:var(--muted)">Dr. Carlos</div>
                   </div>
-                  <button class="btn btn-primary">Book Appointment</button>
+                  <button class="btn btn-primary">Agendar consulta</button>
                 </div>
               </div>
               <div style="padding:18px;">
                 <div class="web-ex-label">Tipo 4 — Site médico / clínica</div>
                 <h3>Site médico focado em confiança</h3>
-                <p>Para dentistas, psicólogos, clínicas de estética y fisioterapia. Incluye perfiles de médicos, servicios, sección antes/después y formulario de ingreso de pacientes conectado al CRM de citas.</p>
+                <p>Para dentistas, psicólogos, clínicas de estética e fisioterapia. Inclui perfis profissionais, serviços, seção de resultados e formulário conectado ao CRM de agendamentos.</p>
               </div>
             </div>
 
             <div class="card" style="grid-column:span 2;">
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;">
                 <div class="web-preview" style="border-radius:0;min-height:200px;">
-                  <div class="web-top"><span>Propiedad Pro</span><span>37 Listados</span></div>
+                  <div class="web-top"><span>Imóvel Pro</span><span>37 imóveis</span></div>
                   <div class="web-body">
                     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
                       <div style="height:38px;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid var(--line);"></div>
                       <div style="height:38px;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid var(--line);"></div>
                     </div>
                     <div class="fake-line" style="width:70%"></div>
-                    <button class="btn btn-primary" style="margin-top:12px;">View Listings</button>
+                    <button class="btn btn-primary" style="margin-top:12px;">Ver imóveis</button>
                   </div>
                 </div>
                 <div style="padding:24px;display:flex;flex-direction:column;justify-content:center;">
                   <div class="web-ex-label">Tipo 5 — Site imobiliário</div>
-                  <h3 style="margin-bottom:8px;">Plataforma de listados con captura de leads</h3>
-                  <p style="color:var(--muted);font-size:14px;line-height:1.7;">Para agentes de bienes raíces, corredores y desarrolladores de propiedades. Incluye listados de propiedades, filtros de búsqueda, datos de vecindarios, perfiles de agentes y formulario de captura de leads que fluye directamente al CRM de Ventas para seguimiento instantáneo.</p>
+                  <h3 style="margin-bottom:8px;">Plataforma de imóveis com captura de leads</h3>
+                  <p style="color:var(--muted);font-size:14px;line-height:1.7;">Para corretores, imobiliárias e incorporadoras. Inclui imóveis, filtros de busca, dados de região, perfis de agentes e formulário de captura conectado diretamente ao CRM de vendas para acompanhamento rápido.</p>
                 </div>
               </div>
             </div>
@@ -2186,7 +2249,7 @@
       <section class="sub-hero">
         <div class="container">
           <div class="eyebrow">Sistemas de leads</div>
-          <h2>Tu negocio sigue activo 24/7 — incluso cuando estás fuera.</h2>
+          <h2>Seu negócio continua ativo 24/7, mesmo quando você não está online.</h2>
           <p style="color: var(--muted); font-size: 18px; line-height: 1.7; max-width: 850px;">
             Um sistema de leads conecta seus canais de contato a um fluxo inteligente que recebe solicitações, coleta informações, qualifica leads, responde dúvidas e envia os dados ao CRM.
           </p>
@@ -2195,7 +2258,7 @@
           </p>
           <div class="inline-actions" style="justify-content: flex-start; margin-top: 22px;">
             <a class="btn" data-route="home" href="#services">← Voltar</a>
-            <a class="btn btn-primary" data-route="pricing" href="#pricing-page">Ver planes de sistemas de leads</a>
+            <a class="btn btn-primary" data-route="pricing" href="#pricing-page">Ver planos de sistemas de leads</a>
           </div>
         </div>
       </section>
@@ -2203,9 +2266,9 @@
       <section>
         <div class="container">
           <div class="section-head">
-            <div class="eyebrow">Cómo Funciona</div>
-            <h2>Un flujo real de calificación de leads.</h2>
-            <p>Esta es exactamente la forma en que nuestro sistema maneja un nuevo lead en cualquier hora del día.</p>
+            <div class="eyebrow">Como funciona</div>
+            <h2>Um fluxo real de qualificação de leads.</h2>
+            <p>É assim que o sistema pode lidar com um novo lead a qualquer hora do dia.</p>
           </div>
 
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;">
@@ -2214,21 +2277,21 @@
                 <div style="width:36px;height:36px;border-radius:50%;background:var(--cyan);display:grid;place-items:center;font-size:18px;flex-shrink:0;">🏢</div>
                 <div>
                   <div style="font-weight:700;font-size:14px;">Iluminity Negocios</div>
-                  <div style="font-size:11px;color:var(--muted);">Contact Inbox</div>
+                  <div style="font-size:11px;color:var(--muted);">Caixa de entrada</div>
                 </div>
               </div>
               <div class="wa-msgs">
-                <div class="wa-m sys">Hoy, 11:22 PM</div>
-                <div class="wa-m">Hola quiero saber el precio de un sitio web</div>
+                <div class="wa-m sys">Hoje, 23:22</div>
+                <div class="wa-m">Olá, quero saber o preço de um site</div>
                 <div class="wa-m u">Olá! Bem-vindo à Iluminity. Que tipo de site você procura?<br><br>1. Landing Page<br>2. Site empresarial<br>3. Loja online</div>
                 <div class="wa-m">2</div>
                 <div class="wa-m u">Ótima escolha. Qual é o orçamento aproximado para este projeto?<br><br>A. Menos de R$ 2.500<br>B. R$ 2.500–R$ 7.500<br>C. R$ 7.500+</div>
                 <div class="wa-m">B</div>
                 <div class="wa-m u">Perfeito. Qual é o nome do seu negócio?</div>
-                <div class="wa-m">Se llama Nova Designs</div>
+                <div class="wa-m">Chama Nova Designs</div>
                 <div class="wa-m u">Obrigado! Última pergunta: quando você gostaria de começar?<br><br>1. O quanto antes<br>2. No próximo mês<br>3. Apenas pesquisando</div>
                 <div class="wa-m">1</div>
-                <div class="wa-m sys">Lead guardado en CRM · Asignado a equipo de ventas</div>
+                <div class="wa-m sys">Lead salvo no CRM · Atribuído à equipe de vendas</div>
                 <div class="wa-m u">Excelente! Nossa equipe entrará em contato para falar sobre o projeto.</div>
               </div>
             </div>
@@ -2239,23 +2302,23 @@
               </div>
               <div class="x-row" style="border-color:rgba(155,231,255,.3);">
                 <div style="font-size:20px;">1</div>
-                <div><strong>Lead envía un mensaje</strong><br><span style="color:var(--muted);font-size:14px;">El bot responde instantáneamente — incluso a las 3 AM un domingo.</span></div>
+                <div><strong>Lead envia uma mensagem</strong><br><span style="color:var(--muted);font-size:14px;">O assistente responde instantaneamente, mesmo fora do horário comercial.</span></div>
               </div>
               <div class="x-row" style="border-color:rgba(155,231,255,.3);">
                 <div style="font-size:20px;">2</div>
-                <div><strong>Bot califica el lead</strong><br><span style="color:var(--muted);font-size:14px;">Pregunta tipo de servicio, presupuesto y cronograma en una conversación natural.</span></div>
+                <div><strong>Assistente qualifica o lead</strong><br><span style="color:var(--muted);font-size:14px;">Pergunta tipo de serviço, orçamento e prazo em uma conversa natural.</span></div>
               </div>
               <div class="x-row" style="border-color:rgba(155,231,255,.3);">
                 <div style="font-size:20px;">3</div>
-                <div><strong>Datos guardados automáticamente</strong><br><span style="color:var(--muted);font-size:14px;">Nombre, respuestas y contacto se agregan a tu CRM sin trabajo manual.</span></div>
+                <div><strong>Dados salvos automaticamente</strong><br><span style="color:var(--muted);font-size:14px;">Nome, respostas e contato entram no CRM sem trabalho manual.</span></div>
               </div>
               <div class="x-row" style="border-color:rgba(155,231,255,.3);">
                 <div style="font-size:20px;">4</div>
-                <div><strong>Equipo notificado</strong><br><span style="color:var(--muted);font-size:14px;">El equipo de ventas recibe una alerta con el resumen del lead calificado.</span></div>
+                <div><strong>Equipe notificada</strong><br><span style="color:var(--muted);font-size:14px;">A equipe de vendas recebe um alerta com o resumo do lead qualificado.</span></div>
               </div>
               <div class="x-row" style="border-color:rgba(155,231,255,.3);">
                 <div style="font-size:20px;">5</div>
-                <div><strong>Seguimiento programado</strong><br><span style="color:var(--muted);font-size:14px;">Si sin respuesta en 24h, el bot envía un seguimiento automáticamente.</span></div>
+                <div><strong>Acompanhamento programado</strong><br><span style="color:var(--muted);font-size:14px;">Se não houver resposta em 24h, o sistema envia um acompanhamento automaticamente.</span></div>
               </div>
             </div>
           </div>
@@ -2265,40 +2328,40 @@
       <section>
         <div class="container">
           <div class="section-head">
-            <div class="eyebrow">Tipos de Sistemas</div>
-            <h2>3 sistemas de leads que construimos.</h2>
+            <div class="eyebrow">Tipos de sistemas</div>
+            <h2>3 sistemas de leads que construímos.</h2>
           </div>
           <div class="grid cards3">
             <article class="card">
               <div style="font-size:32px;margin-bottom:12px;">📅</div>
-              <h3>Flujo de Reserva</h3>
+              <h3>Fluxo de reservas</h3>
               <p>O fluxo gerencia solicitações, preferências e lembretes de acompanhamento.</p>
               <ul class="features" style="margin-top:12px;">
-                <li>Barberías y salones</li>
-                <li>Clínicas y dentistas</li>
-                <li>Coaches y consultores</li>
+                <li>Barbearias y salones</li>
+                <li>Clínicas e dentistas</li>
+                <li>Coaches e consultores</li>
               </ul>
             </article>
 
             <article class="card">
               <div style="font-size:32px;margin-bottom:12px;">🎯</div>
-              <h3>Flujo de Calificación de Leads</h3>
-              <p>Recopila presupuesto, ubicación, necesidad de servicio, urgencia e información de contacto antes de que alguien de tu equipo gaste un minuto en el lead. Solo compradores serios alcanzan tu bandeja de entrada.</p>
+              <h3>Fluxo de qualificação de leads</h3>
+              <p>Coleta orçamento, localização, necessidade, urgência e contato antes da equipe investir tempo no lead. Assim, contatos mais preparados chegam à sua caixa de entrada.</p>
               <ul class="features" style="margin-top:12px;">
-                <li>Agentes de bienes raíces</li>
-                <li>Agencias de marketing</li>
-                <li>Negocios de servicios del hogar</li>
+                <li>Corretores imobiliários</li>
+                <li>Agências de marketing</li>
+                <li>Serviços residenciais</li>
               </ul>
             </article>
 
             <article class="card">
               <div style="font-size:32px;margin-bottom:12px;">🤝</div>
-              <h3>Asistente de Soporte</h3>
-              <p>Maneja FAQs, envía enlaces de rastreo de pedidos, recopila detalles de quejas y escala problemas complejos a un agente humano — con contexto completo ya en mano.</p>
+              <h3>Assistente de suporte</h3>
+              <p>Responde dúvidas frequentes, envia links de acompanhamento, coleta detalhes de solicitações e encaminha casos complexos para uma pessoa com contexto completo.</p>
               <ul class="features" style="margin-top:12px;">
-                <li>Tiendas de ecommerce</li>
-                <li>Restaurantes y delivery</li>
-                <li>Cualquier bandeja de entrada de alto volumen</li>
+                <li>Lojas ecommerce</li>
+                <li>Restaurantes e delivery</li>
+                <li>Qualquer caixa de entrada com alto volume</li>
               </ul>
             </article>
           </div>
@@ -2309,14 +2372,14 @@
     <div id="assistantsView" class="view">
       <section class="sub-hero">
         <div class="container">
-          <div class="eyebrow">Asistentes con IA</div>
-          <h2>Un asistente que realmente entiende tu negocio.</h2>
+          <div class="eyebrow">Assistentes com IA</div>
+          <h2>Um assistente que realmente entende seu negócio.</h2>
           <p style="color: var(--muted); font-size: 18px; line-height: 1.7; max-width: 850px;">
             Um FAQ básico responde por roteiro. Nossos assistentes de IA usam dados reais do negócio, como serviços, preços, processos, documentos e tom de voz.
           </p>
           <div class="inline-actions" style="justify-content: flex-start; margin-top: 22px;">
             <a class="btn" data-route="home" href="#services">← Voltar</a>
-            <a class="btn btn-primary" data-route="pricing" href="#pricing-page">Ver precios</a>
+            <a class="btn btn-primary" data-route="pricing" href="#pricing-page">Ver preços</a>
           </div>
         </div>
       </section>
@@ -2324,38 +2387,38 @@
       <section>
         <div class="container">
           <div class="section-head">
-            <div class="eyebrow">Bot Básico vs Asistente de IA</div>
-            <h2>La diferencia es obvia.</h2>
+            <div class="eyebrow">Bot básico vs assistente de IA</div>
+            <h2>A diferença é clara.</h2>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:48px;">
             <div>
-              <div style="color:#ff6b6b;font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;">Bot FAQ Básico</div>
+              <div style="color:#ff6b6b;font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;">Bot FAQ básico</div>
               <div class="x-row" style="border-color:rgba(255,107,107,.25);">
-                <span style="color:#ff6b6b;">✗</span><div>Solo responde a coincidencias exactas de palabras clave</div>
+                <span style="color:#ff6b6b;">✗</span><div>Responde apenas a palavras-chave exatas</div>
               </div>
               <div class="x-row" style="border-color:rgba(255,107,107,.25);">
-                <span style="color:#ff6b6b;">✗</span><div>No tiene memoria de la conversación</div>
+                <span style="color:#ff6b6b;">✗</span><div>Não mantém contexto da conversa</div>
               </div>
               <div class="x-row" style="border-color:rgba(255,107,107,.25);">
-                <span style="color:#ff6b6b;">✗</span><div>No puede recomendar un paquete específico</div>
+                <span style="color:#ff6b6b;">✗</span><div>Não recomenda o pacote ideal</div>
               </div>
               <div class="x-row" style="border-color:rgba(255,107,107,.25);">
-                <span style="color:#ff6b6b;">✗</span><div>Recurre a "Por favor contacte al soporte" para cualquier cosa fuera del script</div>
+                <span style="color:#ff6b6b;">✗</span><div>Recorre a respostas genéricas quando sai do roteiro</div>
               </div>
             </div>
             <div>
-              <div style="color:var(--cyan);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;">Asistente de IA (Entrenado)</div>
+              <div style="color:var(--cyan);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;">Assistente de IA treinado</div>
               <div class="x-row" style="border-color:rgba(155,231,255,.25);">
-                <span style="color:var(--cyan);">✓</span><div>Entiende la intención incluso con errores tipográficos o preguntas vagas</div>
+                <span style="color:var(--cyan);">✓</span><div>Entende intenção mesmo com erros de digitação ou perguntas vagas</div>
               </div>
               <div class="x-row" style="border-color:rgba(155,231,255,.25);">
-                <span style="color:var(--cyan);">✓</span><div>Recuerda todo lo que se dijo anteriormente en la conversación</div>
+                <span style="color:var(--cyan);">✓</span><div>Mantém contexto do que foi dito antes</div>
               </div>
               <div class="x-row" style="border-color:rgba(155,231,255,.25);">
-                <span style="color:var(--cyan);">✓</span><div>Recomienda el plan correcto basado en las necesidades específicas del cliente</div>
+                <span style="color:var(--cyan);">✓</span><div>Recomenda o plano certo com base na necessidade do cliente</div>
               </div>
               <div class="x-row" style="border-color:rgba(155,231,255,.25);">
-                <span style="color:var(--cyan);">✓</span><div>Conoce todo tu negocio y escala a humano solo cuando sea necesario</div>
+                <span style="color:var(--cyan);">✓</span><div>Conhece seu negócio e encaminha para uma pessoa quando necessário</div>
               </div>
             </div>
           </div>
@@ -2365,56 +2428,56 @@
       <section>
         <div class="container">
           <div class="section-head">
-            <div class="eyebrow">Tipos de Asistentes</div>
-            <h2>3 asistentes — ejemplos reales de conversación.</h2>
+            <div class="eyebrow">Tipos de assistentes</div>
+            <h2>3 assistentes com exemplos de conversa.</h2>
           </div>
           <div class="grid cards3">
 
             <article class="card">
               <div style="font-size:28px;margin-bottom:10px;">💼</div>
-              <h3>Asistente de Ventas</h3>
-              <p style="color:var(--muted);font-size:13px;margin-bottom:16px;">Recomienda el servicio correcto basado en las necesidades del visitante y presupuesto. Convierte conversaciones en leads calificados.</p>
+              <h3>Assistente de vendas</h3>
+              <p style="color:var(--muted);font-size:13px;margin-bottom:16px;">Recomenda o serviço certo com base na necessidade e orçamento do visitante. Transforma conversas em leads qualificados.</p>
               <div class="conv-demo">
                 <div class="conv-label">Visitante</div>
-                <div class="conv-text">Necesito ayuda para conseguir más clientes para mi gimnasio</div>
-                <div class="conv-label" style="color:var(--cyan);">Asistente de Ventas IA</div>
-                <div class="conv-text" style="border-color:rgba(155,231,255,.3);">Entendido. ¿Estás principalmente buscando nuevos leads, o quieres evitar que miembros actuales cancelen?</div>
+                <div class="conv-text">Preciso de ajuda para conseguir mais clientes para minha academia</div>
+                <div class="conv-label" style="color:var(--cyan);">Assistente de vendas IA</div>
+                <div class="conv-text" style="border-color:rgba(155,231,255,.3);">Entendi. Você quer principalmente novos leads ou reduzir cancelamentos de alunos atuais?</div>
                 <div class="conv-label">Visitante</div>
-                <div class="conv-text">Ambos honestamente</div>
-                <div class="conv-label" style="color:var(--cyan);">Asistente de Ventas IA</div>
-                <div class="conv-text" style="border-color:rgba(155,231,255,.3);">Perfecto — eso es exactamente lo que nuestro bundle CRM + lead system resuelve. Puedo mostrarte el plan. ¿Quieres los precios ahora o prefieres agendar una llamada rápida primero?</div>
+                <div class="conv-text">Os dois, sinceramente</div>
+                <div class="conv-label" style="color:var(--cyan);">Assistente de vendas IA</div>
+                <div class="conv-text" style="border-color:rgba(155,231,255,.3);">Perfeito. É exatamente isso que um sistema com site, CRM e captação de leads resolve. Quer ver os preços ou prefere solicitar uma proposta?</div>
               </div>
             </article>
 
             <article class="card">
               <div style="font-size:28px;margin-bottom:10px;">📚</div>
-              <h3>Asistente FAQ / Conocimiento</h3>
-              <p style="color:var(--muted);font-size:13px;margin-bottom:16px;">Entrenado en tus PDFs, páginas de servicios y documentos internos. Responde preguntas detalladas al instante sin escalar cada vez.</p>
+              <h3>Assistente FAQ / conhecimento</h3>
+              <p style="color:var(--muted);font-size:13px;margin-bottom:16px;">Treinado com PDFs, páginas de serviço e documentos internos. Responde perguntas detalhadas sem acionar a equipe o tempo todo.</p>
               <div class="conv-demo">
                 <div class="conv-label">Cliente</div>
                 <div class="conv-text">O plano CRM Starter inclui integração de contato?</div>
-                <div class="conv-label" style="color:var(--cyan);">Asistente FAQ</div>
+                <div class="conv-label" style="color:var(--cyan);">Assistente FAQ</div>
                 <div class="conv-text" style="border-color:rgba(155,231,255,.3);">O CRM Starter inclui pipeline, rastreamento de leads e automações básicas. Integrações avançadas podem ser adicionadas conforme o escopo.</div>
                 <div class="conv-label">Cliente</div>
-                <div class="conv-text">Sí por favor</div>
-                <div class="conv-label" style="color:var(--cyan);">Asistente FAQ</div>
-                <div class="conv-text" style="border-color:rgba(155,231,255,.3);">Aquí está la comparación completa: [enlace] — y dejaré que nuestro equipo sepa que estás interesado para que den seguimiento.</div>
+                <div class="conv-text">Sim, por favor</div>
+                <div class="conv-label" style="color:var(--cyan);">Assistente FAQ</div>
+                <div class="conv-text" style="border-color:rgba(155,231,255,.3);">Aqui está a comparação completa: [link]. Também vou avisar nossa equipe que você tem interesse.</div>
               </div>
             </article>
 
             <article class="card">
               <div style="font-size:28px;margin-bottom:10px;">🏗️</div>
-              <h3>Asistente de Equipo Interno</h3>
-              <p style="color:var(--muted);font-size:13px;margin-bottom:16px;">Ayuda a tu equipo a buscar datos de clientes, estado del pipeline y notas del proyecto — sin abrir 5 herramientas diferentes.</p>
+              <h3>Assistente interno da equipe</h3>
+              <p style="color:var(--muted);font-size:13px;margin-bottom:16px;">Ajuda a equipe a buscar dados de clientes, status do pipeline e notas do projeto sem abrir várias ferramentas.</p>
               <div class="conv-demo">
-                <div class="conv-label">Miembro del Equipo</div>
-                <div class="conv-text">¿Cuál es el estado del proyecto Nova Designs?</div>
-                <div class="conv-label" style="color:var(--cyan);">Asistente Interno</div>
+                <div class="conv-label">Membro da equipe</div>
+                <div class="conv-text">Qual é o status do projeto Nova Designs?</div>
+                <div class="conv-label" style="color:var(--cyan);">Assistente interno</div>
                 <div class="conv-text" style="border-color:rgba(155,231,255,.3);">Nova Designs — Site empresarial. Etapa: Em andamento. Última atualização: há 3 dias. Próximo marco: revisão de design na sexta. Contato: Carlos (vendas).</div>
-                <div class="conv-label">Miembro del Equipo</div>
-                <div class="conv-text">¿La factura fue enviada?</div>
-                <div class="conv-label" style="color:var(--cyan);">Asistente Interno</div>
-                <div class="conv-text" style="border-color:rgba(155,231,255,.3);">Factura #0042 fue enviada el 14 de enero. Estado: Esperando pago. Vencimiento: 28 de enero.</div>
+                <div class="conv-label">Membro da equipe</div>
+                <div class="conv-text">A fatura foi enviada?</div>
+                <div class="conv-label" style="color:var(--cyan);">Assistente interno</div>
+                <div class="conv-text" style="border-color:rgba(155,231,255,.3);">A fatura #0042 foi enviada em 14 de janeiro. Status: aguardando pagamento. Vencimento: 28 de janeiro.</div>
               </div>
             </article>
 
@@ -2427,7 +2490,7 @@
       <section id="pricing-page" class="sub-hero">
         <div class="container">
           <div class="eyebrow">Preços 2026</div>
-          <h2>Preços iniciales simples.</h2>
+          <h2>Preços iniciais simples.</h2>
           <p style="color: var(--muted); font-size: 18px; line-height: 1.7; max-width: 850px;">
             Comece com o que você precisa agora. Depois de revisar seu negócio e objetivo, recomendamos o escopo correto.
           </p>
@@ -2442,7 +2505,7 @@
       <section>
         <div class="container tabs-layout">
           <aside class="sidebar">
-            <button class="btn side-btn active" data-price="webPrice">Websites</button>
+            <button class="btn side-btn active" data-price="webPrice">Sites</button>
             <button class="btn side-btn" data-price="crmPrice">CRM e Automações</button>
             <button class="btn side-btn" data-price="securityPrice">Segurança e Privacidade</button>
           </aside>
@@ -2495,7 +2558,7 @@
             <div class="detail-panel" id="crmPrice">
               <div class="grid plans">
                 <article class="card">
-                  <h3>CRM Setup</h3>
+                  <h3>Configuração de CRM</h3>
                   <div class="price">Sob orçamento</div>
                   <p style="color:var(--muted)">Organiza leads, etapas e acompanhamento comercial.</p>
                   <ul class="features">
@@ -2588,19 +2651,19 @@
         </div>
 
         <p style="color: var(--muted); line-height: 1.7; margin: 12px 0 18px;">
-          Compartilhe os detalhes do projeto e recomendaremos o website, CRM ou automação mais adequada.
+          Compartilhe os detalhes do projeto e recomendaremos o site, CRM ou automação mais adequada.
         </p>
 
         <div class="grid" style="gap: 12px;">
           <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=Solicita%C3%A7%C3%A3o%20de%20projeto%20-%20Iluminity">Gmail: iluminity.inc@gmail.com</a>
-          <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=Solicita%C3%A7%C3%A3o%20de%20projeto%20-%20Iluminity">Segundo Gmail: iluminacioninc@gmail.com</a>
+          <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=Solicita%C3%A7%C3%A3o%20de%20projeto%20-%20Iluminity">Gmail secundário: iluminacioninc@gmail.com</a>
           <a class="buy-btn" href="https://www.instagram.com/iluminity.inc/" target="_blank" rel="noreferrer">Instagram: @iluminity.inc</a>
         </div>
       </div>
     </div>
 
     <div class="chat-float" id="aiChat">
-      <button class="chat-trigger" id="chatToggle" aria-label="Abrir asesor de soluciones" title="Asesor Iluminity">
+      <button class="chat-trigger" id="chatToggle" aria-label="Abrir consultor de soluções" title="Consultor Iluminity">
         <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
           <path d="M32 5L55 18.5V45.5L32 59L9 45.5V18.5L32 5Z" stroke="#0f2f56" stroke-width="4.5" />
           <path d="M22 18L34 25V50L22 43V18Z" stroke="#0f2f56" stroke-width="4.5" stroke-linejoin="round" />
@@ -2612,7 +2675,7 @@
       <div class="chat-panel">
         <div class="chat-head">
           <div class="chat-title">
-            <strong>Asesor de Soluciones</strong>
+            <strong>Consultor de soluções</strong>
             <small>Iluminity · resposta em 30s</small>
           </div>
           <button class="btn" id="chatClose">Fechar</button>
@@ -2620,17 +2683,17 @@
 
         <div class="chat-body">
           <div class="msg bot" id="chatAnswer">
-            Te recomiendo el mejor camino para tu proyecto en 3 preguntas. Elige una opción para empezar.
+            Recomendo o melhor caminho para seu projeto em 3 perguntas. Escolha uma opção para começar.
           </div>
 
           <div class="chat-options">
-            <button class="chip" data-answer="Perfecto. Para cotizar rápido: dime 1) servicio, 2) objetivo principal y 3) fecha ideal de lanzamiento. Con eso te doy rango y plan recomendado.">Quero orçamento</button>
+            <button class="chip" data-answer="Perfeito. Para orçar rápido, envie: 1) serviço, 2) objetivo principal e 3) data ideal de lançamento. Assim recomendamos o melhor caminho.">Quero orçamento</button>
             <button class="chip" data-answer="Se você quer resultados rápidos, normalmente começamos por: 1) CRM Pro para organizar vendas, 2) sistema de leads para qualificar contatos, 3) site empresarial para aumentar conversões.">Qual plano eu preciso?</button>
-            <button class="chip" data-answer="Ejemplo recomendado: negocio de servicios con website + contact + CRM. El objetivo es responder más rápido, ordenar el seguimiento y recibir consultas más calificadas.">Ver caso parecido</button>
-            <button class="chip" data-answer="Nuestro proceso: diagnóstico breve, propuesta por fases, implementación, pruebas y optimización mensual. Todo con hitos claros.">Como trabalhamos</button>
+            <button class="chip" data-answer="Exemplo recomendado: negócio de serviços com site, contato e CRM. O objetivo é responder mais rápido, organizar acompanhamento e receber leads mais qualificados.">Ver caso parecido</button>
+            <button class="chip" data-answer="Nosso processo: diagnóstico breve, proposta por fases, implementação, testes e otimização. Tudo com etapas claras.">Como trabalhamos</button>
           </div>
 
-          <button class="btn btn-primary chat-cta" id="chatHuman">Contactar Iluminity</button>
+          <button class="btn btn-primary chat-cta" id="chatHuman">Falar com a Iluminity</button>
         </div>
       </div>
     </div>
@@ -2646,7 +2709,7 @@
           </span>
           <span>
             Iluminity Inc.
-            <small>AI Solutions</small>
+            <small>Soluções com IA</small>
           </span>
         </div>
 
@@ -2656,7 +2719,7 @@
           <a href="#contact">Contato</a>
         </div>
 
-        <p>© 2026 Iluminity Inc. Websites, CRM e sistemas de automação com IA.</p>
+        <p>© 2026 Iluminity Inc. Sites, CRM e sistemas de automação com IA.</p>
       </div>
     </footer>
   </div>
@@ -2679,6 +2742,14 @@
     try {
       localStorage.setItem("iluminity-language", currentLanguage);
     } catch (error) {
+    }
+
+    function scrollToTarget(element) {
+      const nav = document.querySelector(".nav");
+      const navHeight = nav ? nav.getBoundingClientRect().height : 90;
+      const offset = navHeight + 34;
+      const top = element.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: Math.max(top, 0), behavior: "smooth" });
     }
 
     function renderRoute(route, anchor = null) {
@@ -2705,7 +2776,7 @@
           requestAnimationFrame(() => {
             const el = document.querySelector(anchor);
             if (el) {
-              el.scrollIntoView({ behavior: "smooth" });
+              scrollToTarget(el);
             } else {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }
@@ -2809,6 +2880,42 @@
       });
     });
 
+    const portfolioDemo = {
+      capture: {
+        one: "Formulário recebido",
+        two: "Lead criado: Ana Rodriguez",
+        three: "Acompanhamento pronto",
+        code: `lead = {
+  nome: "Ana Rodriguez",
+  servico: "Consulta migratória",
+  status: "capturado",
+  origem: "Landing page"
+}`
+      },
+      crm: {
+        one: "Lead qualificado",
+        two: "Pipeline atualizado",
+        three: "Email de acompanhamento enviado",
+        code: `crm.createDeal({
+  contato: "Ana Rodriguez",
+  etapa: "Consulta",
+  valor_estimado: "R$ 2.250",
+  tarefa: "Revisar documentos"
+})`
+      }
+    };
+
+    document.querySelectorAll("[data-portfolio-demo]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const state = portfolioDemo[button.dataset.portfolioDemo];
+        if (!state) return;
+        document.getElementById("demoStepOne").textContent = state.one;
+        document.getElementById("demoStepTwo").textContent = state.two;
+        document.getElementById("demoStepThree").textContent = state.three;
+        document.getElementById("portfolioCode").textContent = state.code;
+      });
+    });
+
     const revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -2856,7 +2963,7 @@
     const feed = document.getElementById("activityFeed");
 
     const activities = [
-      "New lead captured from website",
+      "Novo lead capturado pelo site",
       "contact reminder sent",
       "CRM status updated",
       "AI assistant answered FAQ",
