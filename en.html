@@ -1589,7 +1589,7 @@
               <div class="security-badge">Mobile-first design</div>
               <div class="security-badge">Secure forms</div>
               <div class="security-badge">WhatsApp integration</div>
-              <div class="security-badge">English & Spanish support</div>
+              <div class="security-badge">English &amp; Spanish support</div>
             </div>
           </div>
         </section>
@@ -1672,7 +1672,7 @@
                 For larger projects, we can organize tasks, requests and implementation updates in a simple client workspace.
               </p>
               <div class="inline-actions" style="justify-content: flex-start; margin-top: 24px;">
-                <button class="btn btn-primary" id="openModal">Get a Free Demo</button>
+                <button type="button" class="btn btn-primary" id="openModal">Get a Free Demo</button>
                 <a class="btn" data-route="pricing" href="#pricing-page">View Plans</a>
               </div>
             </div>
@@ -1752,7 +1752,7 @@
             </div>
 
             <form onsubmit="event.preventDefault(); window.open('https://wa.me/5595984178100?text=' + encodeURIComponent('Hi! I want a quote for: ' + this.querySelector('select').value + '. My name is: ' + this.querySelector('input').value + '. Details: ' + this.querySelector('textarea').value), '_blank');">
-              <input placeholder="Full name" required />
+              <input type="text" placeholder="Full name" required />
               <input type="email" placeholder="Email address" required />
 
               <select required>
@@ -1765,7 +1765,7 @@
               </select>
 
               <textarea placeholder="Tell us about your business and what you need..."></textarea>
-              <button class="btn btn-primary">Request a Quote</button>
+              <button type="submit" class="btn btn-primary">Request a Quote</button>
             </form>
           </div>
         </section>
@@ -1973,12 +1973,12 @@
             <p>Click an industry to see a real example of how we organize the pipeline for that niche.</p>
           </div>
           <div class="tabs-layout">
-            <aside class="sidebar">
-            <button class="btn side-btn active" data-tab="realestate">Real Estate</button>
-            <button class="btn side-btn" data-tab="clinics">Clinics</button>
-            <button class="btn side-btn" data-tab="barbers">Barbershops</button>
-            <button class="btn side-btn" data-tab="gyms">Gyms</button>
-            <button class="btn side-btn" data-tab="agencies">Agencies</button>
+            <aside class="sidebar" aria-label="Industry pipeline demos">
+            <button type="button" class="btn side-btn active" data-tab="realestate">Real Estate</button>
+            <button type="button" class="btn side-btn" data-tab="clinics">Clinics</button>
+            <button type="button" class="btn side-btn" data-tab="barbers">Barbershops</button>
+            <button type="button" class="btn side-btn" data-tab="gyms">Gyms</button>
+            <button type="button" class="btn side-btn" data-tab="agencies">Agencies</button>
           </aside>
 
           <div>
@@ -2078,7 +2078,7 @@
                   <div class="fake-title"></div>
                   <div style="font-size:13px;color:var(--muted);margin-bottom:12px;line-height:1.5">One page. One goal. One CTA. Targeted at a specific offer to capture contact info.</div>
                   <div class="fake-line" style="width:80%"></div>
-                  <button class="btn btn-primary" style="margin-top:14px;">Get Free Guide</button>
+                  <button type="button" class="btn btn-primary" style="margin-top:14px;">Get Free Guide</button>
                 </div>
               </div>
               <div style="padding:18px;">
@@ -2099,7 +2099,7 @@
                     <div style="height:28px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid var(--line);"></div>
                     <div style="height:28px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid var(--line);"></div>
                   </div>
-                  <button class="btn btn-primary">Book a Free Call</button>
+                  <button type="button" class="btn btn-primary">Book a Free Call</button>
                 </div>
               </div>
               <div style="padding:18px;">
@@ -2118,7 +2118,7 @@
                     <div style="height:48px;border-radius:8px;background:rgba(155,231,255,.08);border:1px solid var(--line);"></div>
                     <div style="height:48px;border-radius:8px;background:rgba(155,231,255,.08);border:1px solid var(--line);"></div>
                   </div>
-                  <button class="btn btn-primary">Shop Now</button>
+                  <button type="button" class="btn btn-primary">Shop Now</button>
                 </div>
               </div>
               <div style="padding:18px;">
@@ -2137,7 +2137,7 @@
                     <div style="height:30px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid var(--line);display:grid;place-items:center;font-size:11px;color:var(--muted)">Dr. Ana</div>
                     <div style="height:30px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid var(--line);display:grid;place-items:center;font-size:11px;color:var(--muted)">Dr. Carlos</div>
                   </div>
-                  <button class="btn btn-primary">Book Appointment</button>
+                  <button type="button" class="btn btn-primary">Book Appointment</button>
                 </div>
               </div>
               <div style="padding:18px;">
@@ -2157,7 +2157,7 @@
                       <div style="height:38px;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid var(--line);"></div>
                     </div>
                     <div class="fake-line" style="width:70%"></div>
-                    <button class="btn btn-primary" style="margin-top:12px;">View Listings</button>
+                    <button type="button" class="btn btn-primary" style="margin-top:12px;">View Listings</button>
                   </div>
                 </div>
                 <div style="padding:24px;display:flex;flex-direction:column;justify-content:center;">
@@ -2265,9 +2265,9 @@
               <h3>Booking Flow</h3>
               <p>The bot handles the entire appointment process. Client picks service, preferred time and receives a WhatsApp reminder 24h before. Missed appointments trigger an automatic rebook offer.</p>
               <ul class="features" style="margin-top:12px;">
-                <li>Barbershops & salons</li>
-                <li>Clinics & dentists</li>
-                <li>Coaches & consultants</li>
+                <li>Barbershops &amp; salons</li>
+                <li>Clinics &amp; dentists</li>
+                <li>Coaches &amp; consultants</li>
               </ul>
             </article>
 
@@ -2288,7 +2288,7 @@
               <p>Handles FAQs, sends order tracking links, collects complaint details and escalates complex issues to a human agent — with full context already in hand.</p>
               <ul class="features" style="margin-top:12px;">
                 <li>Ecommerce stores</li>
-                <li>Restaurants & delivery</li>
+                <li>Restaurants &amp; delivery</li>
                 <li>Any high-volume inbox</li>
               </ul>
             </article>
@@ -2432,10 +2432,10 @@
 
       <section>
         <div class="container tabs-layout">
-          <aside class="sidebar">
-            <button class="btn side-btn active" data-price="webPrice">Websites</button>
-            <button class="btn side-btn" data-price="crmPrice">CRM & Automations</button>
-            <button class="btn side-btn" data-price="securityPrice">Security & Privacy</button>
+          <aside class="sidebar" aria-label="Pricing tabs">
+            <button type="button" class="btn side-btn active" data-price="webPrice">Websites</button>
+            <button type="button" class="btn side-btn" data-price="crmPrice">CRM &amp; Automations</button>
+            <button type="button" class="btn side-btn" data-price="securityPrice">Security &amp; Privacy</button>
           </aside>
 
           <div>
@@ -2469,7 +2469,7 @@
                 </article>
 
                 <article class="card">
-                  <h3>CRM & Automations</h3>
+                  <h3>CRM &amp; Automations</h3>
                   <div class="price">Custom Quote</div>
                   <p style="color:var(--muted)">For sales pipelines, lead routing and AI workflows.</p>
                   <ul class="features">
@@ -2529,7 +2529,7 @@
 
             <div class="detail-panel" id="securityPrice">
               <div class="card">
-                <h3>Security & Privacy Policy</h3>
+                <h3>Security &amp; Privacy Policy</h3>
                 <p class="policy">
                   Iluminity Inc. systems should only collect the information needed to complete a project request.
                   Client data should be stored in secure platforms, protected with strong passwords, role-based access and limited team permissions.
@@ -2575,7 +2575,7 @@
       <div class="modal-card">
         <div class="dash-top">
           <h3>Book a Strategy Call</h3>
-          <button class="btn" id="closeModal">Close</button>
+          <button type="button" class="btn" id="closeModal">Close</button>
         </div>
 
         <p style="color: var(--muted); line-height: 1.7; margin: 12px 0 18px;">
@@ -2583,7 +2583,7 @@
         </p>
 
         <form onsubmit="event.preventDefault(); window.open('https://wa.me/5595984178100?text=' + encodeURIComponent('Hi! I want a free demo for: ' + this.querySelector('select').value), '_blank');">
-          <input placeholder="Your name" required />
+          <input type="text" placeholder="Your name" required />
           <input type="email" placeholder="Email" required />
 
           <select>
@@ -2594,13 +2594,13 @@
             <option>WhatsApp Lead System</option>
           </select>
 
-          <button class="btn btn-primary">Get a Free Demo</button>
+          <button type="submit" class="btn btn-primary">Get a Free Demo</button>
         </form>
       </div>
     </div>
 
     <div class="chat-float" id="aiChat">
-      <button class="chat-trigger" id="chatToggle" aria-label="Open solutions advisor" title="Iluminity advisor">
+      <button type="button" class="chat-trigger" id="chatToggle" aria-label="Open solutions advisor" title="Iluminity advisor">
         <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
           <path d="M32 5L55 18.5V45.5L32 59L9 45.5V18.5L32 5Z" stroke="#0f2f56" stroke-width="4.5" />
           <path d="M22 18L34 25V50L22 43V18Z" stroke="#0f2f56" stroke-width="4.5" stroke-linejoin="round" />
@@ -2615,7 +2615,7 @@
             <strong>Solutions Advisor</strong>
             <small>Iluminity · 30s response</small>
           </div>
-          <button class="btn" id="chatClose">Close</button>
+          <button type="button" class="btn" id="chatClose">Close</button>
         </div>
 
         <div class="chat-body">
@@ -2624,13 +2624,13 @@
           </div>
 
           <div class="chat-options">
-            <button class="chip" data-answer="Great. For a fast quote, send: 1) service needed, 2) main business goal, and 3) ideal launch date. I will suggest a realistic range.">Get a quote</button>
-            <button class="chip" data-answer="If you need immediate impact, the usual sequence is: 1) CRM Pro (sales structure), 2) WhatsApp Pro (lead qualification), 3) Business Website (higher conversion).">Which plan fits me?</button>
-            <button class="chip" data-answer="Recommended example: service business with Website + WhatsApp + CRM. The goal is faster response time, cleaner follow-up and more qualified inquiries.">Show similar case</button>
-            <button class="chip" data-answer="Our delivery model: quick diagnosis, phased proposal, implementation, testing, and monthly optimization with clear milestones.">How we work</button>
+            <button type="button" class="chip" data-answer="Great. For a fast quote, send: 1) service needed, 2) main business goal, and 3) ideal launch date. I will suggest a realistic range.">Get a quote</button>
+            <button type="button" class="chip" data-answer="If you need immediate impact, the usual sequence is: 1) CRM Pro (sales structure), 2) WhatsApp Pro (lead qualification), 3) Business Website (higher conversion).">Which plan fits me?</button>
+            <button type="button" class="chip" data-answer="Recommended example: service business with Website + WhatsApp + CRM. The goal is faster response time, cleaner follow-up and more qualified inquiries.">Show similar case</button>
+            <button type="button" class="chip" data-answer="Our delivery model: quick diagnosis, phased proposal, implementation, testing, and monthly optimization with clear milestones.">How we work</button>
           </div>
 
-          <button class="btn btn-primary chat-cta" id="chatHuman">Talk to an advisor on WhatsApp</button>
+          <button type="button" class="btn btn-primary chat-cta" id="chatHuman">Talk to an advisor on WhatsApp</button>
         </div>
       </div>
     </div>

@@ -1672,7 +1672,7 @@
                 En proyectos más grandes, podemos organizar tareas, solicitudes y avances en un espacio simple para el cliente.
               </p>
               <div class="inline-actions" style="justify-content: flex-start; margin-top: 24px;">
-                <button class="btn btn-primary" id="openModal">Obtener Demo Gratis</button>
+                <button type="button" class="btn btn-primary" id="openModal">Obtener Demo Gratis</button>
                 <a class="btn" data-route="pricing" href="#pricing-page">Ver Planes</a>
               </div>
             </div>
@@ -1753,7 +1753,7 @@
             </div>
 
             <form onsubmit="event.preventDefault(); const name=this.querySelector('[name=name]').value; const email=this.querySelector('[name=email]').value; const service=this.querySelector('[name=service]').value; const msg=this.querySelector('[name=message]').value; const text='Hola! Mi nombre es '+name+'. Servicio: '+service+'. E-mail: '+email+'. Mensaje: '+msg; window.open('https://wa.me/5595984178100?text='+encodeURIComponent(text),'_blank'); window.location.href='mailto:iluminity.inc@gmail.com?subject='+encodeURIComponent('Solicitud de proyecto - '+service)+'&body='+encodeURIComponent(text);">
-              <input name="name" placeholder="Nombre completo" required />
+              <input type="text" name="name" placeholder="Nombre completo" required />
               <input name="email" type="email" placeholder="Correo electronico" required />
 
               <select name="service" required>
@@ -1766,7 +1766,7 @@
               </select>
 
               <textarea name="message" placeholder="Cuéntanos sobre tu negocio y lo que necesitas..."></textarea>
-              <button class="btn btn-primary">Solicitar Cotización</button>
+              <button type="submit" class="btn btn-primary">Solicitar Cotización</button>
             </form>
           </div>
         </section>
@@ -1974,12 +1974,12 @@
             <p>Haz clic en una industria para ver un ejemplo real de cómo organizamos el pipeline para ese nicho.</p>
           </div>
           <div class="tabs-layout">
-            <aside class="sidebar">
-            <button class="btn side-btn active" data-tab="realestate">Bienes Raíces</button>
-            <button class="btn side-btn" data-tab="clinics">Clínicas</button>
-            <button class="btn side-btn" data-tab="barbers">Barberías</button>
-            <button class="btn side-btn" data-tab="gyms">Gimnasios</button>
-            <button class="btn side-btn" data-tab="agencies">Agencias</button>
+            <aside class="sidebar" aria-label="Demos de pipeline por industria">
+            <button type="button" class="btn side-btn active" data-tab="realestate">Bienes Raíces</button>
+            <button type="button" class="btn side-btn" data-tab="clinics">Clínicas</button>
+            <button type="button" class="btn side-btn" data-tab="barbers">Barberías</button>
+            <button type="button" class="btn side-btn" data-tab="gyms">Gimnasios</button>
+            <button type="button" class="btn side-btn" data-tab="agencies">Agencias</button>
           </aside>
 
           <div>
@@ -2079,7 +2079,7 @@
                   <div class="fake-title"></div>
                   <div style="font-size:13px;color:var(--muted);margin-bottom:12px;line-height:1.5">Una página. Un objetivo. Un CTA. Dirigido a una oferta específica para capturar información de contacto.</div>
                   <div class="fake-line" style="width:80%"></div>
-                  <button class="btn btn-primary" style="margin-top:14px;">Get Free Guide</button>
+                  <button type="button" class="btn btn-primary" style="margin-top:14px;">Get Free Guide</button>
                 </div>
               </div>
               <div style="padding:18px;">
@@ -2100,7 +2100,7 @@
                     <div style="height:28px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid var(--line);"></div>
                     <div style="height:28px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid var(--line);"></div>
                   </div>
-                  <button class="btn btn-primary">Book a Free Call</button>
+                  <button type="button" class="btn btn-primary">Book a Free Call</button>
                 </div>
               </div>
               <div style="padding:18px;">
@@ -2119,7 +2119,7 @@
                     <div style="height:48px;border-radius:8px;background:rgba(155,231,255,.08);border:1px solid var(--line);"></div>
                     <div style="height:48px;border-radius:8px;background:rgba(155,231,255,.08);border:1px solid var(--line);"></div>
                   </div>
-                  <button class="btn btn-primary">Shop Now</button>
+                  <button type="button" class="btn btn-primary">Shop Now</button>
                 </div>
               </div>
               <div style="padding:18px;">
@@ -2138,7 +2138,7 @@
                     <div style="height:30px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid var(--line);display:grid;place-items:center;font-size:11px;color:var(--muted)">Dr. Ana</div>
                     <div style="height:30px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid var(--line);display:grid;place-items:center;font-size:11px;color:var(--muted)">Dr. Carlos</div>
                   </div>
-                  <button class="btn btn-primary">Book Appointment</button>
+                  <button type="button" class="btn btn-primary">Book Appointment</button>
                 </div>
               </div>
               <div style="padding:18px;">
@@ -2158,7 +2158,7 @@
                       <div style="height:38px;border-radius:8px;background:rgba(255,255,255,.06);border:1px solid var(--line);"></div>
                     </div>
                     <div class="fake-line" style="width:70%"></div>
-                    <button class="btn btn-primary" style="margin-top:12px;">View Listings</button>
+                    <button type="button" class="btn btn-primary" style="margin-top:12px;">View Listings</button>
                   </div>
                 </div>
                 <div style="padding:24px;display:flex;flex-direction:column;justify-content:center;">
@@ -2433,10 +2433,10 @@
 
       <section>
         <div class="container tabs-layout">
-          <aside class="sidebar">
-            <button class="btn side-btn active" data-price="webPrice">Websites</button>
-            <button class="btn side-btn" data-price="crmPrice">CRM y Automatizaciones</button>
-            <button class="btn side-btn" data-price="securityPrice">Seguridad y Privacidad</button>
+          <aside class="sidebar" aria-label="Pestañas de precios">
+            <button type="button" class="btn side-btn active" data-price="webPrice">Websites</button>
+            <button type="button" class="btn side-btn" data-price="crmPrice">CRM y Automatizaciones</button>
+            <button type="button" class="btn side-btn" data-price="securityPrice">Seguridad y Privacidad</button>
           </aside>
 
           <div>
@@ -2576,7 +2576,7 @@
       <div class="modal-card">
         <div class="dash-top">
           <h3>Agendar Llamada de Estrategia</h3>
-          <button class="btn" id="closeModal">Cerrar</button>
+          <button type="button" class="btn" id="closeModal">Cerrar</button>
         </div>
 
         <p style="color: var(--muted); line-height: 1.7; margin: 12px 0 18px;">
@@ -2584,7 +2584,7 @@
         </p>
 
         <form onsubmit="event.preventDefault(); window.open('https://wa.me/5595984178100?text=' + encodeURIComponent('Hola! Quiero una demo gratis para: ' + this.querySelector('select').value), '_blank');">
-          <input placeholder="Tu nombre" required />
+          <input type="text" placeholder="Tu nombre" required />
           <input type="email" placeholder="Correo" required />
 
           <select>
@@ -2595,13 +2595,13 @@
             <option>WhatsApp Lead System</option>
           </select>
 
-          <button class="btn btn-primary">Obtener Demo Gratis</button>
+          <button type="submit" class="btn btn-primary">Obtener Demo Gratis</button>
         </form>
       </div>
     </div>
 
     <div class="chat-float" id="aiChat">
-      <button class="chat-trigger" id="chatToggle" aria-label="Abrir asesor de soluciones" title="Asesor Iluminity">
+      <button type="button" class="chat-trigger" id="chatToggle" aria-label="Abrir asesor de soluciones" title="Asesor Iluminity">
         <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
           <path d="M32 5L55 18.5V45.5L32 59L9 45.5V18.5L32 5Z" stroke="#0f2f56" stroke-width="4.5" />
           <path d="M22 18L34 25V50L22 43V18Z" stroke="#0f2f56" stroke-width="4.5" stroke-linejoin="round" />
@@ -2616,7 +2616,7 @@
             <strong>Asesor de Soluciones</strong>
             <small>Iluminity · respuesta en 30s</small>
           </div>
-          <button class="btn" id="chatClose">Cerrar</button>
+          <button type="button" class="btn" id="chatClose">Cerrar</button>
         </div>
 
         <div class="chat-body">
@@ -2625,13 +2625,13 @@
           </div>
 
           <div class="chat-options">
-            <button class="chip" data-answer="Perfecto. Para cotizar rápido: dime 1) servicio, 2) objetivo principal y 3) fecha ideal de lanzamiento. Con eso te doy rango y plan recomendado.">Quiero cotización</button>
-            <button class="chip" data-answer="Si quieres resultados rápidos, normalmente empezamos por: 1) CRM Pro (si tienes equipo comercial), 2) WhatsApp Pro (si recibes muchos leads), 3) Sitio Business (si necesitas más conversiones).">¿Qué plan necesito?</button>
-            <button class="chip" data-answer="Ejemplo recomendado: negocio de servicios con website + WhatsApp + CRM. El objetivo es responder más rápido, ordenar el seguimiento y recibir consultas más calificadas.">Ver caso similar</button>
-            <button class="chip" data-answer="Nuestro proceso: diagnóstico breve, propuesta por fases, implementación, pruebas y optimización mensual. Todo con hitos claros.">Cómo trabajamos</button>
+            <button type="button" class="chip" data-answer="Perfecto. Para cotizar rápido: dime 1) servicio, 2) objetivo principal y 3) fecha ideal de lanzamiento. Con eso te doy rango y plan recomendado.">Quiero cotización</button>
+            <button type="button" class="chip" data-answer="Si quieres resultados rápidos, normalmente empezamos por: 1) CRM Pro (si tienes equipo comercial), 2) WhatsApp Pro (si recibes muchos leads), 3) Sitio Business (si necesitas más conversiones).">¿Qué plan necesito?</button>
+            <button type="button" class="chip" data-answer="Ejemplo recomendado: negocio de servicios con website + WhatsApp + CRM. El objetivo es responder más rápido, ordenar el seguimiento y recibir consultas más calificadas.">Ver caso similar</button>
+            <button type="button" class="chip" data-answer="Nuestro proceso: diagnóstico breve, propuesta por fases, implementación, pruebas y optimización mensual. Todo con hitos claros.">Cómo trabajamos</button>
           </div>
 
-          <button class="btn btn-primary chat-cta" id="chatHuman">Hablar con asesor por WhatsApp</button>
+          <button type="button" class="btn btn-primary chat-cta" id="chatHuman">Hablar con asesor por WhatsApp</button>
         </div>
       </div>
     </div>
