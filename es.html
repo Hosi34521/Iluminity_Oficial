@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="./assets/brand/favicon.svg" />
 
   <title>Iluminity Inc. | Soluciones de IA para Negocios</title>
 
@@ -24,10 +25,101 @@
   <meta property="og:title" content="Iluminity Inc. | Soluciones de IA para Negocios" />
   <meta property="og:description" content="Iluminity Inc. crea sitios web, sistemas CRM, automatizaciones con IA y flujos de email e Instagram para negocios de servicios." />
   <meta property="og:url" content="https://iluminity-oficial.vercel.app/es.html" />
+<<<<<<< HEAD
+  <meta property="og:image" content="https://iluminity-oficial.vercel.app/assets/brand/og-image.svg" />
+  <meta property="og:image:alt" content="Iluminity Inc. AI Solutions brand preview" />
+=======
+>>>>>>> origin/main
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Iluminity Inc. | Soluciones de IA para Negocios" />
   <meta name="twitter:description" content="Iluminity Inc. crea sitios web, sistemas CRM, automatizaciones con IA y flujos de email e Instagram para negocios de servicios." />
+<<<<<<< HEAD
+  <meta name="twitter:image" content="https://iluminity-oficial.vercel.app/assets/brand/og-image.svg" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://iluminity-oficial.vercel.app/#organization",
+      "name": "Iluminity Inc.",
+      "url": "https://iluminity-oficial.vercel.app",
+      "logo": "https://iluminity-oficial.vercel.app/assets/brand/iluminity-logo.svg",
+      "sameAs": [
+        "https://www.instagram.com/iluminity.inc/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://iluminity-oficial.vercel.app/#website",
+      "url": "https://iluminity-oficial.vercel.app",
+      "name": "Iluminity Inc.",
+      "publisher": {
+        "@id": "https://iluminity-oficial.vercel.app/#organization"
+      },
+      "inLanguage": "es"
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://iluminity-oficial.vercel.app/#service",
+      "name": "Iluminity Inc. AI Solutions",
+      "url": "https://iluminity-oficial.vercel.app/es.html",
+      "description": "Iluminity Inc. crea sitios web, sistemas CRM, automatizaciones con IA y flujos de email e Instagram para negocios de servicios.",
+      "provider": {
+        "@id": "https://iluminity-oficial.vercel.app/#organization"
+      },
+      "serviceType": [
+        "Business websites",
+        "CRM setup",
+        "AI automation",
+        "Lead systems"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://iluminity-oficial.vercel.app/es.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué crea Iluminity?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Iluminity crea sitios web premium, configuraciones CRM y sistemas de leads asistidos por IA para negocios de servicios que necesitan mejor seguimiento y consultas más calificadas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Pueden conectar mi sitio a un CRM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. La configuración recomendada conecta formularios o flujos de leads con un pipeline CRM para responder rápido y dar seguimiento ordenado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito un sistema completo desde el primer día?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Puedes empezar con una landing page o sitio empresarial y después agregar CRM, automatizaciones y flujos con IA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo puedo pedir una cotización rápido?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Envía el servicio, objetivo, rango de presupuesto y fecha ideal. Iluminity puede recomendar el camino más simple antes de definir el alcance."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+=======
+>>>>>>> origin/main
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -170,7 +262,7 @@
 
     .nav-links {
       display: flex;
-      gap: 25px;
+      gap: 18px;
       color: #d9e4f2;
       font-size: 14px;
     }
@@ -1570,6 +1662,95 @@
       margin-top: 4px;
     }
 
+<<<<<<< HEAD
+
+
+    .brand-logo-img {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
+
+    .process-grid,
+    .faq-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .process-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .process-step {
+      border: 1px solid rgba(155, 231, 255, 0.2);
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035));
+      padding: 24px;
+      min-height: 210px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .process-step::after {
+      content: "";
+      position: absolute;
+      inset: auto -20% -30% 25%;
+      height: 120px;
+      background: radial-gradient(circle, rgba(155, 231, 255, 0.16), transparent 62%);
+      pointer-events: none;
+    }
+
+    .process-step strong {
+      display: block;
+      color: var(--cyan);
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .process-step h3 {
+      margin-bottom: 10px;
+    }
+
+    .process-step p,
+    .faq-item p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .faq-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.045);
+      padding: 22px;
+    }
+
+    .faq-item h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: rgba(155, 231, 255, 0.65);
+      box-shadow: 0 0 0 4px rgba(54, 163, 255, 0.14);
+    }
+
+    .btn,
+    .buy-btn,
+    .chip,
+    .menu-toggle {
+      min-height: 44px;
+    }
+
+=======
+>>>>>>> origin/main
     @media (prefers-reduced-motion: reduce) {
       *,
       *::before,
@@ -1682,6 +1863,21 @@
         top: 72px;
       }
 
+<<<<<<< HEAD
+
+      input,
+      textarea,
+      select {
+        font-size: 16px;
+      }
+
+      .process-step,
+      .faq-item {
+        padding: 18px;
+      }
+
+=======
+>>>>>>> origin/main
       .brand span {
         font-size: 14px;
       }
@@ -1765,6 +1961,9 @@
   <div class="page">
     <nav class="nav">
       <a href="#home" class="brand" data-route="home">
+<<<<<<< HEAD
+        <span class="logo-mark"><img class="brand-logo-img" src="./assets/brand/iluminity-logo.svg" alt="" aria-hidden="true" /></span>
+=======
         <span class="logo-mark">
           <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
             <path d="M32 5L55 18.5V45.5L32 59L9 45.5V18.5L32 5Z" stroke="#9BE7FF" stroke-width="5" />
@@ -1772,6 +1971,7 @@
             <path d="M18 29L30 36V49L18 42V29Z" fill="#fff" opacity=".9" />
           </svg>
         </span>
+>>>>>>> origin/main
         <span>
           Iluminity Inc.
           <small>AI Solutions</small>
@@ -1782,6 +1982,7 @@
         <a href="#services" data-route="home">Servicios</a>
         <a href="#trust" data-route="home">Confianza</a>
         <a href="#portfolio" data-route="home">Portafolio</a>
+        <a href="#faq" data-route="home">FAQ</a>
         <a href="#pricing-page" data-route="pricing">Precios</a>
         <a href="#contact" data-route="home">Contacto</a>
       </div>
@@ -1800,6 +2001,10 @@
       <a href="#services" data-route="home">Servicios</a>
       <a href="#trust" data-route="home">Confianza</a>
       <a href="#portfolio" data-route="home">Portafolio</a>
+<<<<<<< HEAD
+      <a href="#faq" data-route="home">FAQ</a>
+=======
+>>>>>>> origin/main
       <a href="#pricing-page" data-route="pricing">Precios</a>
       <a href="#contact" data-route="home">Contacto</a>
     </div>
@@ -1965,6 +2170,23 @@
               <div class="security-badge">Formularios seguros</div>
               <div class="security-badge">Integración de contacto</div>
               <div class="security-badge">Soporte inglés y español</div>
+            </div>
+          </div>
+        </section>
+
+
+
+        <section id="process" class="reveal">
+          <div class="container">
+            <div class="section-head">
+              <div class="eyebrow">Proceso</div>
+              <h2>Un proceso más limpio desde el primer clic hasta el seguimiento.</h2>
+              <p>El objetivo no es solo un sitio más bonito: es un camino completo de leads que tu equipo pueda usar todos los días.</p>
+            </div>
+            <div class="process-grid">
+              <article class="process-step"><strong>01</strong><h3>Captura</h3><p>Una página profesional presenta tu oferta y recoge los datos correctos.</p></article>
+              <article class="process-step"><strong>02</strong><h3>Organiza</h3><p>La información del lead queda lista para CRM, prioridad y próximos pasos.</p></article>
+              <article class="process-step"><strong>03</strong><h3>Automatiza</h3><p>Flujos de email, tareas y recordatorios reducen trabajo manual.</p></article>
             </div>
           </div>
         </section>
@@ -2157,6 +2379,24 @@
               <span class="tech-pill">Email / Instagram</span>
               <span class="tech-pill">OpenAI / Claude / Gemini</span>
               <span class="tech-pill">Cloudflare</span>
+            </div>
+          </div>
+        </section>
+
+
+
+        <section id="faq" class="reveal">
+          <div class="container">
+            <div class="section-head">
+              <div class="eyebrow">FAQ</div>
+              <h2>¿Dudas antes de crear tu sistema de leads?</h2>
+              <p>Respuestas claras para dueños de negocios que comparan sitios web, CRM y automatización con IA.</p>
+            </div>
+            <div class="faq-grid">
+              <article class="faq-item"><h3>¿Qué crea Iluminity?</h3><p>Iluminity crea sitios web premium, configuraciones CRM y sistemas de leads asistidos por IA para negocios de servicios que necesitan mejor seguimiento y consultas más calificadas.</p></article>
+              <article class="faq-item"><h3>¿Pueden conectar mi sitio a un CRM?</h3><p>Sí. La configuración recomendada conecta formularios o flujos de leads con un pipeline CRM para responder rápido y dar seguimiento ordenado.</p></article>
+              <article class="faq-item"><h3>¿Necesito un sistema completo desde el primer día?</h3><p>No. Puedes empezar con una landing page o sitio empresarial y después agregar CRM, automatizaciones y flujos con IA.</p></article>
+              <article class="faq-item"><h3>¿Cómo puedo pedir una cotización rápido?</h3><p>Envía el servicio, objetivo, rango de presupuesto y fecha ideal. Iluminity puede recomendar el camino más simple antes de definir el alcance.</p></article>
             </div>
           </div>
         </section>
@@ -3099,12 +3339,16 @@
     <footer>
       <div class="container footer-inner">
         <div class="brand">
+<<<<<<< HEAD
+          <span class="logo-mark"><img class="brand-logo-img" src="./assets/brand/iluminity-logo.svg" alt="" aria-hidden="true" /></span>
+=======
           <span class="logo-mark">
             <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
               <path d="M32 5L55 18.5V45.5L32 59L9 45.5V18.5L32 5Z" stroke="#9BE7FF" stroke-width="5" />
               <path d="M22 19L41 30V45L31 39V28L22 23V19Z" fill="#9BE7FF" />
             </svg>
           </span>
+>>>>>>> origin/main
           <span>
             Iluminity Inc.
             <small>AI Solutions</small>

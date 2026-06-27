@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="20%" r="70%">
+      <stop offset="0" stop-color="#164c7a" stop-opacity="0.9"/>
+      <stop offset="0.45" stop-color="#06111f"/>
+      <stop offset="1" stop-color="#02050a"/>
+    </radialGradient>
+    <linearGradient id="t" x1="0" x2="0" y1="0" y2="1">
+      <stop stop-color="#fff"/>
+      <stop offset="1" stop-color="#9BE7FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <g opacity="0.22" stroke="#fff">
+    <path d="M0 120h1200M0 240h1200M0 360h1200M0 480h1200M180 0v630M360 0v630M540 0v630M720 0v630M900 0v630M1080 0v630"/>
+  </g>
+  <g transform="translate(98 110)">
+    <path d="M126 0 252 73v146l-126 73L0 219V73L126 0Z" fill="none" stroke="#9BE7FF" stroke-width="18" stroke-linejoin="round"/>
+    <path d="M48 70 125 116v116l-48-28v-64L48 124V70Z" fill="none" stroke="#fff" stroke-width="16" stroke-linejoin="round"/>
+    <path d="M98 45 184 96v104l-48-28v-46L98 104V45Z" fill="none" stroke="#9BE7FF" stroke-width="16" stroke-linejoin="round"/>
+  </g>
+  <text x="410" y="210" fill="url(#t)" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="900" letter-spacing="-3">ILUMINITY INC.</text>
+  <text x="414" y="274" fill="#9BE7FF" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="8">AI SOLUTIONS</text>
+  <text x="414" y="360" fill="#f7fbff" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">Websites, CRM and AI lead systems</text>
+  <text x="414" y="420" fill="#a7b3c4" font-family="Inter, Arial, sans-serif" font-size="26">Premium digital systems for service businesses.</text>
+</svg>
