@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Iluminity Inc. logo</title>
+  <desc id="desc">Geometric cube mark for Iluminity Inc. AI Solutions.</desc>
+  <rect width="512" height="512" rx="96" fill="#02050a"/>
+  <path d="M256 72 414 164v184L256 440 98 348V164L256 72Z" fill="none" stroke="#9BE7FF" stroke-width="26" stroke-linejoin="round"/>
+  <path d="M152 158 250 216v164l-72-42V246l-26-15v-73Z" fill="none" stroke="#F7FBFF" stroke-width="24" stroke-linejoin="round"/>
+  <path d="M208 126 316 190v136l-64-37v-61l-44-26v-76Z" fill="none" stroke="#9BE7FF" stroke-width="24" stroke-linejoin="round"/>
+  <path d="M270 112 362 166v138l-56-32v-74l-36-21v-65Z" fill="none" stroke="#F7FBFF" stroke-width="24" stroke-linejoin="round"/>
+</svg>

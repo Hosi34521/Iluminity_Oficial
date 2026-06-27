@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="./assets/brand/favicon.svg" />
 
   <title>Iluminity Inc. | AI Solutions</title>
 
@@ -10,6 +11,109 @@
     name="description"
     content="Iluminity Inc. builds AI automations, CRM systems, premium websites and email and Instagram workflows for modern businesses."
   />
+
+
+  <link rel="canonical" href="https://iluminity-oficial.vercel.app/en.html" />
+  <link rel="alternate" hreflang="en" href="https://iluminity-oficial.vercel.app/en.html" />
+  <link rel="alternate" hreflang="es" href="https://iluminity-oficial.vercel.app/es.html" />
+  <link rel="alternate" hreflang="pt-BR" href="https://iluminity-oficial.vercel.app/pt-br.html" />
+  <link rel="alternate" hreflang="x-default" href="https://iluminity-oficial.vercel.app/en.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Iluminity Inc." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Iluminity Inc. | AI Solutions" />
+  <meta property="og:description" content="Iluminity Inc. builds AI automations, CRM systems, premium websites and email and Instagram workflows for modern businesses." />
+  <meta property="og:url" content="https://iluminity-oficial.vercel.app/en.html" />
+  <meta property="og:image" content="https://iluminity-oficial.vercel.app/assets/brand/og-image.svg" />
+  <meta property="og:image:alt" content="Iluminity Inc. AI Solutions brand preview" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Iluminity Inc. | AI Solutions" />
+  <meta name="twitter:description" content="Iluminity Inc. builds AI automations, CRM systems, premium websites and email and Instagram workflows for modern businesses." />
+  <meta name="twitter:image" content="https://iluminity-oficial.vercel.app/assets/brand/og-image.svg" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://iluminity-oficial.vercel.app/#organization",
+      "name": "Iluminity Inc.",
+      "url": "https://iluminity-oficial.vercel.app",
+      "logo": "https://iluminity-oficial.vercel.app/assets/brand/iluminity-logo.svg",
+      "sameAs": [
+        "https://www.instagram.com/iluminity.inc/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://iluminity-oficial.vercel.app/#website",
+      "url": "https://iluminity-oficial.vercel.app",
+      "name": "Iluminity Inc.",
+      "publisher": {
+        "@id": "https://iluminity-oficial.vercel.app/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://iluminity-oficial.vercel.app/#service",
+      "name": "Iluminity Inc. AI Solutions",
+      "url": "https://iluminity-oficial.vercel.app/en.html",
+      "description": "Iluminity Inc. builds AI automations, CRM systems, premium websites and email and Instagram workflows for modern businesses.",
+      "provider": {
+        "@id": "https://iluminity-oficial.vercel.app/#organization"
+      },
+      "serviceType": [
+        "Business websites",
+        "CRM setup",
+        "AI automation",
+        "Lead systems"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://iluminity-oficial.vercel.app/en.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does Iluminity build?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Iluminity builds premium websites, CRM setups and AI-assisted lead systems for service businesses that need clearer follow-up and more qualified inquiries."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you connect my website to a CRM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The recommended setup is a website form or lead flow that sends client details into a CRM pipeline for fast response and organized follow-up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a full system from day one?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. You can start with a focused landing page or business website, then add CRM, automations and AI workflows as your process grows."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast can I request a quote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Send your service, goal, budget range and ideal launch date. Iluminity can recommend the simplest next step before scoping a full build."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -64,6 +168,19 @@
     }
 
     button {
+      border: 0;
+    }
+
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
       border: 0;
     }
 
@@ -139,13 +256,111 @@
 
     .nav-links {
       display: flex;
-      gap: 25px;
+      gap: 18px;
       color: #d9e4f2;
       font-size: 14px;
     }
 
     .nav-links a:hover {
       color: white;
+    }
+
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .language-switcher {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.07);
+      color: white;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      flex-direction: column;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    body.mobile-menu-open .menu-toggle span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    body.mobile-menu-open .menu-toggle span:nth-child(2) {
+      opacity: 0;
+    }
+
+    body.mobile-menu-open .menu-toggle span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 88px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-12px);
+      width: min(520px, calc(100% - 28px));
+      z-index: 49;
+      display: none;
+      gap: 10px;
+      padding: 16px;
+      border: 1px solid rgba(155, 231, 255, 0.25);
+      border-radius: 26px;
+      background: rgba(2, 5, 10, 0.94);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45), 0 0 60px rgba(54, 163, 255, 0.18);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .mobile-menu a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.045);
+      color: #dbeeff;
+      font-weight: 800;
+    }
+
+    .mobile-menu a::after {
+      content: "→";
+      color: var(--cyan);
+    }
+
+    body.mobile-menu-open .mobile-menu {
+      display: grid;
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0);
     }
 
     .btn {
@@ -1277,9 +1492,285 @@
       transform: translateY(0);
     }
 
+
+
+
+    .hero-proof {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 760px;
+      margin: 34px auto 0;
+    }
+
+    .proof-card,
+    .case-result,
+    .contact-trust-card,
+    .pricing-note {
+      border: 1px solid rgba(155, 231, 255, 0.18);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.055);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .proof-card {
+      padding: 14px;
+      text-align: left;
+    }
+
+    .proof-card strong {
+      display: block;
+      font-size: 19px;
+      color: white;
+      margin-bottom: 4px;
+    }
+
+    .proof-card span,
+    .case-meta,
+    .pricing-note,
+    .contact-trust-card {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .hero-secondary {
+      color: var(--cyan);
+      border-color: rgba(155, 231, 255, 0.28);
+    }
+
+    .case-card {
+      min-height: 100%;
+    }
+
+    .case-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0 18px;
+    }
+
+    .case-meta span {
+      padding: 7px 10px;
+      border: 1px solid rgba(155, 231, 255, 0.18);
+      border-radius: 999px;
+      background: rgba(155, 231, 255, 0.06);
+      color: #dbeeff;
+      font-weight: 700;
+    }
+
+    .case-result {
+      padding: 14px;
+      margin-top: 16px;
+    }
+
+    .case-result strong {
+      display: block;
+      color: white;
+      margin-bottom: 4px;
+    }
+
+    .pricing-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      gap: 26px;
+      align-items: end;
+    }
+
+    .pricing-note {
+      padding: 18px;
+      background: linear-gradient(135deg, rgba(155, 231, 255, 0.12), rgba(255, 255, 255, 0.035));
+    }
+
+    .pricing-note strong {
+      display: block;
+      color: white;
+      margin-bottom: 6px;
+      font-size: 16px;
+    }
+
+    .plan-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .plan-card .buy-btn {
+      margin-top: auto;
+    }
+
+    .plan-kicker {
+      display: inline-flex;
+      align-self: flex-start;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border: 1px solid rgba(155, 231, 255, 0.25);
+      border-radius: 999px;
+      color: var(--cyan);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(155, 231, 255, 0.07);
+    }
+
+    .contact-box {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 12% 12%, rgba(155, 231, 255, 0.12), transparent 32%);
+      pointer-events: none;
+    }
+
+    .contact-box > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-trust {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .contact-trust-card {
+      padding: 12px;
+    }
+
+    .contact-trust-card strong {
+      display: block;
+      color: white;
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+
+    .form-note {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      margin-top: 4px;
+    }
+
+
+
+    .brand-logo-img {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
+
+    .process-grid,
+    .faq-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .process-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .process-step {
+      border: 1px solid rgba(155, 231, 255, 0.2);
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035));
+      padding: 24px;
+      min-height: 210px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .process-step::after {
+      content: "";
+      position: absolute;
+      inset: auto -20% -30% 25%;
+      height: 120px;
+      background: radial-gradient(circle, rgba(155, 231, 255, 0.16), transparent 62%);
+      pointer-events: none;
+    }
+
+    .process-step strong {
+      display: block;
+      color: var(--cyan);
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .process-step h3 {
+      margin-bottom: 10px;
+    }
+
+    .process-step p,
+    .faq-item p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .faq-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.045);
+      padding: 22px;
+    }
+
+    .faq-item h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: rgba(155, 231, 255, 0.65);
+      box-shadow: 0 0 0 4px rgba(54, 163, 255, 0.14);
+    }
+
+    .btn,
+    .buy-btn,
+    .chip,
+    .menu-toggle {
+      min-height: 44px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
     @media (max-width: 900px) {
       .nav-links {
         display: none;
+      }
+
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav-actions .btn-primary {
+        display: none;
+      }
+
+      .pricing-intro,
+      .hero-proof,
+      .contact-trust {
+        grid-template-columns: 1fr;
       }
 
       .hero {
@@ -1347,6 +1838,32 @@
         top: 10px;
         padding: 11px;
         overflow: hidden;
+      }
+
+
+      .nav-actions {
+        gap: 6px;
+      }
+
+      .language-switcher a {
+        padding: 6px 8px !important;
+        font-size: 13px;
+      }
+
+      .mobile-menu {
+        top: 72px;
+      }
+
+
+      input,
+      textarea,
+      select {
+        font-size: 16px;
+      }
+
+      .process-step,
+      .faq-item {
+        padding: 18px;
       }
 
       .brand span {
@@ -1432,13 +1949,7 @@
   <div class="page">
     <nav class="nav">
       <a href="#home" class="brand" data-route="home">
-        <span class="logo-mark">
-          <svg viewBox="0 0 64 64" fill="none">
-            <path d="M32 5L55 18.5V45.5L32 59L9 45.5V18.5L32 5Z" stroke="#9BE7FF" stroke-width="5" />
-            <path d="M22 19L41 30V45L31 39V28L22 23V19Z" fill="#9BE7FF" />
-            <path d="M18 29L30 36V49L18 42V29Z" fill="#fff" opacity=".9" />
-          </svg>
-        </span>
+        <span class="logo-mark"><img class="brand-logo-img" src="./assets/brand/iluminity-logo.svg" alt="" aria-hidden="true" /></span>
         <span>
           Iluminity Inc.
           <small>AI Solutions</small>
@@ -1449,18 +1960,29 @@
         <a href="#services" data-route="home">Services</a>
         <a href="#trust" data-route="home">Trust</a>
         <a href="#portfolio" data-route="home">Portfolio</a>
+        <a href="#faq" data-route="home">FAQ</a>
         <a href="#pricing-page" data-route="pricing">Pricing</a>
         <a href="#contact" data-route="home">Contact</a>
       </div>
-      <div style="display:flex;align-items:center;gap:10px;">
-        <div style="display:flex;align-items:center;gap:6px;padding:4px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04);">
+      <div class="nav-actions">
+        <div class="language-switcher">
           <a href="./en.html?lang=en" data-lang-link="en" style="padding:7px 10px;border-radius:999px;background:rgba(155,231,255,.2);font-weight:800;color:#fff;">EN</a>
           <a href="./es.html?lang=es" data-lang-link="es" style="padding:7px 10px;border-radius:999px;color:var(--muted);font-weight:800;">ES</a>
           <a href="./pt-br.html?lang=pt" data-lang-link="pt" style="padding:7px 10px;border-radius:999px;color:var(--muted);font-weight:800;">PT</a>
         </div>
         <a class="btn btn-primary" href="#contact">Request a Quote</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menu" aria-controls="mobileMenu" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#services" data-route="home">Services</a>
+      <a href="#trust" data-route="home">Trust</a>
+      <a href="#portfolio" data-route="home">Portfolio</a>
+      <a href="#faq" data-route="home">FAQ</a>
+      <a href="#pricing-page" data-route="pricing">Pricing</a>
+      <a href="#contact" data-route="home">Contact</a>
+    </div>
 
     <div id="homeView" class="view active">
       <header id="home" class="hero">
@@ -1469,24 +1991,28 @@
         <div class="container hero-content">
           <div class="pill">
             <span class="spark"></span>
-            Websites, CRM and AI automations for service businesses
+            Premium websites, CRM and AI lead systems for service businesses
           </div>
 
-          <h1>Websites + AI<br>for better leads.</h1>
+          <h1>Turn more visitors<br>into qualified leads.</h1>
 
           <p>
-            We build websites and AI systems that help service businesses generate more leads and automate operations.
+            Iluminity builds conversion-focused websites and AI workflows that capture inquiries, organize your CRM and help your team follow up faster.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Get a Free Demo</a>
-            <a class="btn" data-route="pricing" href="#pricing-page">Request a Quote</a>
-            <a class="btn" href="#contact">Contact Options</a>
+            <a class="btn btn-primary" href="#contact">Get a Free Strategy Review</a>
+            <a class="btn hero-secondary" data-route="pricing" href="#pricing-page">View Starting Prices</a>
+          </div>
+
+          <div class="hero-proof">
+            <div class="proof-card"><strong>Website + CRM</strong><span>One connected lead flow from first click to follow-up.</span></div>
+            <div class="proof-card"><strong>AI-ready</strong><span>Automation paths for intake, reminders and sales tasks.</span></div>
+            <div class="proof-card"><strong>Service-focused</strong><span>Built for clinics, consultants, real estate, tax offices and agencies.</span></div>
           </div>
 
           <div class="trusted">
             <p>For consultants, local service providers, real estate teams, tax offices, clinics and growing agencies.</p>
-
             <div class="logo-row">
               <span class="client-logo">Landing Pages</span>
               <span class="client-logo">Websites</span>
@@ -1623,20 +2149,39 @@
           </div>
         </section>
 
+
+
+        <section id="process" class="reveal">
+          <div class="container">
+            <div class="section-head">
+              <div class="eyebrow">Process</div>
+              <h2>A cleaner process from first click to follow-up.</h2>
+              <p>The goal is not just a better-looking site — it is a complete lead path your team can use every day.</p>
+            </div>
+            <div class="process-grid">
+              <article class="process-step"><strong>01</strong><h3>Capture</h3><p>A polished page presents your offer and collects the right project details.</p></article>
+              <article class="process-step"><strong>02</strong><h3>Organize</h3><p>Lead data is structured for CRM follow-up, priority and next actions.</p></article>
+              <article class="process-step"><strong>03</strong><h3>Automate</h3><p>Email, task and reminder workflows reduce manual response time.</p></article>
+            </div>
+          </div>
+        </section>
+
         <section id="portfolio" class="reveal">
           <div class="container">
             <div class="section-head">
               <div class="eyebrow">Portfolio Examples</div>
-              <h2>Practical builds for real service businesses.</h2>
+              <h2>Case-study style builds with clear business outcomes.</h2>
               <p>
-                These examples show the type of projects Iluminity can create and connect to your sales process.
+                Practical examples of how Iluminity packages websites, CRM and automations into polished lead-generation systems.
               </p>
             </div>
 
             <div class="grid cards3">
-              <article class="card" style="grid-column: span 2;">
-                <div class="eyebrow">Mini demo</div>
-                <h3>Immigration consultant system</h3>
+              <article class="card case-card" style="grid-column: span 2;">
+                <div class="eyebrow">Featured case concept</div>
+                <h3>Immigration consultant intake system</h3>
+                <div class="case-meta"><span>Website</span><span>CRM handoff</span><span>Document checklist</span></div>
+                <p style="color:var(--muted);line-height:1.7;">A premium consultation page that guides visitors to request an evaluation, collects the right details and prepares the lead for a structured follow-up.</p>
                 <div class="web-preview" style="margin-top: 18px;">
                   <div class="web-top"><span>VisaPro Consultants</span><span>Request evaluation</span></div>
                   <div class="web-body">
@@ -1649,11 +2194,13 @@
                     </div>
                   </div>
                 </div>
+                <div class="case-result"><strong>Outcome focus</strong><span>Reduce back-and-forth by routing complete lead details into a CRM-ready workflow.</span></div>
               </article>
 
-              <article class="card">
-                <div class="eyebrow">Lead captured</div>
-                <h3>Automatic flow</h3>
+              <article class="card case-card">
+                <div class="eyebrow">Automation layer</div>
+                <h3>Lead capture to CRM in minutes</h3>
+                <div class="case-meta"><span>Instant routing</span><span>Email follow-up</span></div>
                 <div class="timeline">
                   <div class="task"><span id="demoStepOne">Form ready</span><em>Demo</em></div>
                   <div class="task"><span id="demoStepTwo">CRM waiting for lead</span><em>Auto</em></div>
@@ -1670,8 +2217,10 @@
                 </div>
               </article>
 
-              <article class="card">
-                <h3>CRM Pipeline</h3>
+              <article class="card case-card">
+                <div class="eyebrow">Sales operations</div>
+                <h3>CRM pipeline for service teams</h3>
+                <p style="color:var(--muted);line-height:1.7;">A clean pipeline that shows where every inquiry stands and what should happen next.</p>
                 <div class="pipeline" style="grid-template-columns: 1fr; margin-top: 14px;">
                   <div class="pipe-col">New lead<div class="lead">Ana · residency</div></div>
                   <div class="pipe-col">Qualified<div class="lead">Documents pending</div></div>
@@ -1679,14 +2228,16 @@
                 </div>
               </article>
 
-              <article class="card">
-                <h3>Tax website example</h3>
+              <article class="card case-card">
+                <div class="eyebrow">Professional services</div>
+                <h3>Tax office website + reminders</h3>
                 <p>Tax preparation website with document checklist, intake form and automated email reminders.</p>
                 <ul class="features">
                   <li>Data intake</li>
                   <li>CRM delivery</li>
                   <li>Automated email</li>
                 </ul>
+                <div class="case-result"><strong>Built to convert</strong><span>Clear requirements, fewer missed documents and faster first response.</span></div>
               </article>
             </div>
           </div>
@@ -1807,14 +2358,37 @@
           </div>
         </section>
 
+
+
+        <section id="faq" class="reveal">
+          <div class="container">
+            <div class="section-head">
+              <div class="eyebrow">FAQ</div>
+              <h2>Questions before building your lead system?</h2>
+              <p>Clear answers for business owners comparing websites, CRM and AI automation.</p>
+            </div>
+            <div class="faq-grid">
+              <article class="faq-item"><h3>What does Iluminity build?</h3><p>Iluminity builds premium websites, CRM setups and AI-assisted lead systems for service businesses that need clearer follow-up and more qualified inquiries.</p></article>
+              <article class="faq-item"><h3>Can you connect my website to a CRM?</h3><p>Yes. The recommended setup is a website form or lead flow that sends client details into a CRM pipeline for fast response and organized follow-up.</p></article>
+              <article class="faq-item"><h3>Do I need a full system from day one?</h3><p>No. You can start with a focused landing page or business website, then add CRM, automations and AI workflows as your process grows.</p></article>
+              <article class="faq-item"><h3>How fast can I request a quote?</h3><p>Send your service, goal, budget range and ideal launch date. Iluminity can recommend the simplest next step before scoping a full build.</p></article>
+            </div>
+          </div>
+        </section>
+
         <section id="contact" class="reveal">
           <div class="container contact-box">
             <div>
               <div class="eyebrow">Contact</div>
-              <h2>Request a quote for your website or AI system.</h2>
+              <h2>Tell us what you want to improve first.</h2>
               <p style="color: var(--muted); line-height: 1.7; margin-top: 16px;">
-                Tell us what you need and we will recommend the simplest path to launch.
+                Share your project goals and we will recommend the simplest website, CRM or automation path for your business.
               </p>
+              <div class="contact-trust">
+                <div class="contact-trust-card"><strong>Clear next step</strong><span>We reply with scope questions or a suggested starting plan.</span></div>
+                <div class="contact-trust-card"><strong>No pressure</strong><span>Start with a focused page or expand into CRM later.</span></div>
+                <div class="contact-trust-card"><strong>Secure by design</strong><span>Only share what is needed to review the project.</span></div>
+              </div>
               <div class="grid" style="gap: 10px; margin-top: 18px;">
                 <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=Project%20request%20-%20Iluminity">Email: iluminity.inc@gmail.com</a>
                 <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=Project%20request%20-%20Iluminity">Second Gmail: iluminacioninc@gmail.com</a>
@@ -1822,11 +2396,14 @@
               </div>
             </div>
 
-            <form onsubmit="event.preventDefault(); window.location.href = 'mailto:iluminity.inc@gmail.com?subject=Project%20request%20-%20Iluminity';">
-              <input placeholder="Full name" required />
-              <input type="email" placeholder="Email address" required />
+            <form onsubmit="event.preventDefault(); const name=this.querySelector('[name=name]').value; const email=this.querySelector('[name=email]').value; const service=this.querySelector('[name=service]').value; const msg=this.querySelector('[name=message]').value; const text='Hello! My name is '+name+'. Service: '+service+'. Email: '+email+'. Message: '+msg; window.location.href='mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject='+encodeURIComponent('Project request - '+service)+'&body='+encodeURIComponent(text);">
+              <label class="sr-only" for="contact-name">Full name</label>
+              <input id="contact-name" name="name" placeholder="Full name" autocomplete="name" required />
+              <label class="sr-only" for="contact-email">Email address</label>
+              <input id="contact-email" name="email" type="email" placeholder="Email address" autocomplete="email" required />
 
-              <select required>
+              <label class="sr-only" for="contact-service">Service</label>
+              <select id="contact-service" name="service" required>
                 <option value="">Select a service</option>
                 <option>AI Automation</option>
                 <option>CRM Setup</option>
@@ -1835,7 +2412,9 @@
                 <option>Lead System</option>
               </select>
 
-              <textarea placeholder="Tell us about your business and what you need..."></textarea>
+              <label class="sr-only" for="contact-message">Project details</label>
+              <textarea id="contact-message" name="message" placeholder="Tell us about your business and what you need..."></textarea>
+              <p class="form-note">We use your details only to respond to your project request.</p>
               <button class="btn btn-primary">Request a Quote</button>
             </form>
           </div>
@@ -2487,17 +3066,20 @@
 
     <div id="pricingView" class="view">
       <section id="pricing-page" class="sub-hero">
-        <div class="container">
-          <div class="eyebrow">Pricing 2026</div>
-          <h2>Simple starting prices.</h2>
-          <p style="color: var(--muted); font-size: 18px; line-height: 1.7; max-width: 850px;">
-            Start with the offer you need now. We will recommend the right scope after a quick review of your business and goals.
-          </p>
+        <div class="container pricing-intro">
+          <div>
+            <div class="eyebrow">Pricing 2026</div>
+            <h2>Start lean. Upgrade into a full lead system.</h2>
+            <p style="color: var(--muted); font-size: 18px; line-height: 1.7; max-width: 850px;">
+              Choose the entry point that fits your business today. Every plan is scoped around conversion, trust and a clean follow-up process.
+            </p>
 
-          <div class="inline-actions" style="justify-content: flex-start; margin-top: 22px;">
-            <a class="btn" data-route="home" href="#services">← Back Home</a>
-            <a class="btn btn-primary" href="#contact" data-route="home">Request Quote</a>
+            <div class="inline-actions" style="justify-content: flex-start; margin-top: 22px;">
+              <a class="btn btn-primary" href="#contact" data-route="home">Request a Quote</a>
+              <a class="btn" data-route="home" href="#services">← Back Home</a>
+            </div>
           </div>
+          <div class="pricing-note"><strong>Not sure what you need?</strong>Send your goal, budget range and launch timeline. We will recommend the simplest path before quoting.</div>
         </div>
       </section>
 
@@ -2512,7 +3094,8 @@
           <div>
             <div class="detail-panel active" id="webPrice">
               <div class="grid plans">
-                <article class="card">
+                <article class="card plan-card">
+                  <div class="plan-kicker">Fast launch</div>
                   <h3>Landing Pages</h3>
                   <div class="price">Starting at $150</div>
                   <p style="color:var(--muted)">For focused offers, ads and lead capture.</p>
@@ -2525,8 +3108,9 @@
                   <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=Project%20request%20-%20Iluminity">Request a Quote</a>
                 </article>
 
-                <article class="card" style="border-color: rgba(155, 231, 255, 0.45); box-shadow: var(--shadow);">
+                <article class="card plan-card" style="border-color: rgba(155, 231, 255, 0.45); box-shadow: var(--shadow);">
                   <div class="popular-tag">Most Popular</div>
+                  <div class="plan-kicker">Best value</div>
                   <h3>Business Websites</h3>
                   <div class="price">Starting at $350</div>
                   <p style="color:var(--muted)">For service businesses that need trust and conversion.</p>
@@ -2539,7 +3123,8 @@
                   <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=Project%20request%20-%20Iluminity">Request a Quote</a>
                 </article>
 
-                <article class="card">
+                <article class="card plan-card">
+                  <div class="plan-kicker">Scale-ready</div>
                   <h3>CRM & Automations</h3>
                   <div class="price">Custom Quote</div>
                   <p style="color:var(--muted)">For sales pipelines, lead routing and AI workflows.</p>
@@ -2556,7 +3141,8 @@
 
             <div class="detail-panel" id="crmPrice">
               <div class="grid plans">
-                <article class="card">
+                <article class="card plan-card">
+                  <div class="plan-kicker">Organize sales</div>
                   <h3>CRM Setup</h3>
                   <div class="price">Custom Quote</div>
                   <p style="color:var(--muted)">Organize leads, stages and sales follow-up.</p>
@@ -2569,8 +3155,9 @@
                   <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=Project%20request%20-%20Iluminity">Request a Quote</a>
                 </article>
 
-                <article class="card" style="border-color: rgba(155, 231, 255, 0.45); box-shadow: var(--shadow);">
+                <article class="card plan-card" style="border-color: rgba(155, 231, 255, 0.45); box-shadow: var(--shadow);">
                   <div class="popular-tag">Best for growth</div>
+                  <div class="plan-kicker">Automation layer</div>
                   <h3>AI Automations</h3>
                   <div class="price">Custom Quote</div>
                   <p style="color:var(--muted)">Automate lead routing and repetitive tasks.</p>
@@ -2583,7 +3170,8 @@
                   <a class="buy-btn" href="mailto:iluminity.inc@gmail.com?cc=iluminacioninc@gmail.com&subject=Project%20request%20-%20Iluminity">Request a Quote</a>
                 </article>
 
-                <article class="card">
+                <article class="card plan-card">
+                  <div class="plan-kicker">Full lead flow</div>
                   <h3>Lead Systems</h3>
                   <div class="price">Custom Quote</div>
                   <p style="color:var(--muted)">Qualify leads from the channel clients already use.</p>
@@ -2700,12 +3288,7 @@
     <footer>
       <div class="container footer-inner">
         <div class="brand">
-          <span class="logo-mark">
-            <svg viewBox="0 0 64 64" fill="none">
-              <path d="M32 5L55 18.5V45.5L32 59L9 45.5V18.5L32 5Z" stroke="#9BE7FF" stroke-width="5" />
-              <path d="M22 19L41 30V45L31 39V28L22 23V19Z" fill="#9BE7FF" />
-            </svg>
-          </span>
+          <span class="logo-mark"><img class="brand-logo-img" src="./assets/brand/iluminity-logo.svg" alt="" aria-hidden="true" /></span>
           <span>
             Iluminity Inc.
             <small>AI Solutions</small>
@@ -2800,6 +3383,7 @@
         clearTimeout(routeTimer);
       }
 
+      closeMobileMenu();
       renderRoute(route, anchor);
     }
 
@@ -2811,6 +3395,40 @@
       const state = event.state || { route: "home", anchor: null };
       go(state.route || "home", state.anchor || null, false);
     });
+
+
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    function closeMobileMenu() {
+      document.body.classList.remove("mobile-menu-open");
+      if (menuToggle) {
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+    }
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = document.body.classList.toggle("mobile-menu-open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMobileMenu);
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) {
+          closeMobileMenu();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeMobileMenu();
+        }
+      });
+    }
 
     document.addEventListener("click", (event) => {
       const routeElement = event.target.closest("[data-route]");

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iluminity-oficial.vercel.app/sitemap.xml
