@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://iluminity-oficial.vercel.app/en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iluminity-oficial.vercel.app/en.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://iluminity-oficial.vercel.app/es.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://iluminity-oficial.vercel.app/pt-br.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iluminity-oficial.vercel.app/en.html" />
+  </url>
+  <url>
+    <loc>https://iluminity-oficial.vercel.app/es.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iluminity-oficial.vercel.app/en.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://iluminity-oficial.vercel.app/es.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://iluminity-oficial.vercel.app/pt-br.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iluminity-oficial.vercel.app/en.html" />
+  </url>
+  <url>
+    <loc>https://iluminity-oficial.vercel.app/pt-br.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://iluminity-oficial.vercel.app/en.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://iluminity-oficial.vercel.app/es.html" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://iluminity-oficial.vercel.app/pt-br.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://iluminity-oficial.vercel.app/en.html" />
+  </url>
+</urlset>
