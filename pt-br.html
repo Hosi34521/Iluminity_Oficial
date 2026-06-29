@@ -1975,6 +1975,83 @@
         padding: 64px 0;
       }
     }
+
+    /* ── Esfera 3D ── */
+    .sphere-3d {
+      position: absolute;
+      top: 50%;
+      right: 6%;
+      transform: translateY(-54%);
+      width: 380px;
+      height: 380px;
+      perspective: 900px;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .orbit-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1.5px solid rgba(155,231,255,0.28);
+      transform-style: preserve-3d;
+    }
+    .orbit-ring::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 14px 4px rgba(155,231,255,0.7);
+    }
+    .r1 { animation: ring1 6s linear infinite; }
+    .r2 { animation: ring2 9s linear infinite; }
+    .r3 { animation: ring3 13s linear infinite; }
+    @keyframes ring1 { from { transform: rotateX(65deg) rotateY(0deg); } to { transform: rotateX(65deg) rotateY(360deg); } }
+    @keyframes ring2 { from { transform: rotateX(20deg) rotateY(0deg); } to { transform: rotateX(20deg) rotateY(-360deg); } }
+    @keyframes ring3 { from { transform: rotateX(80deg) rotateY(120deg); } to { transform: rotateX(80deg) rotateY(480deg); } }
+    .sphere-core {
+      position: absolute;
+      inset: 14%;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, rgba(155,231,255,0.18), rgba(54,163,255,0.06) 60%, transparent 80%);
+      border: 1px solid rgba(155,231,255,0.2);
+      box-shadow: 0 0 60px rgba(54,163,255,0.22), inset 0 0 40px rgba(155,231,255,0.08);
+      animation: sphere-pulse 4s ease-in-out infinite;
+    }
+    @keyframes sphere-pulse { 0%,100% { opacity:.85; transform:scale(1); } 50% { opacity:1; transform:scale(1.04); } }
+    @media (max-width: 900px) {
+      .sphere-3d { width: 200px; height: 200px; right: 2%; top: 28%; }
+    }
+    @media (max-width: 560px) {
+      .sphere-3d { width: 140px; height: 140px; top: 16%; right: 1%; }
+    }
+
+    /* ── Barras KPI ── */
+    .kpi-section { padding: 80px 0; background: linear-gradient(180deg, transparent, rgba(54,163,255,0.04), transparent); }
+    .kpi-section .section-head { margin-bottom: 48px; }
+    .kpi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .kpi-item { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 28px; }
+    .kpi-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+    .kpi-header span { font-size: 14px; color: var(--muted); font-weight: 500; }
+    .kpi-val { font-size: 36px; font-weight: 800; letter-spacing: -0.04em; color: var(--cyan); }
+    .kpi-bar { height: 6px; background: rgba(255,255,255,0.08); border-radius: 99px; overflow: hidden; margin-bottom: 10px; }
+    .kpi-fill { height: 100%; width: 0; border-radius: 99px; background: linear-gradient(90deg, var(--blue), var(--cyan)); transition: width 1.4s cubic-bezier(.4,0,.2,1); }
+    .kpi-sub { font-size: 13px; color: var(--muted); }
+    .stats-band { margin-top: 48px; display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+    .stat-band-item { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; text-align: center; }
+    .stat-band-item .count { font-size: 32px; font-weight: 800; letter-spacing: -0.04em; color: var(--text); }
+    .stat-band-item p { font-size: 13px; color: var(--muted); margin-top: 4px; }
+    @media (max-width: 900px) {
+      .kpi-grid { grid-template-columns: 1fr; }
+      .stats-band { grid-template-columns: repeat(2,1fr); }
+    }
+
+    /* ── Tilt 3D serviços ── */
+    .service-link { transition: transform 0.12s ease, box-shadow 0.25s ease !important; }
   </style>
 </head>
 
@@ -2010,7 +2087,7 @@
           <a href="./es.html?lang=es" data-lang-link="es" style="padding:7px 10px;border-radius:999px;color:var(--muted);font-weight:800;">ES</a>
           <a href="./pt-br.html?lang=pt" data-lang-link="pt" style="padding:7px 10px;border-radius:999px;background:rgba(155,231,255,.2);font-weight:800;color:#fff;">PT</a>
         </div>
-        <a class="btn btn-primary" href="#contact">Solicitar Orçamento</a>
+        <a class="btn btn-primary" href="#contact" data-route="home">Solicitar Orçamento</a>
         <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menu" aria-controls="mobileMenu" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </nav>
@@ -2026,23 +2103,28 @@
 
     <div id="homeView" class="view active">
       <header id="home" class="hero">
-        <div class="glow-cube"></div>
+        <div class="sphere-3d">
+          <div class="orbit-ring r1"></div>
+          <div class="orbit-ring r2"></div>
+          <div class="orbit-ring r3"></div>
+          <div class="sphere-core"></div>
+        </div>
 
         <div class="container hero-content">
           <div class="pill">
             <span class="spark"></span>
-            Sites premium, CRM e sistemas de leads com IA para negócios de serviços
+            Sites Premium · Automações IA · Sistemas CRM
           </div>
 
-          <h1>Transforme visitas<br>em leads qualificados.</h1>
+          <h1>Mais leads,<br>menos trabalho manual.</h1>
 
           <p>
-            A Iluminity cria sites focados em conversão e fluxos com IA que capturam contatos, organizam seu CRM e ajudam sua equipe a responder mais rápido.
+            A Iluminity entrega sites focados em conversão, CRMs integrados e automações com IA para que sua equipe capture mais contatos e feche mais negócios — sem esforço extra.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Solicitar revisão estratégica grátis</a>
-            <a class="btn hero-secondary" data-route="pricing" href="#pricing-page">Ver preços iniciais</a>
+            <a class="btn btn-primary" href="#contact" data-route="home">Solicitar Demo Grátis</a>
+            <a class="btn hero-secondary" data-route="pricing" href="#pricing-page">Ver preços</a>
           </div>
 
           <div class="hero-proof">
@@ -2052,13 +2134,14 @@
           </div>
 
           <div class="trusted">
-            <p>Para consultores, prestadores locais, equipes imobiliárias, escritórios fiscais, clínicas e agências em crescimento.</p>
+            <p>Confiado por imobiliárias, clínicas médicas, escritórios jurídicos, consultorias fiscais, agências digitais e marcas de serviços.</p>
             <div class="logo-row">
-              <span class="client-logo">Landing Pages</span>
-              <span class="client-logo">Sites</span>
-              <span class="client-logo">CRM</span>
-              <span class="client-logo">Fluxos IA</span>
-              <span class="client-logo">Sistemas de leads</span>
+              <span class="client-logo">Imobiliárias</span>
+              <span class="client-logo">Clínicas Médicas</span>
+              <span class="client-logo">Escritórios Jurídicos</span>
+              <span class="client-logo">Consultorias Fiscais</span>
+              <span class="client-logo">Agências Digitais</span>
+              <span class="client-logo">Marcas de Serviços</span>
             </div>
           </div>
         </div>
@@ -2123,7 +2206,7 @@
                 Seu site captura o contato, o CRM salva o lead e as automações notificam a pessoa certa.
               </p>
               <div class="inline-actions" style="justify-content: flex-start; margin-top: 24px;">
-                <a class="btn btn-primary" href="#contact">Receber Demo Grátis</a>
+                <a class="btn btn-primary" href="#contact" data-route="home">Receber Demo Grátis</a>
                 <a class="btn" data-route="pricing" href="#pricing-page">Solicitar Orçamento</a>
               </div>
             </div>
@@ -2202,6 +2285,68 @@
               <article class="process-step"><strong>01</strong><h3>Captura</h3><p>Uma página profissional apresenta sua oferta e coleta os dados certos.</p></article>
               <article class="process-step"><strong>02</strong><h3>Organiza</h3><p>Os dados do lead ficam prontos para CRM, prioridade e próximos passos.</p></article>
               <article class="process-step"><strong>03</strong><h3>Automatiza</h3><p>Fluxos de e-mail, tarefas e lembretes reduzem trabalho manual.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="reveal kpi-section">
+          <div class="container">
+            <div class="section-head">
+              <div class="eyebrow">Impacto Real</div>
+              <h2>Resultados que nossos sistemas entregam.</h2>
+              <p>Métricas médias de clientes com sites, CRM e automações ativas.</p>
+            </div>
+            <div class="kpi-grid">
+              <div class="kpi-item" data-kpi="94">
+                <div class="kpi-header">
+                  <span>Taxa de captura de leads</span>
+                  <span class="kpi-val">0%</span>
+                </div>
+                <div class="kpi-bar"><div class="kpi-fill"></div></div>
+                <p class="kpi-sub">Formulários e fluxos ativos que convertem visitantes em leads</p>
+              </div>
+              <div class="kpi-item" data-kpi="78">
+                <div class="kpi-header">
+                  <span>Redução no tempo de resposta</span>
+                  <span class="kpi-val">0%</span>
+                </div>
+                <div class="kpi-bar"><div class="kpi-fill"></div></div>
+                <p class="kpi-sub">Alertas automáticos e pipelines elimina demora no primeiro contato</p>
+              </div>
+              <div class="kpi-item" data-kpi="67">
+                <div class="kpi-header">
+                  <span>Mais reuniões agendadas</span>
+                  <span class="kpi-val">+0%</span>
+                </div>
+                <div class="kpi-bar"><div class="kpi-fill"></div></div>
+                <p class="kpi-sub">Sites otimizados com CTAs direcionados aumentam conversões</p>
+              </div>
+              <div class="kpi-item" data-kpi="85">
+                <div class="kpi-header">
+                  <span>Trabalho manual eliminado</span>
+                  <span class="kpi-val">0%</span>
+                </div>
+                <div class="kpi-bar"><div class="kpi-fill"></div></div>
+                <p class="kpi-sub">Automações substituem tarefas repetitivas de entrada de dados</p>
+              </div>
+            </div>
+            <div class="stats-band">
+              <div class="stat-band-item">
+                <div class="count" data-count="340">0</div>
+                <p>leads/mês capturados</p>
+              </div>
+              <div class="stat-band-item">
+                <div class="count" data-count="26">0</div>
+                <p>horas salvas por semana</p>
+              </div>
+              <div class="stat-band-item">
+                <div class="count" data-count="94">0</div>
+                <p>% automatizado</p>
+              </div>
+              <div class="stat-band-item">
+                <div class="count" data-count="3">0</div>
+                <p>dias para o primeiro sistema</p>
+              </div>
             </div>
           </div>
         </section>
@@ -2294,8 +2439,8 @@
             </div>
 
             <div class="inline-actions" style="justify-content: flex-start;">
-              <a class="btn btn-primary" href="#contact">Solicitar Orçamento</a>
-              <a class="btn" href="#contact">Ver métodos de contato</a>
+              <a class="btn btn-primary" href="#contact" data-route="home">Solicitar Orçamento</a>
+              <a class="btn" href="#contact" data-route="home">Ver métodos de contato</a>
             </div>
           </div>
         </section>
@@ -3137,7 +3282,7 @@
                 <article class="card plan-card">
                   <div class="plan-kicker">Lançamento rápido</div>
                   <h3>Landing Pages</h3>
-                  <div class="price">A partir de R$ 750</div>
+                  <div class="price">A partir de R$ 1.499</div>
                   <p style="color:var(--muted)">Para ofertas, anúncios e captação de leads.</p>
                   <ul class="features">
                      <li>Design responsivo de uma página</li>
@@ -3152,7 +3297,7 @@
                   <div class="plan-kicker">Melhor valor</div>
                   <div class="popular-tag">Mais popular</div>
                   <h3>Sites Empresariais</h3>
-                  <div class="price">A partir de R$ 1.750</div>
+                  <div class="price">A partir de R$ 2.999</div>
                   <p style="color:var(--muted)">Para negócios de serviços que precisam de confiança e conversão.</p>
                   <ul class="features">
                      <li>Site multi-seção</li>
@@ -3336,9 +3481,9 @@
         </div>
 
         <div class="footer-links">
-          <a href="#security">Segurança</a>
+          <a href="#security" data-route="home">Segurança</a>
           <a href="#pricing-page" data-route="pricing">Preços</a>
-          <a href="#contact">Contato</a>
+          <a href="#contact" data-route="home">Contato</a>
         </div>
 
         <p>© 2026 Iluminity Inc. Sites, CRM e sistemas de automação com IA.</p>
@@ -3621,9 +3766,9 @@
 
     const activities = [
       "Novo lead capturado pelo site",
-      "contact reminder sent",
-      "CRM status updated",
-      "AI assistant answered FAQ",
+      "Lembrete de contato enviado automaticamente",
+      "Status do CRM atualizado",
+      "Assistente IA respondeu dúvida frequente",
       "Revisão de segurança concluída"
     ];
 
@@ -3692,6 +3837,49 @@
         modal.classList.remove("active");
       }
     });
+
+    // Cookie sync no carregamento
+    document.cookie = "iluminity-language=pt; path=/; max-age=31536000; samesite=lax";
+
+    // KPI bars animadas
+    const kpiObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = Number(el.dataset.kpi);
+        const fill = el.querySelector(".kpi-fill");
+        const val = el.querySelector(".kpi-val");
+        const prefix = val.textContent.startsWith("+") ? "+" : "";
+        let current = 0;
+        const step = Math.max(1, Math.round(target / 50));
+        fill.style.width = "0%";
+        const timer = setInterval(() => {
+          current = Math.min(current + step, target);
+          fill.style.width = current + "%";
+          val.textContent = prefix + current + "%";
+          if (current >= target) clearInterval(timer);
+        }, 28);
+        kpiObs.unobserve(el);
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll(".kpi-item[data-kpi]").forEach(el => kpiObs.observe(el));
+
+    // Tilt 3D em cards de serviço (apenas desktop)
+    if (window.matchMedia("(pointer: fine)").matches) {
+      document.querySelectorAll(".card.service-link").forEach(card => {
+        card.addEventListener("mousemove", e => {
+          const r = card.getBoundingClientRect();
+          const x = (e.clientX - r.left) / r.width - 0.5;
+          const y = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform = `perspective(800px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg) scale(1.03)`;
+          card.style.boxShadow = "0 20px 60px rgba(54,163,255,0.18)";
+        });
+        card.addEventListener("mouseleave", () => {
+          card.style.transform = "";
+          card.style.boxShadow = "";
+        });
+      });
+    }
   </script>
 </body>
 </html>
