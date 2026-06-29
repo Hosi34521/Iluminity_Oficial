@@ -10,6 +10,12 @@
     name="description"
     content="Iluminity Inc. crea websites, sistemas CRM, automatizaciones con IA y flujos de WhatsApp para negocios de servicios."
   />
+  <meta property="og:title" content="Iluminity Inc. | Soluciones de IA para Negocios" />
+  <meta property="og:description" content="Websites premium, automatizaciones con IA, sistemas CRM y flujos de WhatsApp para negocios de servicios modernos." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Iluminity Inc. | Soluciones de IA para Negocios" />
+  <meta name="robots" content="index, follow" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -1390,6 +1396,206 @@
         padding: 64px 0;
       }
     }
+
+    /* ── 3D Sphere ── */
+    .sphere-3d {
+      position: absolute;
+      width: 540px;
+      height: 540px;
+      top: 110px;
+      left: 50%;
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+    .orbit-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1px solid rgba(155, 231, 255, 0.18);
+    }
+    .orbit-ring::after {
+      content: "";
+      position: absolute;
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 16px var(--cyan), 0 0 30px rgba(155, 231, 255, 0.5);
+      top: -4px; left: 50%; margin-left: -4px;
+    }
+    .r1 { animation: ring1 10s linear infinite; }
+    .r2 { border-color: rgba(54, 163, 255, 0.22); animation: ring2 14s linear infinite; }
+    .r3 { border-color: rgba(155, 231, 255, 0.12); animation: ring3 18s linear infinite; }
+    @keyframes ring1 { to { transform: rotate(360deg); } }
+    @keyframes ring2 { from { transform: rotateX(66deg) rotate(0deg); } to { transform: rotateX(66deg) rotate(360deg); } }
+    @keyframes ring3 { from { transform: rotateY(66deg) rotate(0deg); } to { transform: rotateY(66deg) rotate(360deg); } }
+    .sphere-core {
+      position: absolute;
+      inset: 150px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, rgba(155, 231, 255, 0.28), rgba(54, 163, 255, 0.1) 45%, transparent 70%);
+      border: 1px solid rgba(155, 231, 255, 0.28);
+      box-shadow: 0 0 90px rgba(54, 163, 255, 0.35), inset 0 0 70px rgba(155, 231, 255, 0.1);
+      animation: sphere-pulse 4s ease-in-out infinite;
+    }
+    @keyframes sphere-pulse {
+      0%, 100% { box-shadow: 0 0 90px rgba(54, 163, 255, 0.35), inset 0 0 70px rgba(155, 231, 255, 0.1); }
+      50% { box-shadow: 0 0 140px rgba(54, 163, 255, 0.55), inset 0 0 100px rgba(155, 231, 255, 0.18); }
+    }
+
+    /* ── Hamburger ── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255,255,255,.05);
+    }
+    .hamburger span {
+      display: block;
+      width: 20px; height: 2px;
+      background: #d9e4f2;
+      border-radius: 2px;
+      transition: 0.25s ease;
+    }
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 49;
+      background: rgba(2, 5, 10, 0.97);
+      backdrop-filter: blur(24px);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: white;
+    }
+    .mobile-nav a:hover { color: var(--cyan); }
+    .mobile-nav-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--muted);
+      cursor: pointer;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 9px 14px;
+      background: rgba(255,255,255,.05);
+    }
+    .mobile-nav .mobile-cta {
+      font-size: 16px;
+      border: 1px solid rgba(155, 231, 255, 0.45);
+      background: linear-gradient(135deg, #0d4b78, #0a2540 55%, #07121f);
+      padding: 14px 22px;
+      border-radius: 999px;
+      margin-top: 10px;
+    }
+    @media (max-width: 900px) {
+      .hamburger { display: flex; }
+      .nav .nav-links { display: none !important; }
+      .nav .btn-primary { display: none !important; }
+      .sphere-3d { width: 420px; height: 420px; top: 160px; }
+      .sphere-core { inset: 110px; }
+    }
+
+    /* ── KPI Bars ── */
+    .kpi-section {
+      background: linear-gradient(180deg, transparent, rgba(54,163,255,0.03), transparent);
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px 52px;
+      margin-top: 42px;
+    }
+    .kpi-item { display: grid; gap: 10px; }
+    .kpi-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 15px;
+      font-weight: 700;
+      color: #d8e6f4;
+    }
+    .kpi-val {
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      color: var(--cyan);
+      font-variant-numeric: tabular-nums;
+      min-width: 64px;
+      text-align: right;
+    }
+    .kpi-bar {
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      overflow: hidden;
+    }
+    .kpi-fill {
+      height: 100%;
+      width: 0;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--cyan), var(--blue));
+      box-shadow: 0 0 12px rgba(54, 163, 255, 0.45);
+      transition: width 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .kpi-sub { font-size: 12px; color: var(--muted); margin-top: -4px; }
+
+    /* ── Stats band ── */
+    .stats-band {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 60px;
+    }
+    .stat-band-item {
+      padding: 26px 20px;
+      text-align: center;
+      border-right: 1px solid var(--line);
+    }
+    .stat-band-item:last-child { border-right: none; }
+    .stat-band-item strong {
+      display: block;
+      font-size: 38px;
+      font-weight: 900;
+      letter-spacing: -0.07em;
+    }
+    .stat-band-item span {
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* ── 3D tilt card ── */
+    .service-link { transition: transform 0.12s ease, box-shadow 0.25s ease !important; }
+
+    @media (max-width: 900px) {
+      .kpi-grid { grid-template-columns: 1fr; gap: 22px; }
+      .stats-band { grid-template-columns: 1fr 1fr; border-radius: 18px; }
+      .stat-band-item:nth-child(odd) { border-right: 1px solid var(--line); }
+      .stat-band-item:nth-child(even) { border-right: none; }
+      .stat-band-item { border-bottom: 1px solid var(--line); }
+      .stat-band-item:nth-child(3), .stat-band-item:nth-child(4) { border-bottom: none; }
+    }
+    @media (max-width: 560px) {
+      .sphere-3d { width: 300px; height: 300px; top: 190px; }
+      .sphere-core { inset: 70px; }
+    }
   </style>
 </head>
 
@@ -1429,41 +1635,60 @@
           <a href="./en.html?lang=en" data-lang-link="en" style="padding:7px 10px;border-radius:999px;color:var(--muted);font-weight:800;">EN</a>
           <a href="./es.html?lang=es" data-lang-link="es" style="padding:7px 10px;border-radius:999px;background:rgba(155,231,255,.2);font-weight:800;color:#fff;">ES</a>
         </div>
-        <a class="btn btn-primary" href="#contact">Solicitar Cotización</a>
+        <a class="btn btn-primary" href="#contact" data-route="home">Solicitar Cotización</a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" type="button">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </nav>
 
+    <div class="mobile-nav" id="mobileNav">
+      <button class="mobile-nav-close" id="mobileNavClose" type="button">&#10005; Cerrar</button>
+      <a href="#services" data-route="home">Servicios</a>
+      <a href="#trust" data-route="home">Confianza</a>
+      <a href="#portfolio" data-route="home">Portafolio</a>
+      <a href="#pricing-page" data-route="pricing">Precios</a>
+      <a href="#contact" data-route="home">Contacto</a>
+      <a class="mobile-cta" href="https://wa.me/5595984178100?text=Hola%2C%20quiero%20una%20demo%20gratis." target="_blank" rel="noreferrer">Escríbenos por WhatsApp →</a>
+    </div>
+
     <div id="homeView" class="view active">
       <header id="home" class="hero">
-        <div class="glow-cube"></div>
+        <div class="sphere-3d">
+          <div class="orbit-ring r1"></div>
+          <div class="orbit-ring r2"></div>
+          <div class="orbit-ring r3"></div>
+          <div class="sphere-core"></div>
+        </div>
 
         <div class="container hero-content">
           <div class="pill">
             <span class="spark"></span>
-            Websites, CRM y automatizaciones con IA para negocios de servicios
+            Websites Premium &middot; Automatizaciones IA &middot; Sistemas CRM
           </div>
 
-          <h1>Websites + IA<br>para más leads.</h1>
+          <h1>Más leads,<br>menos trabajo manual.</h1>
 
           <p>
-            Creamos websites y sistemas con IA que ayudan a negocios de servicios a generar más leads y automatizar operaciones.
+            Diseñamos, conectamos y automatizamos los sistemas digitales que los negocios de servicios modernos necesitan&nbsp;&mdash; websites premium, flujos con IA y pipelines CRM que capturan leads las 24 horas.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Obtener Demo Gratis</a>
-            <a class="btn" data-route="pricing" href="#pricing-page">Solicitar Cotización</a>
+            <a class="btn btn-primary" href="#contact" data-route="home">Obtener Demo Gratis</a>
+            <a class="btn" data-route="pricing" href="#pricing-page">Ver Precios</a>
             <a class="btn" href="https://wa.me/5595984178100?text=Hola%2C%20quiero%20hablar%20sobre%20un%20website%20o%20sistema%20con%20IA." target="_blank" rel="noreferrer">Escríbenos por WhatsApp</a>
           </div>
 
           <div class="trusted">
-            <p>Para consultores, servicios locales, inmobiliarias, oficinas de impuestos, clínicas y agencias en crecimiento.</p>
+            <p>Elegidos por consultores, agencias inmobiliarias, clínicas, despachos fiscales y agencias digitales.</p>
 
             <div class="logo-row">
-              <span class="client-logo">Landing Pages</span>
-              <span class="client-logo">Websites</span>
-              <span class="client-logo">CRM</span>
-              <span class="client-logo">Flujos IA</span>
-              <span class="client-logo">Leads por WhatsApp</span>
+              <span class="client-logo">Inmobiliarias</span>
+              <span class="client-logo">Clínicas Médicas</span>
+              <span class="client-logo">Despachos Legales</span>
+              <span class="client-logo">Consultores Fiscales</span>
+              <span class="client-logo">Agencias Digitales</span>
+              <span class="client-logo">Marcas de Servicios</span>
             </div>
           </div>
         </div>
@@ -1590,6 +1815,44 @@
               <div class="security-badge">Formularios seguros</div>
               <div class="security-badge">Integración WhatsApp</div>
               <div class="security-badge">Soporte inglés y español</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="reveal kpi-section">
+          <div class="container">
+            <div class="section-head">
+              <div class="eyebrow">Impacto Real</div>
+              <h2>Números que importan a tu negocio.</h2>
+              <p>Resultados promedio en proyectos de clientes durante los primeros 90 días.</p>
+            </div>
+            <div class="kpi-grid">
+              <div class="kpi-item" data-kpi="94">
+                <div class="kpi-header"><span>Tasa de captura de leads</span><span class="kpi-val">0%</span></div>
+                <div class="kpi-bar"><div class="kpi-fill"></div></div>
+                <span class="kpi-sub">Automatizado 24/7 &mdash; ningún lead perdido fuera de horario</span>
+              </div>
+              <div class="kpi-item" data-kpi="78">
+                <div class="kpi-header"><span>Reducción en tiempo de respuesta</span><span class="kpi-val">0%</span></div>
+                <div class="kpi-bar"><div class="kpi-fill"></div></div>
+                <span class="kpi-sub">De 4h promedio de respuesta manual a menos de 60 segundos</span>
+              </div>
+              <div class="kpi-item" data-kpi="67" data-prefix="+">
+                <div class="kpi-header"><span>Más demos agendadas por mes</span><span class="kpi-val">+0%</span></div>
+                <div class="kpi-bar"><div class="kpi-fill"></div></div>
+                <span class="kpi-sub">Website + CRM + WhatsApp funcionando como un solo sistema</span>
+              </div>
+              <div class="kpi-item" data-kpi="85">
+                <div class="kpi-header"><span>Trabajo manual del equipo eliminado</span><span class="kpi-val">0%</span></div>
+                <div class="kpi-bar"><div class="kpi-fill"></div></div>
+                <span class="kpi-sub">Desde captación de lead hasta seguimiento &mdash; todo automatizado</span>
+              </div>
+            </div>
+            <div class="stats-band">
+              <div class="stat-band-item"><strong class="count" data-count="340">0</strong><span>Leads captados al mes (prom.)</span></div>
+              <div class="stat-band-item"><strong class="count" data-count="26">0</strong><span>Horas ahorradas por semana</span></div>
+              <div class="stat-band-item"><strong class="count" data-count="94">0</strong><span>% tasa de respuesta automática</span></div>
+              <div class="stat-band-item"><strong class="count" data-count="3">0</strong><span>Días al primer sistema en vivo</span></div>
             </div>
           </div>
         </section>
@@ -1754,7 +2017,7 @@
 
             <form onsubmit="event.preventDefault(); const name=this.querySelector('[name=name]').value; const email=this.querySelector('[name=email]').value; const service=this.querySelector('[name=service]').value; const msg=this.querySelector('[name=message]').value; const text='Hola! Mi nombre es '+name+'. Servicio: '+service+'. E-mail: '+email+'. Mensaje: '+msg; window.open('https://wa.me/5595984178100?text='+encodeURIComponent(text),'_blank'); window.location.href='mailto:iluminity.inc@gmail.com?subject='+encodeURIComponent('Solicitud de proyecto - '+service)+'&body='+encodeURIComponent(text);">
               <input type="text" name="name" placeholder="Nombre completo" required />
-              <input name="email" type="email" placeholder="Correo electronico" required />
+              <input type="email" name="email" placeholder="Correo electrónico" required />
 
               <select name="service" required>
                 <option value="">Selecciona un servicio</option>
@@ -2444,7 +2707,7 @@
               <div class="grid plans">
                 <article class="card">
                   <h3>Landing Pages</h3>
-                  <div class="price">Desde $150</div>
+                  <div class="price">Desde $299</div>
                   <p style="color:var(--muted)">Para ofertas, anuncios y captación de leads.</p>
                   <ul class="features">
                      <li>Diseño responsive de una página</li>
@@ -2458,7 +2721,7 @@
                 <article class="card" style="border-color: rgba(155, 231, 255, 0.45); box-shadow: var(--shadow);">
                   <div class="popular-tag">Más popular</div>
                   <h3>Business Websites</h3>
-                  <div class="price">Desde $350</div>
+                  <div class="price">Desde $599</div>
                   <p style="color:var(--muted)">Para negocios de servicios que necesitan confianza y conversión.</p>
                   <ul class="features">
                      <li>Sitio multi-sección</li>
@@ -2552,7 +2815,7 @@
             </div>
 
             <div class="custom-plan-box">
-              <h3>Quieres un Plan Personalizado?</h3>
+              <h3>¿Quieres un Plan Personalizado?</h3>
               <p style="color: var(--muted); margin-bottom: 20px; line-height: 1.7;">Combina servicios y adapta el proyecto a tu presupuesto y a tu mercado.</p>
               <form onsubmit="event.preventDefault(); window.open('https://wa.me/5595984178100?text=' + encodeURIComponent('Hola! Quiero un plan personalizado con ' + document.getElementById('customService').value + '. Mi presupuesto aproximado es: ' + document.getElementById('customBudget').value), '_blank'); window.location.href='mailto:iluminity.inc@gmail.com?subject='+encodeURIComponent('Plan personalizado - Iluminity')+'&body='+encodeURIComponent('Servicio base: '+document.getElementById('customService').value+' | Presupuesto: '+document.getElementById('customBudget').value);">
                 <select id="customService" required style="margin-bottom: 10px;">
@@ -2652,9 +2915,9 @@
         </div>
 
         <div class="footer-links">
-          <a href="#security">Seguridad</a>
+          <a href="#security" data-route="home">Seguridad</a>
           <a href="#pricing-page" data-route="pricing">Precios</a>
-          <a href="#contact">Contacto</a>
+          <a href="#contact" data-route="home">Contacto</a>
         </div>
 
         <p>© 2026 Iluminity Inc. Websites, CRM y sistemas de automatización con IA.</p>
@@ -2847,11 +3110,11 @@
     const feed = document.getElementById("activityFeed");
 
     const activities = [
-      "New lead captured from website",
-      "WhatsApp reminder sent",
-      "CRM status updated",
-      "AI assistant answered FAQ",
-      "Security scan completed"
+      "Nuevo lead capturado desde el sitio",
+      "Recordatorio de WhatsApp enviado",
+      "Estado del CRM actualizado",
+      "Asistente IA respondió consulta",
+      "Revisión de seguridad completada"
     ];
 
     let activityIndex = 0;
@@ -2919,6 +3182,64 @@
         modal.classList.remove("active");
       }
     });
+
+    // ── Cookie sync on load (Vercel edge compatibility) ──
+    try {
+      document.cookie = "iluminity-language=" + encodeURIComponent(currentLanguage) + "; path=/; max-age=31536000; samesite=lax";
+    } catch (e) {}
+
+    // ── Hamburger menu ──
+    const hamburger = document.getElementById("hamburger");
+    const mobileNav = document.getElementById("mobileNav");
+    const mobileNavClose = document.getElementById("mobileNavClose");
+
+    hamburger?.addEventListener("click", () => mobileNav.classList.add("open"));
+    mobileNavClose?.addEventListener("click", () => mobileNav.classList.remove("open"));
+
+    mobileNav?.addEventListener("click", (e) => {
+      const link = e.target.closest("a");
+      if (link) setTimeout(() => mobileNav.classList.remove("open"), 120);
+    });
+
+    // ── KPI animated bars ──
+    const kpiObs = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const item = entry.target;
+        const target = Number(item.dataset.kpi);
+        const prefix = item.dataset.prefix || "";
+        const fill = item.querySelector(".kpi-fill");
+        const val = item.querySelector(".kpi-val");
+        fill.style.width = target + "%";
+        let current = 0;
+        const step = Math.max(1, Math.round(target / 45));
+        const timer = setInterval(() => {
+          current = Math.min(current + step, target);
+          val.textContent = prefix + current + "%";
+          if (current >= target) clearInterval(timer);
+        }, 28);
+        kpiObs.unobserve(item);
+      });
+    }, { threshold: 0.25 });
+
+    document.querySelectorAll(".kpi-item[data-kpi]").forEach((el) => kpiObs.observe(el));
+
+    // ── 3D card tilt (desktop only) ──
+    if (!window.matchMedia("(pointer: coarse)").matches) {
+      document.querySelectorAll(".card.service-link").forEach((card) => {
+        card.addEventListener("mousemove", (e) => {
+          const r = card.getBoundingClientRect();
+          const x = (e.clientX - r.left) / r.width - 0.5;
+          const y = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform = `perspective(800px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg) translateY(-4px)`;
+          card.style.boxShadow = `0 20px 60px rgba(54,163,255,${0.1 + Math.abs(x) * 0.12})`;
+        });
+        card.addEventListener("mouseleave", () => {
+          card.style.transform = "";
+          card.style.boxShadow = "";
+        });
+      });
+    }
   </script>
 </body>
 </html>
