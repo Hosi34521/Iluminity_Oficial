@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="refresh" content="0; url=./en.html" />
   <title>Iluminity Inc.</title>
   <script>
     (function () {
@@ -16,14 +15,20 @@
 
         let target = "en.html";
 
-        if (queryLanguage === "es") {
+        if (queryLanguage === "pt" || queryLanguage === "pt-br") {
+          target = "pt-br.html";
+        } else if (queryLanguage === "es") {
           target = "es.html";
         } else if (queryLanguage === "en") {
           target = "en.html";
+        } else if (savedLanguage === "pt") {
+          target = "pt-br.html";
         } else if (savedLanguage === "es") {
           target = "es.html";
         } else if (savedLanguage === "en") {
           target = "en.html";
+        } else if (languages.includes("pt-br") || languages.includes("pt")) {
+          target = "pt-br.html";
         } else if (languages.includes("es")) {
           target = "es.html";
         }
