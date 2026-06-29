@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Template Library | Iluminity Inc.</title>
+  <meta name="description" content="Browse Iluminity's professional website templates for service businesses — roofing, dental, HVAC, law, restaurant, medspa, and more."/>
+  <link rel="icon" type="image/svg+xml" href="../assets/brand/favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--bg:#02050a;--bg2:#06111f;--text:#f7fbff;--muted:#a7b3c4;--line:rgba(255,255,255,.14);--blue:#36a3ff;--cyan:#9be7ff;--radius:20px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;border:0;cursor:pointer}
+
+    /* NAV */
+    .site-nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:100;width:min(1180px,calc(100% - 32px));display:flex;align-items:center;justify-content:space-between;padding:12px 20px;border:1px solid var(--line);border-radius:999px;background:rgba(2,5,10,.8);backdrop-filter:blur(20px)}
+    .nav-brand{font-weight:800;font-size:18px;letter-spacing:-.04em;display:flex;align-items:center;gap:8px}
+    .nav-brand .dot{width:8px;height:8px;border-radius:50%;background:var(--blue)}
+    .nav-link{color:var(--muted);font-size:14px;transition:color .2s}
+    .nav-link:hover{color:var(--text)}
+    .nav-cta{background:var(--blue);color:#fff;padding:8px 18px;border-radius:999px;font-size:14px;font-weight:600;transition:opacity .2s}
+    .nav-cta:hover{opacity:.85}
+
+    /* HERO */
+    .hero{padding:160px 0 80px;text-align:center;background:radial-gradient(circle at 50% 0%,rgba(54,163,255,.18),transparent 40%)}
+    .container{width:min(1180px,calc(100% - 40px));margin:0 auto}
+    .eyebrow{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);margin-bottom:16px;padding:6px 14px;border:1px solid rgba(54,163,255,.3);border-radius:999px;background:rgba(54,163,255,.08)}
+    h1{font-size:clamp(36px,5vw,64px);font-weight:900;letter-spacing:-.04em;line-height:1.05;margin-bottom:20px}
+    h1 span{background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-sub{font-size:18px;color:var(--muted);max-width:560px;margin:0 auto 40px;line-height:1.7}
+
+    /* SEARCH + FILTER */
+    .controls{max-width:640px;margin:0 auto 60px;display:flex;flex-direction:column;gap:16px;align-items:center}
+    .search-wrap{position:relative;width:100%}
+    .search-wrap svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+    #search{width:100%;padding:14px 16px 14px 48px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--text);font-size:15px;outline:none;transition:border-color .2s}
+    #search:focus{border-color:rgba(54,163,255,.5)}
+    #search::placeholder{color:var(--muted)}
+    .filters{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+    .filter-btn{padding:8px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);font-size:13px;font-weight:500;transition:all .2s}
+    .filter-btn:hover,.filter-btn.active{background:rgba(54,163,255,.12);border-color:rgba(54,163,255,.4);color:var(--text)}
+    .filter-btn.active{color:var(--blue)}
+
+    /* GRID */
+    .templates-section{padding:0 0 100px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+    .template-card{border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.05);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s,border-color .25s}
+    .template-card:hover{transform:translateY(-6px);box-shadow:0 24px 80px rgba(0,0,0,.4);border-color:rgba(255,255,255,.25)}
+    .card-header{padding:28px 24px 20px;display:flex;align-items:flex-start;gap:16px}
+    .card-icon{font-size:36px;line-height:1;flex-shrink:0}
+    .card-badge{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin-bottom:8px}
+    .card-body h3{font-size:20px;font-weight:800;letter-spacing:-.03em;margin-bottom:6px}
+    .card-body p{font-size:14px;color:var(--muted);line-height:1.6}
+    .card-footer{padding:0 24px 24px;margin-top:auto}
+    .card-cta{display:block;text-align:center;padding:12px;border-radius:12px;font-size:14px;font-weight:600;transition:all .2s;border:1px solid var(--line);color:var(--text);background:rgba(255,255,255,.06)}
+    .template-card:hover .card-cta{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3)}
+    .template-card[hidden]{display:none}
+
+    /* EMPTY STATE */
+    .no-results{display:none;text-align:center;padding:60px 20px;color:var(--muted);font-size:16px}
+    .no-results.visible{display:block}
+
+    /* FOOTER */
+    footer{padding:40px 0;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:14px}
+    footer a{color:var(--blue)}
+    footer a:hover{text-decoration:underline}
+
+    @media(max-width:600px){h1{font-size:32px}.hero{padding:120px 0 60px}}
+  </style>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Site navigation">
+  <a href="../en.html" class="nav-brand" aria-label="Iluminity homepage">
+    <span class="dot" aria-hidden="true"></span>
+    <span>Iluminity</span>
+  </a>
+  <span class="nav-link" style="font-size:13px;font-weight:600;color:var(--muted)">Template Library</span>
+  <a href="../en.html" class="nav-cta">Main Site</a>
+</nav>
+
+<main>
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="container">
+      <div class="eyebrow">Template Library</div>
+      <h1>Website Templates<br/><span>by Industry</span></h1>
+      <p class="hero-sub">Professional, fully-built website templates for service businesses. Click any card to preview a complete, client-ready website.</p>
+    </div>
+  </section>
+
+  <section class="templates-section" aria-labelledby="templates-heading">
+    <div class="container">
+      <h2 id="templates-heading" class="sr-only">Browse Templates</h2>
+      <div class="controls">
+        <div class="search-wrap">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="search" id="search" placeholder="Search templates…" aria-label="Search templates" autocomplete="off"/>
+        </div>
+        <div class="filters" role="group" aria-label="Filter by category">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="Home Services" aria-pressed="false">Home Services</button>
+          <button class="filter-btn" data-filter="Healthcare" aria-pressed="false">Healthcare</button>
+          <button class="filter-btn" data-filter="Professional" aria-pressed="false">Professional</button>
+          <button class="filter-btn" data-filter="Hospitality" aria-pressed="false">Hospitality</button>
+        </div>
+      </div>
+
+      <div class="grid" id="templates-grid" role="list">
+
+        <article class="template-card" data-category="Home Services" data-name="roofing" role="listitem">
+          <div class="card-header">
+            <span class="card-icon" aria-hidden="true">🏠</span>
+            <div class="card-body">
+              <span class="card-badge" style="background:rgba(229,92,26,.15);color:#e55c1a">Home Services</span>
+              <h3>Roofing</h3>
+              <p>Professional roofing contractor site with material estimator and storm damage services.</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="../roofing/" class="card-cta" aria-label="Preview Roofing template">Preview Template →</a>
+          </div>
+        </article>
+
+        <article class="template-card" data-category="Healthcare" data-name="dental" role="listitem">
+          <div class="card-header">
+            <span class="card-icon" aria-hidden="true">🦷</span>
+            <div class="card-body">
+              <span class="card-badge" style="background:rgba(14,165,233,.15);color:#0ea5e9">Healthcare</span>
+              <h3>Dental</h3>
+              <p>Family dental practice site with online appointment booking and treatment showcase.</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="../dental/" class="card-cta" aria-label="Preview Dental template">Preview Template →</a>
+          </div>
+        </article>
+
+        <article class="template-card" data-category="Home Services" data-name="hvac" role="listitem">
+          <div class="card-header">
+            <span class="card-icon" aria-hidden="true">❄️</span>
+            <div class="card-body">
+              <span class="card-badge" style="background:rgba(245,158,11,.15);color:#f59e0b">Home Services</span>
+              <h3>HVAC</h3>
+              <p>Heating &amp; cooling company with 24/7 emergency service and service urgency selector.</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="../hvac/" class="card-cta" aria-label="Preview HVAC template">Preview Template →</a>
+          </div>
+        </article>
+
+        <article class="template-card" data-category="Professional" data-name="realtor real estate" role="listitem">
+          <div class="card-header">
+            <span class="card-icon" aria-hidden="true">🏡</span>
+            <div class="card-body">
+              <span class="card-badge" style="background:rgba(139,92,246,.15);color:#8b5cf6">Professional</span>
+              <h3>Realtor</h3>
+              <p>Real estate agent portfolio with property spotlight, filter, and scheduling widget.</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="../realtor/" class="card-cta" aria-label="Preview Realtor template">Preview Template →</a>
+          </div>
+        </article>
+
+        <article class="template-card" data-category="Professional" data-name="law attorney" role="listitem">
+          <div class="card-header">
+            <span class="card-icon" aria-hidden="true">⚖️</span>
+            <div class="card-body">
+              <span class="card-badge" style="background:rgba(99,102,241,.15);color:#6366f1">Professional</span>
+              <h3>Law Firm</h3>
+              <p>Personal injury law firm with case intake selector and free consultation CTA.</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="../law/" class="card-cta" aria-label="Preview Law Firm template">Preview Template →</a>
+          </div>
+        </article>
+
+        <article class="template-card" data-category="Hospitality" data-name="restaurant food dining" role="listitem">
+          <div class="card-header">
+            <span class="card-icon" aria-hidden="true">🍽️</span>
+            <div class="card-body">
+              <span class="card-badge" style="background:rgba(239,68,68,.15);color:#ef4444">Hospitality</span>
+              <h3>Restaurant</h3>
+              <p>Italian restaurant with menu highlights, reservation widget, and ambiance showcase.</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="../restaurant/" class="card-cta" aria-label="Preview Restaurant template">Preview Template →</a>
+          </div>
+        </article>
+
+        <article class="template-card" data-category="Healthcare" data-name="medspa spa beauty aesthetics" role="listitem">
+          <div class="card-header">
+            <span class="card-icon" aria-hidden="true">💆</span>
+            <div class="card-body">
+              <span class="card-badge" style="background:rgba(236,72,153,.15);color:#ec4899">Healthcare</span>
+              <h3>Med Spa</h3>
+              <p>Aesthetic medical spa with treatment selector, pricing tiers, and consultation form.</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="../medspa/" class="card-cta" aria-label="Preview Med Spa template">Preview Template →</a>
+          </div>
+        </article>
+
+        <article class="template-card" data-category="Home Services" data-name="electrician electrical" role="listitem">
+          <div class="card-header">
+            <span class="card-icon" aria-hidden="true">⚡</span>
+            <div class="card-body">
+              <span class="card-badge" style="background:rgba(234,179,8,.15);color:#eab308">Home Services</span>
+              <h3>Electrician</h3>
+              <p>Licensed electrician with panel upgrades, EV charger installs, and diagnostic helper.</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="../electrician/" class="card-cta" aria-label="Preview Electrician template">Preview Template →</a>
+          </div>
+        </article>
+
+        <article class="template-card" data-category="Home Services" data-name="plumber plumbing" role="listitem">
+          <div class="card-header">
+            <span class="card-icon" aria-hidden="true">🔧</span>
+            <div class="card-body">
+              <span class="card-badge" style="background:rgba(59,130,246,.15);color:#3b82f6">Home Services</span>
+              <h3>Plumber</h3>
+              <p>24/7 plumbing service with emergency vs scheduled booking toggle and transparent pricing.</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="../plumber/" class="card-cta" aria-label="Preview Plumber template">Preview Template →</a>
+          </div>
+        </article>
+
+        <article class="template-card" data-category="Home Services" data-name="landscaping lawn garden outdoor" role="listitem">
+          <div class="card-header">
+            <span class="card-icon" aria-hidden="true">🌿</span>
+            <div class="card-body">
+              <span class="card-badge" style="background:rgba(34,197,94,.15);color:#22c55e">Home Services</span>
+              <h3>Landscaping</h3>
+              <p>Full-service landscaping company with project estimator, design showcase, and quote CTA.</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="../landscaping/" class="card-cta" aria-label="Preview Landscaping template">Preview Template →</a>
+          </div>
+        </article>
+
+      </div>
+      <p class="no-results" id="no-results" role="status" aria-live="polite">No templates match your search. Try a different keyword.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2025 <a href="../en.html">Iluminity Inc.</a> · Template Library · <a href="../en.html">Back to Main Site</a></p>
+  </div>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+  const cards = Array.from(document.querySelectorAll('.template-card'));
+  const searchInput = document.getElementById('search');
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const noResults = document.getElementById('no-results');
+  let activeFilter = 'all';
+
+  function applyFilters() {
+    const q = searchInput.value.toLowerCase().trim();
+    let visible = 0;
+    cards.forEach(card => {
+      const name = card.dataset.name || '';
+      const cat = card.dataset.category || '';
+      const matchSearch = !q || name.includes(q) || cat.toLowerCase().includes(q);
+      const matchFilter = activeFilter === 'all' || cat === activeFilter;
+      if (matchSearch && matchFilter) {
+        card.hidden = false;
+        visible++;
+      } else {
+        card.hidden = true;
+      }
+    });
+    noResults.classList.toggle('visible', visible === 0);
+  }
+
+  searchInput.addEventListener('input', applyFilters);
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed','true');
+      activeFilter = btn.dataset.filter;
+      applyFilters();
+    });
+  });
+</script>
+</body>
+</html>

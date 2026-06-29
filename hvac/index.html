@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>CoolBreeze HVAC | Heating & Cooling Experts</title>
+  <meta name="description" content="NATE-certified HVAC installation, repair and maintenance. 24/7 emergency service in Phoenix AZ."/>
+  <link rel="icon" type="image/svg+xml" href="../assets/brand/favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--bg:#02050a;--bg2:#06111f;--text:#f7fbff;--muted:#a7b3c4;--line:rgba(255,255,255,.14);--radius:20px;--accent:#f59e0b;--accent-dim:rgba(245,158,11,.15);--accent-glow:0 0 40px rgba(245,158,11,.25)}
+    *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+    a{color:inherit;text-decoration:none} button{font:inherit;border:0;cursor:pointer} img{max-width:100%;display:block}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .container{width:min(1180px,calc(100% - 40px));margin:0 auto}
+    .section{padding:100px 0} .section-sm{padding:70px 0}
+    .section-head{text-align:center;margin-bottom:60px}
+    .eyebrow{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;padding:5px 14px;border:1px solid var(--accent-dim);border-radius:999px;background:var(--accent-dim)}
+    h2{font-size:clamp(28px,4vw,46px);font-weight:900;letter-spacing:-.04em;line-height:1.1;margin-bottom:16px} h2 span{color:var(--accent)}
+    .sub{font-size:17px;color:var(--muted);line-height:1.7;max-width:580px;margin:0 auto}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    .card{border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.05);padding:28px;transition:transform .25s,box-shadow .25s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+    .card-icon{font-size:32px;margin-bottom:14px} .card h3{font-size:18px;font-weight:700;letter-spacing:-.03em;margin-bottom:8px} .card p{font-size:14px;color:var(--muted);line-height:1.65}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:700;transition:opacity .2s,transform .15s;border:0;cursor:pointer}
+    .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
+    .btn-outline{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);color:var(--text);padding:14px 28px;border-radius:12px;font-size:15px;font-weight:600;transition:all .2s;cursor:pointer}
+    .btn-outline:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim)}
+    .site-nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:100;width:min(1180px,calc(100% - 32px));border:1px solid var(--line);border-radius:999px;background:rgba(2,5,10,.85);backdrop-filter:blur(20px)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;gap:12px}
+    .back-link{font-size:13px;color:var(--muted);font-weight:500;transition:color .2s;white-space:nowrap} .back-link:hover{color:var(--text)}
+    .brand-link{display:flex;align-items:center;gap:7px;font-weight:800;font-size:16px;letter-spacing:-.04em}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0}
+    .nav-cta{background:var(--accent);color:#fff;padding:8px 18px;border-radius:999px;font-size:13px;font-weight:700;transition:opacity .2s;white-space:nowrap} .nav-cta:hover{opacity:.85}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+    .stat{text-align:center;padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.04)}
+    .stat-num{font-size:36px;font-weight:900;letter-spacing:-.04em;color:var(--accent)} .stat-label{font-size:13px;color:var(--muted);margin-top:6px}
+    .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .testi{border:1px solid var(--line);border-radius:var(--radius);padding:28px;background:rgba(255,255,255,.04)}
+    .stars{color:var(--accent);font-size:18px;margin-bottom:14px} .testi-text{font-size:15px;line-height:1.7;color:var(--muted);margin-bottom:18px;font-style:italic}
+    .testi-author{display:flex;align-items:center;gap:12px} .avatar{width:40px;height:40px;border-radius:50%;background:var(--accent-dim);border:1px solid var(--accent);display:grid;place-items:center;font-size:16px;flex-shrink:0}
+    .author-name{font-weight:700;font-size:14px} .author-sub{font-size:12px;color:var(--muted)}
+    .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+    .contact-info h2{text-align:left} .contact-info .sub{text-align:left;margin:0 0 32px}
+    .info-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px}
+    .info-icon{width:40px;height:40px;border-radius:12px;background:var(--accent-dim);border:1px solid var(--accent);display:grid;place-items:center;font-size:18px;flex-shrink:0}
+    .info-text strong{display:block;font-size:14px;font-weight:700;margin-bottom:2px} .info-text span{font-size:13px;color:var(--muted)}
+    form{display:flex;flex-direction:column;gap:16px} .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px} .form-group{display:flex;flex-direction:column;gap:6px}
+    label{font-size:13px;font-weight:600;color:var(--muted)}
+    input,select,textarea{padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--text);font:inherit;font-size:15px;outline:none;transition:border-color .2s}
+    input:focus,select:focus,textarea:focus{border-color:var(--accent)} input::placeholder,textarea::placeholder{color:rgba(167,179,196,.5)}
+    textarea{resize:vertical;min-height:110px} select option{background:#06111f}
+    .form-msg{display:none;padding:14px;border-radius:12px;font-size:14px;font-weight:600;text-align:center}
+    .form-msg.success{display:block;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.3);color:#22c55e}
+    .form-msg.error{display:block;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.3);color:#ef4444}
+    .hero-section{padding:160px 0 90px;background:radial-gradient(circle at 50% 0%,var(--accent-dim),transparent 45%)}
+    .hero-tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);padding:6px 14px;border:1px solid var(--accent-dim);border-radius:999px;background:var(--accent-dim);margin-bottom:24px}
+    h1{font-size:clamp(38px,5.5vw,72px);font-weight:900;letter-spacing:-.05em;line-height:1.0;margin-bottom:20px} h1 em{font-style:normal;color:var(--accent)}
+    .hero-lead{font-size:18px;color:var(--muted);line-height:1.75;max-width:560px;margin-bottom:40px}
+    .hero-ctas{display:flex;gap:14px;flex-wrap:wrap} .trust-row{display:flex;gap:24px;flex-wrap:wrap;margin-top:48px;align-items:center} .trust-badge{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)} .trust-badge strong{color:var(--text)}
+    .mini-wrap{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:var(--radius);padding:36px}
+    .mini-wrap h3{font-size:22px;font-weight:800;letter-spacing:-.03em;margin-bottom:8px} .mini-wrap .desc{font-size:14px;color:var(--muted);margin-bottom:28px}
+    .opt-group{margin-bottom:22px} .opt-label{font-size:13px;font-weight:600;color:var(--muted);margin-bottom:8px;display:block}
+    .opt-btns{display:flex;gap:10px;flex-wrap:wrap}
+    .opt-btn{padding:9px 18px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--muted);font-size:14px;font-weight:500;transition:all .2s;cursor:pointer;font-family:inherit}
+    .opt-btn:hover{border-color:var(--accent);color:var(--text)} .opt-btn.sel{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);font-weight:600}
+    .result-box{border:1px solid var(--accent);border-radius:14px;padding:24px;background:var(--accent-dim);display:none;animation:fadeIn .3s ease}
+    .result-box.show{display:block} .result-box h4{font-size:18px;font-weight:800;color:var(--accent);margin-bottom:8px} .result-box p{font-size:14px;color:var(--muted);line-height:1.65} .result-box strong{color:var(--text)}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+    footer{padding:50px 0;border-top:1px solid var(--line)}
+    .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+    .footer-brand{font-size:20px;font-weight:900;letter-spacing:-.04em;margin-bottom:12px;display:flex;align-items:center;gap:8px} .footer-tagline{font-size:14px;color:var(--muted);line-height:1.6}
+    .footer-col h4{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:14px}
+    .footer-col a{display:block;font-size:14px;color:var(--muted);margin-bottom:8px;transition:color .2s} .footer-col a:hover{color:var(--text)}
+    .footer-bottom{margin-top:40px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    .footer-bottom p{font-size:13px;color:var(--muted)} .footer-bottom a{color:var(--accent)}
+    .reveal{opacity:0;transform:translateY(20px);transition:.6s ease} .reveal.visible{opacity:1;transform:none}
+    @media(max-width:900px){.grid-3{grid-template-columns:1fr 1fr}.testi-grid{grid-template-columns:1fr 1fr}.contact-wrap{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.grid-3{grid-template-columns:1fr}.testi-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}.form-row{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr}.hero-ctas{flex-direction:column}.footer-bottom{flex-direction:column;text-align:center}h1{font-size:36px}}
+    </style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Site navigation">
+  <div class="nav-inner">
+    <a href="../templates/" class="back-link" aria-label="Back to Template Library">← Library</a>
+    <a href="../en.html" class="brand-link"><span class="dot" aria-hidden="true"></span><span>Iluminity</span></a>
+    <a href="#contact" class="nav-cta">Get Started</a>
+  </div>
+</nav>
+<section class="hero-section">
+  <div class="container"><div class="hero-content">
+    <div class="hero-tag">❄️ HVAC Experts — 24/7 Available</div>
+    <h1>Comfort in<br/>Every <em>Season</em></h1>
+    <p class="hero-lead">Expert HVAC installation, repair, and maintenance. NATE-certified technicians, 24/7 emergency service, transparent pricing.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary">Request Service →</a>
+      <a href="tel:+15552003456" class="btn-outline">📞 24/7 Emergency</a>
+    </div>
+    <div class="trust-row">
+      <div class="trust-badge">🏅 <strong>NATE Certified</strong></div>
+      <div class="trust-badge">🕐 <strong>24/7 Emergency</strong></div>
+      <div class="trust-badge">💰 <strong>Upfront Pricing</strong></div>
+    </div>
+  </div></div>
+</section>
+<section class="section" id="services"><div class="container">
+  <div class="section-head reveal"><div class="eyebrow">Services</div><h2>Heating &amp; Cooling <span>Solutions</span></h2><p class="sub">From emergency repairs to full system replacements, CoolBreeze handles all your HVAC needs.</p></div>
+  <div class="grid-3">
+    <div class="card reveal"><div class="card-icon">❄️</div><h3>AC Installation</h3><p>Energy-efficient central air systems sized perfectly for your home. We carry all major brands.</p></div>
+    <div class="card reveal"><div class="card-icon">🔥</div><h3>Furnace Repair</h3><p>Fast diagnosis and repair of gas, electric, and oil furnaces. Same-day parts in most cases.</p></div>
+    <div class="card reveal"><div class="card-icon">♻️</div><h3>Heat Pumps</h3><p>Year-round heating and cooling in one efficient system. Cut your energy bills by up to 40%.</p></div>
+    <div class="card reveal"><div class="card-icon">💨</div><h3>Air Quality</h3><p>Whole-home filtration, UV sanitizers, humidifiers, and dehumidifiers for healthier indoor air.</p></div>
+    <div class="card reveal"><div class="card-icon">🛠️</div><h3>Maintenance Plans</h3><p>Annual tune-ups that extend system life, prevent breakdowns, and keep warranties valid.</p></div>
+    <div class="card reveal"><div class="card-icon">🚨</div><h3>Emergency Service</h3><p>24/7 emergency response — because breakdowns don't wait for business hours.</p></div>
+  </div>
+</div></section><section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">About Us</div>
+      <h2>Why Choose <span>CoolBreeze HVAC</span></h2>
+      <p class="sub">Twenty years of keeping homes and businesses comfortable across the metro area. Our NATE-certified technicians treat every home like their own.</p>
+    </div>
+    <div class="stats-grid"><div class="stat reveal"><div class="stat-num">20+</div><div class="stat-label">Years Experience</div></div>
+<div class="stat reveal"><div class="stat-num">4,500+</div><div class="stat-label">Systems Installed</div></div>
+<div class="stat reveal"><div class="stat-num">NATE</div><div class="stat-label">Certified Techs</div></div>
+<div class="stat reveal"><div class="stat-num">24/7</div><div class="stat-label">Emergency Line</div></div></div>
+  </div>
+</section><section class="section-sm" style="background:rgba(255,255,255,.02)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Service Selector</div>
+      <h2>What Do You <span>Need?</span></h2>
+      <p class="sub">Tell us your issue and urgency level — we'll match you with the right response.</p>
+    </div>
+    <div class="mini-wrap reveal" style="max-width:700px;margin:0 auto">
+      <h3>Service Urgency Selector</h3>
+      <p class="desc">Answer two quick questions to find out your recommended service tier.</p>
+      <div class="opt-group">
+        <span class="opt-label">1. What's the issue?</span>
+        <div class="opt-btns" id="hvac-issue">
+          <button class="opt-btn" data-issue="No cooling" data-emg="true">No Cooling</button>
+          <button class="opt-btn" data-issue="No heating" data-emg="true">No Heating</button>
+          <button class="opt-btn" data-issue="Strange noises" data-emg="false">Strange Noises</button>
+          <button class="opt-btn" data-issue="High energy bills" data-emg="false">High Energy Bills</button>
+          <button class="opt-btn" data-issue="Preventive maintenance" data-emg="false">Preventive Maintenance</button>
+        </div>
+      </div>
+      <div class="opt-group">
+        <span class="opt-label">2. How urgent?</span>
+        <div class="opt-btns" id="hvac-urgency">
+          <button class="opt-btn" data-urg="emergency" data-resp="Within 2 hours">🚨 Emergency — Today</button>
+          <button class="opt-btn" data-urg="urgent" data-resp="Within 48 hours">⚡ Urgent — 48 hrs</button>
+          <button class="opt-btn" data-urg="scheduled" data-resp="Next available slot">📅 Scheduled — Next Week</button>
+        </div>
+      </div>
+      <div id="hvac-result" class="result-box">
+        <h4 id="hvac-tier"></h4>
+        <p id="hvac-detail"></p>
+        <a href="#contact" class="btn-primary" style="margin-top:16px;display:inline-flex">Request Service Now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+let hIssue=null,hUrg=null,hResp=null;
+document.querySelectorAll('#hvac-issue .opt-btn').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#hvac-issue .opt-btn').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');hIssue=b.dataset.issue;updateHvac();}));
+document.querySelectorAll('#hvac-urgency .opt-btn').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#hvac-urgency .opt-btn').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');hUrg=b.dataset.urg;hResp=b.dataset.resp;updateHvac();}));
+function updateHvac(){if(!hIssue||!hUrg)return;const tiers={emergency:'🚨 Emergency Response',urgent:'⚡ Priority Service',scheduled:'📅 Scheduled Maintenance'};document.getElementById('hvac-tier').textContent=tiers[hUrg];document.getElementById('hvac-detail').innerHTML=`Issue: <strong>${hIssue}</strong><br/>Estimated response: <strong>${hResp}</strong><br/><br/>${hUrg==='emergency'?'A certified technician will contact you within 30 minutes. Our emergency fee is waived for maintenance plan members.':hUrg==='urgent'?'We'll schedule you within 48 hours at your convenience. Same-day availability may apply.':'We'll find the best slot in your schedule. Preventive service extends system life by 3–5 years.'}`; document.getElementById('hvac-result').classList.add('show');}
+</script><section class="section" style="background:rgba(255,255,255,.02)">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Reviews</div>
+      <h2>What Clients Say</h2>
+    </div>
+    <div class="testi-grid">
+      <article class="testi reveal">
+            <div class="stars">★★★★★</div>
+            <p class="testi-text">"AC went out on the hottest day of the year. CoolBreeze had a tech at my house within 90 minutes and fixed it on the spot. Real emergency service!"</p>
+            <div class="testi-author">
+              <div class="avatar" aria-hidden="true">👩</div>
+              <div><div class="author-name">Linda P.</div><div class="author-sub">Homeowner, Phoenix AZ</div></div>
+            </div>
+          </article>
+      <article class="testi reveal">
+            <div class="stars">★★★★★</div>
+            <p class="testi-text">"Been on their maintenance plan for 3 years. My system runs better than ever and my energy bills dropped significantly. Worth every penny."</p>
+            <div class="testi-author">
+              <div class="avatar" aria-hidden="true">👨</div>
+              <div><div class="author-name">Tom H.</div><div class="author-sub">Homeowner, Scottsdale AZ</div></div>
+            </div>
+          </article>
+      <article class="testi reveal">
+            <div class="stars">★★★★★</div>
+            <p class="testi-text">"Installed a new heat pump system for our office. The team was professional, fast, and the system has been flawless for two winters."</p>
+            <div class="testi-author">
+              <div class="avatar" aria-hidden="true">👩‍💼</div>
+              <div><div class="author-name">Rachel S.</div><div class="author-sub">Office Manager</div></div>
+            </div>
+          </article>
+    </div>
+  </div>
+</section><section class="section" id="contact" style="background:linear-gradient(180deg,transparent,rgba(255,255,255,.02))">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="contact-info reveal">
+        <div class="eyebrow">Contact Us</div>
+        <h2>Let's Get Started</h2>
+        <p class="sub" style="text-align:left;margin:0 0 32px">Ready to work with us? Fill out the form and we'll be in touch within 24 hours.</p>
+        <div class="info-item"><div class="info-icon">📞</div><div class="info-text"><strong>Phone</strong><span>(555) 200-3456</span></div></div>
+        <div class="info-item"><div class="info-icon">✉️</div><div class="info-text"><strong>Email</strong><span>service@coolbreezhvac.com</span></div></div>
+        <div class="info-item"><div class="info-icon">📍</div><div class="info-text"><strong>Address</strong><span>789 Service Rd, Phoenix AZ 85001</span></div></div>
+      </div>
+      <div class="reveal">
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label for="cf-name">Full Name *</label><input type="text" id="cf-name" placeholder="Jane Smith" required/></div>
+            <div class="form-group"><label for="cf-phone">Phone *</label><input type="tel" id="cf-phone" placeholder="(555) 000-0000" required/></div>
+          </div>
+          <div class="form-group"><label for="cf-email">Email *</label><input type="email" id="cf-email" placeholder="jane@email.com" required/></div>
+          <div class="form-group"><label for="cf-service">Service Needed *</label><select id="cf-service" required><option value="">Select service</option><option>AC Repair</option><option>Furnace Repair</option><option>AC Installation</option><option>Heat Pump</option><option>Emergency Service</option><option>Maintenance Plan</option></select></div>
+          <div class="form-group"><label for="cf-msg">Message</label><textarea id="cf-msg" placeholder="Tell us about your project or question…"></textarea></div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center">Send Message →</button>
+          <p id="form-msg" class="form-msg" role="alert"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section><footer>
+  <div class="container">
+    <div class="footer-inner reveal">
+      <div>
+        <div class="footer-brand"><span class="dot"></span>CoolBreeze HVAC</div>
+        <p class="footer-tagline">Professional services you can trust.<br/>Licensed, insured &amp; locally owned.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+    <a href="#services">AC Installation</a>
+    <a href="#services">Furnace Repair</a>
+    <a href="#services">Heat Pumps</a>
+    <a href="#services">Air Quality</a>
+    <a href="#services">Maintenance</a>
+    <a href="#services">Emergency</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:(555) 200-3456">(555) 200-3456</a>
+        <a href="mailto:service@coolbreezhvac.com">service@coolbreezhvac.com</a>
+        <span style="font-size:14px;color:var(--muted)">789 Service Rd, Phoenix AZ 85001</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 CoolBreeze HVAC. All rights reserved. Template by <a href="../en.html">Iluminity Inc.</a></p>
+      <a href="../templates/" style="font-size:13px;color:var(--muted)">← Template Library</a>
+    </div>
+  </div>
+</footer>
+<script>
+const _obs = new IntersectionObserver(els => els.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');_obs.unobserve(e.target);} }), {threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el => _obs.observe(el));
+
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const inputs = this.querySelectorAll('[required]');
+  let ok = true;
+  inputs.forEach(inp => { if(!inp.value.trim()){inp.style.borderColor='#ef4444';ok=false;}else{inp.style.borderColor='';} });
+  const msg = document.getElementById('form-msg');
+  if(ok){msg.className='form-msg success';msg.textContent="✓ Message sent! We'll be in touch shortly.";this.reset();}
+  else{msg.className='form-msg error';msg.textContent='Please fill in all required fields.';}
+});
+</script>
+</body>
+</html>

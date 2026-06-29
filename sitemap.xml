@@ -22,4 +22,38 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://iluminity-oficial.vercel.app/pt-br.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://iluminity-oficial.vercel.app/en.html" />
   </url>
+  <url>
+    <loc>https://iluminity-oficial.vercel.app/templates/</loc>
+  </url>
+  <url>
+    <loc>https://iluminity-oficial.vercel.app/roofing/</loc>
+  </url>
+  <url>
+    <loc>https://iluminity-oficial.vercel.app/dental/</loc>
+  </url>
+  <url>
+    <loc>https://iluminity-oficial.vercel.app/hvac/</loc>
+  </url>
+  <url>
+    <loc>https://iluminity-oficial.vercel.app/realtor/</loc>
+  </url>
+  <url>
+    <loc>https://iluminity-oficial.vercel.app/law/</loc>
+  </url>
+  <url>
+    <loc>https://iluminity-oficial.vercel.app/restaurant/</loc>
+  </url>
+  <url>
+    <loc>https://iluminity-oficial.vercel.app/medspa/</loc>
+  </url>
+  <url>
+    <loc>https://iluminity-oficial.vercel.app/electrician/</loc>
+  </url>
+  <url>
+    <loc>https://iluminity-oficial.vercel.app/plumber/</loc>
+  </url>
+  <url>
+    <loc>https://iluminity-oficial.vercel.app/landscaping/</loc>
+  </url>
 </urlset>
+

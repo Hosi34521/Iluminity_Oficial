@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>La Cucina | Authentic Italian Restaurant</title>
+  <meta name="description" content="Family Italian restaurant in Miami FL. Fresh pasta, wood-fired pizza, and curated wines. Open nightly from 5 PM."/>
+  <link rel="icon" type="image/svg+xml" href="../assets/brand/favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--bg:#02050a;--bg2:#06111f;--text:#f7fbff;--muted:#a7b3c4;--line:rgba(255,255,255,.14);--radius:20px;--accent:#ef4444;--accent-dim:rgba(239,68,68,.15);--accent-glow:0 0 40px rgba(239,68,68,.25)}
+    *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+    a{color:inherit;text-decoration:none} button{font:inherit;border:0;cursor:pointer}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .container{width:min(1180px,calc(100% - 40px));margin:0 auto}
+    .section{padding:100px 0} .section-sm{padding:70px 0}
+    .section-head{text-align:center;margin-bottom:60px}
+    .eyebrow{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;padding:5px 14px;border:1px solid var(--accent-dim);border-radius:999px;background:var(--accent-dim)}
+    h2{font-size:clamp(28px,4vw,46px);font-weight:900;letter-spacing:-.04em;line-height:1.1;margin-bottom:16px} h2 span{color:var(--accent)}
+    .sub{font-size:17px;color:var(--muted);line-height:1.7;max-width:580px;margin:0 auto}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    .card{border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.05);padding:28px;transition:transform .25s,box-shadow .25s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+    .card-icon{font-size:32px;margin-bottom:14px} .card h3{font-size:18px;font-weight:700;letter-spacing:-.03em;margin-bottom:8px} .card p{font-size:14px;color:var(--muted);line-height:1.65}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:700;transition:opacity .2s,transform .15s;border:0;cursor:pointer}
+    .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
+    .btn-outline{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);color:var(--text);padding:14px 28px;border-radius:12px;font-size:15px;font-weight:600;transition:all .2s;cursor:pointer}
+    .btn-outline:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim)}
+    .site-nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:100;width:min(1180px,calc(100% - 32px));border:1px solid var(--line);border-radius:999px;background:rgba(2,5,10,.85);backdrop-filter:blur(20px)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;gap:12px}
+    .back-link{font-size:13px;color:var(--muted);font-weight:500;transition:color .2s;white-space:nowrap} .back-link:hover{color:var(--text)}
+    .brand-link{display:flex;align-items:center;gap:7px;font-weight:800;font-size:16px;letter-spacing:-.04em}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0}
+    .nav-cta{background:var(--accent);color:#fff;padding:8px 18px;border-radius:999px;font-size:13px;font-weight:700;transition:opacity .2s;white-space:nowrap} .nav-cta:hover{opacity:.85}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+    .stat{text-align:center;padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.04)}
+    .stat-num{font-size:36px;font-weight:900;letter-spacing:-.04em;color:var(--accent)} .stat-label{font-size:13px;color:var(--muted);margin-top:6px}
+    .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .testi{border:1px solid var(--line);border-radius:var(--radius);padding:28px;background:rgba(255,255,255,.04)}
+    .stars{color:var(--accent);font-size:18px;margin-bottom:14px} .testi-text{font-size:15px;line-height:1.7;color:var(--muted);margin-bottom:18px;font-style:italic}
+    .testi-author{display:flex;align-items:center;gap:12px} .avatar{width:40px;height:40px;border-radius:50%;background:var(--accent-dim);border:1px solid var(--accent);display:grid;place-items:center;font-size:16px;flex-shrink:0}
+    .author-name{font-weight:700;font-size:14px} .author-sub{font-size:12px;color:var(--muted)}
+    .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+    .contact-info h2{text-align:left} .contact-info .sub{text-align:left;margin:0 0 32px}
+    .info-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px}
+    .info-icon{width:40px;height:40px;border-radius:12px;background:var(--accent-dim);border:1px solid var(--accent);display:grid;place-items:center;font-size:18px;flex-shrink:0}
+    .info-text strong{display:block;font-size:14px;font-weight:700;margin-bottom:2px} .info-text span{font-size:13px;color:var(--muted)}
+    form{display:flex;flex-direction:column;gap:16px} .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px} .form-group{display:flex;flex-direction:column;gap:6px}
+    label{font-size:13px;font-weight:600;color:var(--muted)}
+    input,select,textarea{padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--text);font:inherit;font-size:15px;outline:none;transition:border-color .2s}
+    input:focus,select:focus,textarea:focus{border-color:var(--accent)} input::placeholder,textarea::placeholder{color:rgba(167,179,196,.5)}
+    textarea{resize:vertical;min-height:110px} select option{background:#06111f}
+    .form-msg{display:none;padding:14px;border-radius:12px;font-size:14px;font-weight:600;text-align:center}
+    .form-msg.success{display:block;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.3);color:#22c55e}
+    .form-msg.error{display:block;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.3);color:#ef4444}
+    .hero-section{padding:160px 0 90px;background:radial-gradient(circle at 50% 0%,var(--accent-dim),transparent 45%)}
+    .hero-tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);padding:6px 14px;border:1px solid var(--accent-dim);border-radius:999px;background:var(--accent-dim);margin-bottom:24px}
+    h1{font-size:clamp(38px,5.5vw,72px);font-weight:900;letter-spacing:-.05em;line-height:1.0;margin-bottom:20px} h1 em{font-style:normal;color:var(--accent)}
+    .hero-lead{font-size:18px;color:var(--muted);line-height:1.75;max-width:560px;margin-bottom:40px}
+    .hero-ctas{display:flex;gap:14px;flex-wrap:wrap} .trust-row{display:flex;gap:24px;flex-wrap:wrap;margin-top:48px;align-items:center} .trust-badge{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)} .trust-badge strong{color:var(--text)}
+    .mini-wrap{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:var(--radius);padding:36px}
+    .mini-wrap h3{font-size:22px;font-weight:800;letter-spacing:-.03em;margin-bottom:8px} .mini-wrap .desc{font-size:14px;color:var(--muted);margin-bottom:28px}
+    .opt-group{margin-bottom:22px} .opt-label{font-size:13px;font-weight:600;color:var(--muted);margin-bottom:8px;display:block}
+    .opt-btns{display:flex;gap:10px;flex-wrap:wrap}
+    .opt-btn{padding:9px 18px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--muted);font-size:14px;font-weight:500;transition:all .2s;cursor:pointer;font-family:inherit}
+    .opt-btn:hover{border-color:var(--accent);color:var(--text)} .opt-btn.sel{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);font-weight:600}
+    .result-box{border:1px solid var(--accent);border-radius:14px;padding:24px;background:var(--accent-dim);display:none;animation:fadeIn .3s ease}
+    .result-box.show{display:block} .result-box h4{font-size:18px;font-weight:800;color:var(--accent);margin-bottom:8px} .result-box p{font-size:14px;color:var(--muted);line-height:1.65} .result-box strong{color:var(--text)}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+    footer{padding:50px 0;border-top:1px solid var(--line)}
+    .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+    .footer-brand{font-size:20px;font-weight:900;letter-spacing:-.04em;margin-bottom:12px;display:flex;align-items:center;gap:8px} .footer-tagline{font-size:14px;color:var(--muted);line-height:1.6}
+    .footer-col h4{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:14px}
+    .footer-col a{display:block;font-size:14px;color:var(--muted);margin-bottom:8px;transition:color .2s} .footer-col a:hover{color:var(--text)}
+    .footer-bottom{margin-top:40px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    .footer-bottom p{font-size:13px;color:var(--muted)} .footer-bottom a{color:var(--accent)}
+    .reveal{opacity:0;transform:translateY(20px);transition:.6s ease} .reveal.visible{opacity:1;transform:none}
+    @media(max-width:900px){.grid-3{grid-template-columns:1fr 1fr}.testi-grid{grid-template-columns:1fr 1fr}.contact-wrap{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.grid-3{grid-template-columns:1fr}.testi-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}.form-row{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr}.hero-ctas{flex-direction:column}.footer-bottom{flex-direction:column;text-align:center}h1{font-size:36px}}
+    </style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Site navigation">
+  <div class="nav-inner">
+    <a href="../templates/" class="back-link" aria-label="Back to Template Library">← Library</a>
+    <a href="../en.html" class="brand-link"><span class="dot" aria-hidden="true"></span><span>Iluminity</span></a>
+    <a href="#contact" class="nav-cta">Get Started</a>
+  </div>
+</nav>
+<section class="hero-section"><div class="container"><div class="hero-content">
+  <div class="hero-tag">🍽️ Authentic Italian Cuisine</div>
+  <h1>Authentic Italian,<br/><em>Unforgettable</em></h1>
+  <p class="hero-lead">Fresh ingredients, cherished family recipes, and warm hospitality. Open nightly from 5 PM. Private dining available for special occasions.</p>
+  <div class="hero-ctas">
+    <a href="#contact" class="btn-primary">Reserve a Table →</a>
+    <a href="tel:+15555006789" class="btn-outline">📞 (555) 500-6789</a>
+  </div>
+  <div class="trust-row">
+    <div class="trust-badge">🌿 <strong>Fresh Daily Ingredients</strong></div>
+    <div class="trust-badge">👨‍👩‍👧 <strong>Family Owned</strong></div>
+    <div class="trust-badge">⭐ <strong>Zagat Recommended</strong></div>
+  </div>
+</div></div></section>
+<section class="section" id="services"><div class="container">
+  <div class="section-head reveal"><div class="eyebrow">Our Menu</div><h2>A Taste of <span>Italy</span></h2><p class="sub">Every dish is crafted from scratch using the finest imported Italian ingredients and local produce.</p></div>
+  <div class="grid-3">
+    <div class="card reveal"><div class="card-icon">🥗</div><h3>Antipasti</h3><p>Bruschetta al pomodoro, burrata e prosciutto, calamari fritti — perfect starters for the table.</p></div>
+    <div class="card reveal"><div class="card-icon">🍝</div><h3>Pasta</h3><p>House-made tagliatelle al ragù, cacio e pepe, pappardelle al cinghiale. All pasta made fresh daily.</p></div>
+    <div class="card reveal"><div class="card-icon">🍕</div><h3>Wood-Fired Pizza</h3><p>Neapolitan-style pizza from our 800°F wood-burning oven. Margherita, diavola, tartufo, and seasonal specials.</p></div>
+    <div class="card reveal"><div class="card-icon">🦞</div><h3>Pesce &amp; Carne</h3><p>Branzino al forno, saltimbocca alla romana, bistecca fiorentina. Market-fresh fish daily.</p></div>
+    <div class="card reveal"><div class="card-icon">🍮</div><h3>Dolci</h3><p>Tiramisu, panna cotta, cannoli siciliani, and our signature gelato flight — five flavors, all house-made.</p></div>
+    <div class="card reveal"><div class="card-icon">🍷</div><h3>Wine &amp; Cocktails</h3><p>Curated Italian wine list, hand-crafted Negroni variations, and a thoughtful selection of digestivi.</p></div>
+  </div>
+</div></section><section class="section"><div class="container">
+    <div class="section-head reveal"><div class="eyebrow">About Us</div><h2>Why Choose <span>La Cucina</span></h2><p class="sub">Family-owned since 1998, La Cucina has been a destination for authentic Italian dining. Our recipes come from generations of family tradition, delivered in a warm and inviting atmosphere.</p></div>
+    <div class="stats-grid"><div class="stat reveal"><div class="stat-num">26+</div><div class="stat-label">Years Serving</div></div><div class="stat reveal"><div class="stat-num">100%</div><div class="stat-label">Fresh Ingredients</div></div><div class="stat reveal"><div class="stat-num">🍷</div><div class="stat-label">Wine &amp; Cocktails</div></div><div class="stat reveal"><div class="stat-num">⭐</div><div class="stat-label">Zagat Recommended</div></div></div>
+  </div></section><section class="section-sm" style="background:rgba(255,255,255,.02)">
+  <div class="container">
+    <div class="section-head reveal"><div class="eyebrow">Reservations</div><h2>Reserve Your <span>Table</span></h2><p class="sub">Book your dining experience in seconds. We'll confirm within the hour.</p></div>
+    <div class="mini-wrap reveal" style="max-width:700px;margin:0 auto">
+      <h3>Table Reservation</h3>
+      <p class="desc">Open daily 5:00 PM – 10:00 PM. Walk-ins welcome based on availability.</p>
+      <div class="opt-group">
+        <span class="opt-label">Party Size</span>
+        <div class="opt-btns" id="res-size">
+          <button class="opt-btn" data-val="1–2">1–2 Guests</button>
+          <button class="opt-btn" data-val="3–4">3–4 Guests</button>
+          <button class="opt-btn" data-val="5–6">5–6 Guests</button>
+          <button class="opt-btn" data-val="7+">7+ Guests</button>
+        </div>
+      </div>
+      <div class="opt-group">
+        <span class="opt-label">Preferred Evening</span>
+        <div class="opt-btns" id="res-day">
+          <button class="opt-btn" data-val="Monday">Mon</button>
+          <button class="opt-btn" data-val="Tuesday">Tue</button>
+          <button class="opt-btn" data-val="Wednesday">Wed</button>
+          <button class="opt-btn" data-val="Thursday">Thu</button>
+          <button class="opt-btn" data-val="Friday">Fri</button>
+          <button class="opt-btn" data-val="Saturday">Sat</button>
+          <button class="opt-btn" data-val="Sunday">Sun</button>
+        </div>
+      </div>
+      <div class="opt-group">
+        <span class="opt-label">Seating Time</span>
+        <div class="opt-btns" id="res-time">
+          <button class="opt-btn" data-val="5:00 PM">5:00 PM</button>
+          <button class="opt-btn" data-val="6:00 PM">6:00 PM</button>
+          <button class="opt-btn" data-val="7:00 PM">7:00 PM</button>
+          <button class="opt-btn" data-val="8:00 PM">8:00 PM</button>
+          <button class="opt-btn" data-val="9:00 PM">9:00 PM</button>
+        </div>
+      </div>
+      <div id="res-result" class="result-box">
+        <h4>Reservation Request</h4>
+        <p id="res-detail"></p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px">
+          <input type="text" id="res-name" placeholder="Your name *" style="padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--text);font:inherit;font-size:15px;outline:none"/>
+          <input type="tel" id="res-phone" placeholder="Phone number *" style="padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--text);font:inherit;font-size:15px;outline:none"/>
+        </div>
+        <button onclick="confirmRes()" class="btn-primary" style="margin-top:16px;width:100%;justify-content:center">Confirm Reservation →</button>
+        <p id="res-confirm" style="display:none;margin-top:12px;font-size:14px;font-weight:600;color:#22c55e;text-align:center"></p>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+let rSize=null,rDay=null,rTime=null;
+function pickRes(gid,key,val){document.querySelectorAll('#'+gid+' .opt-btn').forEach(x=>x.classList.remove('sel'));event.currentTarget.classList.add('sel');if(key==='size')rSize=val;else if(key==='day')rDay=val;else rTime=val;updateRes();}
+function updateRes(){if(!rSize||!rDay||!rTime)return;document.getElementById('res-detail').innerHTML=`<strong>${rSize} guests</strong> · <strong>${rDay}</strong> at <strong>${rTime}</strong><br/>Please enter your name and phone number to confirm.`;document.getElementById('res-result').classList.add('show');}
+function confirmRes(){const n=document.getElementById('res-name').value.trim(),p=document.getElementById('res-phone').value.trim();if(!n||!p){alert('Please enter your name and phone.');return;}const c=document.getElementById('res-confirm');c.textContent='✓ Reservation confirmed for '+n+'! We\'ll call '+p+' to confirm.';c.style.display='block';}
+document.querySelectorAll('#res-size .opt-btn').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#res-size .opt-btn').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');rSize=b.dataset.val;updateRes();}));
+document.querySelectorAll('#res-day .opt-btn').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#res-day .opt-btn').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');rDay=b.dataset.val;updateRes();}));
+document.querySelectorAll('#res-time .opt-btn').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#res-time .opt-btn').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');rTime=b.dataset.val;updateRes();}));
+</script><section class="section" style="background:rgba(255,255,255,.02)"><div class="container">
+    <div class="section-head reveal"><div class="eyebrow">Reviews</div><h2>What Guests Are Saying</h2></div>
+    <div class="testi-grid"><article class="testi reveal"><div class="stars">★★★★★</div><p class="testi-text">"La Cucina is the only Italian restaurant I'll go to for a special occasion. The pasta is absolutely divine and the service is impeccable. A true gem."</p><div class="testi-author"><div class="avatar" aria-hidden="true">👩</div><div><div class="author-name">Sophie L.</div><div class="author-sub">Regular Guest</div></div></div></article><article class="testi reveal"><div class="stars">★★★★★</div><p class="testi-text">"We celebrated our anniversary here and it was perfect. The private dining room, the wine pairing, the homemade tiramisu — every detail was flawless."</p><div class="testi-author"><div class="avatar" aria-hidden="true">👫</div><div><div class="author-name">Michael &amp; Claire R.</div><div class="author-sub">Anniversary Dinner</div></div></div></article><article class="testi reveal"><div class="stars">★★★★★</div><p class="testi-text">"Best wood-fired pizza outside of Naples, and I've been to Naples. The dough is perfectly charred, the San Marzano tomatoes are exceptional. Don't miss it."</p><div class="testi-author"><div class="avatar" aria-hidden="true">👨</div><div><div class="author-name">Anthony V.</div><div class="author-sub">Food Blogger</div></div></div></article></div>
+  </div></section><section class="section" id="contact" style="background:linear-gradient(180deg,transparent,rgba(255,255,255,.02))">
+  <div class="container"><div class="contact-wrap">
+    <div class="contact-info reveal">
+      <div class="eyebrow">Contact Us</div><h2>Let's Get Started</h2>
+      <p class="sub" style="text-align:left;margin:0 0 32px">Fill out the form and we'll respond within 24 hours.</p>
+      <div class="info-item"><div class="info-icon">📞</div><div class="info-text"><strong>Phone</strong><span>(555) 500-6789</span></div></div>
+      <div class="info-item"><div class="info-icon">✉️</div><div class="info-text"><strong>Email</strong><span>reservations@lacucinaitalian.com</span></div></div>
+      <div class="info-item"><div class="info-icon">📍</div><div class="info-text"><strong>Address</strong><span>567 Via Roma, Miami FL 33101</span></div></div>
+    </div>
+    <div class="reveal"><form id="contact-form" novalidate>
+      <div class="form-row">
+        <div class="form-group"><label for="cf-name">Full Name *</label><input type="text" id="cf-name" placeholder="Jane Smith" required/></div>
+        <div class="form-group"><label for="cf-phone">Phone *</label><input type="tel" id="cf-phone" placeholder="(555) 000-0000" required/></div>
+      </div>
+      <div class="form-group"><label for="cf-email">Email *</label><input type="email" id="cf-email" placeholder="jane@email.com" required/></div>
+      <div class="form-group"><label for="cf-service">Service Needed *</label><select id="cf-service" required><option value="">Select inquiry</option><option>Dinner Reservation</option><option>Private Dining</option><option>Large Party (7+)</option><option>Special Event</option><option>General Inquiry</option></select></div>
+      <div class="form-group"><label for="cf-msg">Message</label><textarea id="cf-msg" placeholder="Tell us about your project…"></textarea></div>
+      <button type="submit" class="btn-primary" style="width:100%;justify-content:center">Send Message →</button>
+      <p id="form-msg" class="form-msg" role="alert"></p>
+    </form></div>
+  </div></div>
+</section><footer><div class="container">
+    <div class="footer-inner reveal">
+      <div><div class="footer-brand"><span class="dot"></span>La Cucina</div><p class="footer-tagline">Professional services you can trust.<br/>Licensed, insured &amp; locally owned.</p></div>
+      <div class="footer-col"><h4>Services</h4><a href="#services">Antipasti</a><a href="#services">Pasta</a><a href="#services">Pizza</a><a href="#services">Pesce &amp; Carne</a><a href="#services">Dolci</a><a href="#services">Wine &amp; Bar</a></div>
+      <div class="footer-col"><h4>Contact</h4><a href="tel:(555) 500-6789">(555) 500-6789</a><a href="mailto:reservations@lacucinaitalian.com">reservations@lacucinaitalian.com</a><span style="font-size:14px;color:var(--muted)">567 Via Roma, Miami FL 33101</span></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 La Cucina. All rights reserved. Template by <a href="../en.html">Iluminity Inc.</a></p><a href="../templates/" style="font-size:13px;color:var(--muted)">← Template Library</a></div>
+  </div></footer>
+<script>const _obs=new IntersectionObserver(els=>els.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');_obs.unobserve(e.target);}}),{threshold:0.1});document.querySelectorAll('.reveal').forEach(el=>_obs.observe(el));document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();const inputs=this.querySelectorAll('[required]');let ok=true;inputs.forEach(inp=>{if(!inp.value.trim()){inp.style.borderColor='#ef4444';ok=false;}else{inp.style.borderColor='';}});const msg=document.getElementById('form-msg');if(ok){msg.className='form-msg success';msg.textContent="\u2713 Message sent! We\'ll be in touch shortly.";this.reset();}else{msg.className='form-msg error';msg.textContent='Please fill in all required fields.';}});</script>
+</body>
+</html>

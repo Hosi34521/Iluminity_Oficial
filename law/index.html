@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Morrison & Associates | Personal Injury Law</title>
+  <meta name="description" content="Personal injury law firm in Chicago IL. $50M+ recovered, free consultation, no fee unless we win."/>
+  <link rel="icon" type="image/svg+xml" href="../assets/brand/favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--bg:#02050a;--bg2:#06111f;--text:#f7fbff;--muted:#a7b3c4;--line:rgba(255,255,255,.14);--radius:20px;--accent:#6366f1;--accent-dim:rgba(99,102,241,.15);--accent-glow:0 0 40px rgba(99,102,241,.25)}
+    *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+    a{color:inherit;text-decoration:none} button{font:inherit;border:0;cursor:pointer} img{max-width:100%;display:block}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .container{width:min(1180px,calc(100% - 40px));margin:0 auto}
+    .section{padding:100px 0} .section-sm{padding:70px 0}
+    .section-head{text-align:center;margin-bottom:60px}
+    .eyebrow{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;padding:5px 14px;border:1px solid var(--accent-dim);border-radius:999px;background:var(--accent-dim)}
+    h2{font-size:clamp(28px,4vw,46px);font-weight:900;letter-spacing:-.04em;line-height:1.1;margin-bottom:16px} h2 span{color:var(--accent)}
+    .sub{font-size:17px;color:var(--muted);line-height:1.7;max-width:580px;margin:0 auto}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    .card{border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.05);padding:28px;transition:transform .25s,box-shadow .25s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+    .card-icon{font-size:32px;margin-bottom:14px} .card h3{font-size:18px;font-weight:700;letter-spacing:-.03em;margin-bottom:8px} .card p{font-size:14px;color:var(--muted);line-height:1.65}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:14px 28px;border-radius:12px;font-size:15px;font-weight:700;transition:opacity .2s,transform .15s;border:0;cursor:pointer}
+    .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
+    .btn-outline{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);color:var(--text);padding:14px 28px;border-radius:12px;font-size:15px;font-weight:600;transition:all .2s;cursor:pointer}
+    .btn-outline:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim)}
+    .site-nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:100;width:min(1180px,calc(100% - 32px));border:1px solid var(--line);border-radius:999px;background:rgba(2,5,10,.85);backdrop-filter:blur(20px)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;gap:12px}
+    .back-link{font-size:13px;color:var(--muted);font-weight:500;transition:color .2s;white-space:nowrap} .back-link:hover{color:var(--text)}
+    .brand-link{display:flex;align-items:center;gap:7px;font-weight:800;font-size:16px;letter-spacing:-.04em}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0}
+    .nav-cta{background:var(--accent);color:#fff;padding:8px 18px;border-radius:999px;font-size:13px;font-weight:700;transition:opacity .2s;white-space:nowrap} .nav-cta:hover{opacity:.85}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+    .stat{text-align:center;padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.04)}
+    .stat-num{font-size:36px;font-weight:900;letter-spacing:-.04em;color:var(--accent)} .stat-label{font-size:13px;color:var(--muted);margin-top:6px}
+    .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .testi{border:1px solid var(--line);border-radius:var(--radius);padding:28px;background:rgba(255,255,255,.04)}
+    .stars{color:var(--accent);font-size:18px;margin-bottom:14px} .testi-text{font-size:15px;line-height:1.7;color:var(--muted);margin-bottom:18px;font-style:italic}
+    .testi-author{display:flex;align-items:center;gap:12px} .avatar{width:40px;height:40px;border-radius:50%;background:var(--accent-dim);border:1px solid var(--accent);display:grid;place-items:center;font-size:16px;flex-shrink:0}
+    .author-name{font-weight:700;font-size:14px} .author-sub{font-size:12px;color:var(--muted)}
+    .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+    .contact-info h2{text-align:left} .contact-info .sub{text-align:left;margin:0 0 32px}
+    .info-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px}
+    .info-icon{width:40px;height:40px;border-radius:12px;background:var(--accent-dim);border:1px solid var(--accent);display:grid;place-items:center;font-size:18px;flex-shrink:0}
+    .info-text strong{display:block;font-size:14px;font-weight:700;margin-bottom:2px} .info-text span{font-size:13px;color:var(--muted)}
+    form{display:flex;flex-direction:column;gap:16px} .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px} .form-group{display:flex;flex-direction:column;gap:6px}
+    label{font-size:13px;font-weight:600;color:var(--muted)}
+    input,select,textarea{padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--text);font:inherit;font-size:15px;outline:none;transition:border-color .2s}
+    input:focus,select:focus,textarea:focus{border-color:var(--accent)} input::placeholder,textarea::placeholder{color:rgba(167,179,196,.5)}
+    textarea{resize:vertical;min-height:110px} select option{background:#06111f}
+    .form-msg{display:none;padding:14px;border-radius:12px;font-size:14px;font-weight:600;text-align:center}
+    .form-msg.success{display:block;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.3);color:#22c55e}
+    .form-msg.error{display:block;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.3);color:#ef4444}
+    .hero-section{padding:160px 0 90px;background:radial-gradient(circle at 50% 0%,var(--accent-dim),transparent 45%)}
+    .hero-tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);padding:6px 14px;border:1px solid var(--accent-dim);border-radius:999px;background:var(--accent-dim);margin-bottom:24px}
+    h1{font-size:clamp(38px,5.5vw,72px);font-weight:900;letter-spacing:-.05em;line-height:1.0;margin-bottom:20px} h1 em{font-style:normal;color:var(--accent)}
+    .hero-lead{font-size:18px;color:var(--muted);line-height:1.75;max-width:560px;margin-bottom:40px}
+    .hero-ctas{display:flex;gap:14px;flex-wrap:wrap} .trust-row{display:flex;gap:24px;flex-wrap:wrap;margin-top:48px;align-items:center} .trust-badge{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)} .trust-badge strong{color:var(--text)}
+    .mini-wrap{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:var(--radius);padding:36px}
+    .mini-wrap h3{font-size:22px;font-weight:800;letter-spacing:-.03em;margin-bottom:8px} .mini-wrap .desc{font-size:14px;color:var(--muted);margin-bottom:28px}
+    .opt-group{margin-bottom:22px} .opt-label{font-size:13px;font-weight:600;color:var(--muted);margin-bottom:8px;display:block}
+    .opt-btns{display:flex;gap:10px;flex-wrap:wrap}
+    .opt-btn{padding:9px 18px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--muted);font-size:14px;font-weight:500;transition:all .2s;cursor:pointer;font-family:inherit}
+    .opt-btn:hover{border-color:var(--accent);color:var(--text)} .opt-btn.sel{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);font-weight:600}
+    .result-box{border:1px solid var(--accent);border-radius:14px;padding:24px;background:var(--accent-dim);display:none;animation:fadeIn .3s ease}
+    .result-box.show{display:block} .result-box h4{font-size:18px;font-weight:800;color:var(--accent);margin-bottom:8px} .result-box p{font-size:14px;color:var(--muted);line-height:1.65} .result-box strong{color:var(--text)}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+    footer{padding:50px 0;border-top:1px solid var(--line)}
+    .footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+    .footer-brand{font-size:20px;font-weight:900;letter-spacing:-.04em;margin-bottom:12px;display:flex;align-items:center;gap:8px} .footer-tagline{font-size:14px;color:var(--muted);line-height:1.6}
+    .footer-col h4{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:14px}
+    .footer-col a{display:block;font-size:14px;color:var(--muted);margin-bottom:8px;transition:color .2s} .footer-col a:hover{color:var(--text)}
+    .footer-bottom{margin-top:40px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    .footer-bottom p{font-size:13px;color:var(--muted)} .footer-bottom a{color:var(--accent)}
+    .reveal{opacity:0;transform:translateY(20px);transition:.6s ease} .reveal.visible{opacity:1;transform:none}
+    @media(max-width:900px){.grid-3{grid-template-columns:1fr 1fr}.testi-grid{grid-template-columns:1fr 1fr}.contact-wrap{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.grid-3{grid-template-columns:1fr}.testi-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:1fr 1fr}.form-row{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr}.hero-ctas{flex-direction:column}.footer-bottom{flex-direction:column;text-align:center}h1{font-size:36px}}
+    </style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Site navigation">
+  <div class="nav-inner">
+    <a href="../templates/" class="back-link" aria-label="Back to Template Library">← Library</a>
+    <a href="../en.html" class="brand-link"><span class="dot" aria-hidden="true"></span><span>Iluminity</span></a>
+    <a href="#contact" class="nav-cta">Get Started</a>
+  </div>
+</nav>
+<section class="hero-section"><div class="container"><div class="hero-content">
+  <div class="hero-tag">⚖️ Personal Injury Law · 25 Years</div>
+  <h1>Fighting for Justice,<br/><em>Fighting for You</em></h1>
+  <p class="hero-lead">Over $50 million recovered for injury victims. Free case consultation. No attorney fees unless we win your case.</p>
+  <div class="hero-ctas">
+    <a href="#contact" class="btn-primary">Free Consultation →</a>
+    <a href="tel:+15554005678" class="btn-outline">📞 (555) 400-5678</a>
+  </div>
+  <div class="trust-row">
+    <div class="trust-badge">💰 <strong>$50M+ Recovered</strong></div>
+    <div class="trust-badge">🆓 <strong>Free Consultation</strong></div>
+    <div class="trust-badge">✅ <strong>No Fee Unless We Win</strong></div>
+  </div>
+</div></div></section>
+<section class="section" id="services"><div class="container">
+  <div class="section-head reveal"><div class="eyebrow">Practice Areas</div><h2>We Fight for the <span>Injured</span></h2><p class="sub">Our experienced attorneys have the knowledge and resources to take on any personal injury case, no matter how complex.</p></div>
+  <div class="grid-3">
+    <div class="card reveal"><div class="card-icon">🚗</div><h3>Car Accidents</h3><p>Injured in a car, truck, or motorcycle accident? We handle the insurance companies while you focus on healing.</p></div>
+    <div class="card reveal"><div class="card-icon">🏗️</div><h3>Slip &amp; Fall</h3><p>Property owners have a duty of care. If negligence caused your injury, you may be entitled to significant compensation.</p></div>
+    <div class="card reveal"><div class="card-icon">🏭</div><h3>Workers' Compensation</h3><p>Injured on the job? We fight to ensure you receive full workers' comp benefits and any additional damages owed.</p></div>
+    <div class="card reveal"><div class="card-icon">🏥</div><h3>Medical Malpractice</h3><p>When healthcare providers are negligent, patients suffer. We hold medical professionals accountable.</p></div>
+    <div class="card reveal"><div class="card-icon">⚠️</div><h3>Premises Liability</h3><p>Dog bites, inadequate security, unsafe conditions — if you were hurt on someone else's property, we can help.</p></div>
+    <div class="card reveal"><div class="card-icon">💔</div><h3>Wrongful Death</h3><p>Losing a loved one due to negligence is devastating. We pursue maximum compensation for surviving families.</p></div>
+  </div>
+</div></section><section class="section"><div class="container">
+    <div class="section-head reveal"><div class="eyebrow">About Us</div><h2>Why Choose <span>Morrison &amp; Associates</span></h2><p class="sub">With 25 years of experience and over $50 million recovered, Morrison &amp; Associates is the firm that insurance companies fear and injury victims trust.</p></div>
+    <div class="stats-grid"><div class="stat reveal"><div class="stat-num">25+</div><div class="stat-label">Years Experience</div></div><div class="stat reveal"><div class="stat-num">$50M+</div><div class="stat-label">Recovered</div></div><div class="stat reveal"><div class="stat-num">98%</div><div class="stat-label">Success Rate</div></div><div class="stat reveal"><div class="stat-num">0</div><div class="stat-label">Upfront Fees</div></div></div>
+  </div></section><section class="section-sm" style="background:rgba(255,255,255,.02)">
+  <div class="container">
+    <div class="section-head reveal"><div class="eyebrow">Free Case Review</div><h2>Is Your Case <span>Eligible?</span></h2><p class="sub">Answer three quick questions to get an initial eligibility assessment — no obligation.</p></div>
+    <div class="mini-wrap reveal" style="max-width:700px;margin:0 auto">
+      <h3>Case Intake Selector</h3>
+      <p class="desc">Your information is 100% confidential. No fee unless we win.</p>
+      <div class="opt-group">
+        <span class="opt-label">1. Type of Case</span>
+        <div class="opt-btns" id="case-type">
+          <button class="opt-btn" data-val="Car Accident">🚗 Car Accident</button>
+          <button class="opt-btn" data-val="Slip &amp; Fall">🏗️ Slip &amp; Fall</button>
+          <button class="opt-btn" data-val="Workplace Injury">🏭 Workplace Injury</button>
+          <button class="opt-btn" data-val="Medical Malpractice">🏥 Medical Malpractice</button>
+          <button class="opt-btn" data-val="Other Injury">📋 Other</button>
+        </div>
+      </div>
+      <div class="opt-group">
+        <span class="opt-label">2. When Did It Happen?</span>
+        <div class="opt-btns" id="case-when">
+          <button class="opt-btn" data-val="recent" data-label="Within the last 30 days">Within 30 days</button>
+          <button class="opt-btn" data-val="months" data-label="1–6 months ago">1–6 months ago</button>
+          <button class="opt-btn" data-val="year" data-label="6–12 months ago">6–12 months ago</button>
+          <button class="opt-btn" data-val="old" data-label="Over a year ago">Over a year ago</button>
+        </div>
+      </div>
+      <div class="opt-group">
+        <span class="opt-label">3. Were You Injured?</span>
+        <div class="opt-btns" id="case-injury">
+          <button class="opt-btn" data-val="active" data-label="Yes, still seeking treatment">Yes, seeking treatment</button>
+          <button class="opt-btn" data-val="recovered" data-label="Yes, treated and recovered">Yes, fully recovered</button>
+          <button class="opt-btn" data-val="none" data-label="No injuries, property damage only">No injuries</button>
+        </div>
+      </div>
+      <div id="case-result" class="result-box">
+        <h4 id="case-verdict"></h4>
+        <p id="case-detail"></p>
+        <a href="#contact" class="btn-primary" style="margin-top:16px;display:inline-flex">Schedule Free Consultation →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+let cType=null,cWhen=null,cInj=null;
+function updateCase(){if(!cType||!cWhen||!cInj)return;const r=document.getElementById('case-result');const eligible=cWhen!=='old'||cInj==='active';document.getElementById('case-verdict').textContent=eligible?'✅ You May Have a Strong Case':'⚠️ Let Us Review Your Case';document.getElementById('case-detail').innerHTML=eligible?`Case type: <strong>${cType}</strong> · Timing: <strong>${cWhen==='recent'?'Within 30 days':cWhen==='months'?'1–6 months ago':cWhen==='year'?'6–12 months ago':'Over a year ago'}</strong><br/><br/>Based on your answers, your case may qualify for compensation. Schedule a free consultation — we review all details at no cost and no obligation. <strong>No fee unless we win.</strong>`:`Case type: <strong>${cType}</strong><br/><br/>Even cases with complex timelines deserve a review. Our attorneys will assess the statute of limitations and all available options. <strong>Free consultation, no commitment required.</strong>`;r.classList.add('show');}
+document.querySelectorAll('#case-type .opt-btn').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#case-type .opt-btn').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');cType=b.dataset.val;updateCase();}));
+document.querySelectorAll('#case-when .opt-btn').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#case-when .opt-btn').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');cWhen=b.dataset.val;updateCase();}));
+document.querySelectorAll('#case-injury .opt-btn').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#case-injury .opt-btn').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');cInj=b.dataset.val;updateCase();}));
+</script><section class="section" style="background:rgba(255,255,255,.02)"><div class="container">
+    <div class="section-head reveal"><div class="eyebrow">Reviews</div><h2>Results That Speak</h2></div>
+    <div class="testi-grid"><article class="testi reveal"><div class="stars">★★★★★</div><p class="testi-text">"After my car accident, I was overwhelmed by medical bills and insurance calls. Morrison & Associates handled everything and secured a settlement 3x what I expected."</p><div class="testi-author"><div class="avatar" aria-hidden="true">👩</div><div><div class="author-name">Jennifer B.</div><div class="author-sub">Car Accident Victim</div></div></div></article><article class="testi reveal"><div class="stars">★★★★★</div><p class="testi-text">"I was injured on a construction site and my employer's insurance was trying to lowball my claim. Morrison fought hard and got me full compensation. Forever grateful."</p><div class="testi-author"><div class="avatar" aria-hidden="true">👨</div><div><div class="author-name">Roberto M.</div><div class="author-sub">Workers' Comp Client</div></div></div></article><article class="testi reveal"><div class="stars">★★★★★</div><p class="testi-text">"When my mother passed due to medical negligence, we were devastated. The Morrison team handled our case with compassion and professionalism. We received the justice we deserved."</p><div class="testi-author"><div class="avatar" aria-hidden="true">👨‍👩‍👦</div><div><div class="author-name">The Williams Family</div><div class="author-sub">Wrongful Death Clients</div></div></div></article></div>
+  </div></section><section class="section" id="contact" style="background:linear-gradient(180deg,transparent,rgba(255,255,255,.02))">
+  <div class="container"><div class="contact-wrap">
+    <div class="contact-info reveal">
+      <div class="eyebrow">Contact Us</div>
+      <h2>Let's Get Started</h2>
+      <p class="sub" style="text-align:left;margin:0 0 32px">Ready to work with us? Fill out the form and we'll respond within 24 hours.</p>
+      <div class="info-item"><div class="info-icon">📞</div><div class="info-text"><strong>Phone</strong><span>(555) 400-5678</span></div></div>
+      <div class="info-item"><div class="info-icon">✉️</div><div class="info-text"><strong>Email</strong><span>info@morrisonlaw.com</span></div></div>
+      <div class="info-item"><div class="info-icon">📍</div><div class="info-text"><strong>Address</strong><span>321 Justice Plaza, Chicago IL 60601</span></div></div>
+    </div>
+    <div class="reveal">
+      <form id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-group"><label for="cf-name">Full Name *</label><input type="text" id="cf-name" placeholder="Jane Smith" required/></div>
+          <div class="form-group"><label for="cf-phone">Phone *</label><input type="tel" id="cf-phone" placeholder="(555) 000-0000" required/></div>
+        </div>
+        <div class="form-group"><label for="cf-email">Email *</label><input type="email" id="cf-email" placeholder="jane@email.com" required/></div>
+        <div class="form-group"><label for="cf-service">Service Needed *</label><select id="cf-service" required><option value="">Select case type</option><option>Car Accident</option><option>Slip &amp; Fall</option><option>Workers Compensation</option><option>Medical Malpractice</option><option>Wrongful Death</option><option>Other</option></select></div>
+        <div class="form-group"><label for="cf-msg">Message</label><textarea id="cf-msg" placeholder="Tell us about your project…"></textarea></div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center">Send Message →</button>
+        <p id="form-msg" class="form-msg" role="alert"></p>
+      </form>
+    </div>
+  </div></div>
+</section><footer><div class="container">
+    <div class="footer-inner reveal">
+      <div>
+        <div class="footer-brand"><span class="dot"></span>Morrison &amp; Associates</div>
+        <p class="footer-tagline">Professional services you can trust.<br/>Licensed, insured &amp; locally owned.</p>
+      </div>
+      <div class="footer-col"><h4>Services</h4>    <a href="#services">Car Accidents</a>
+    <a href="#services">Slip &amp; Fall</a>
+    <a href="#services">Workers Comp</a>
+    <a href="#services">Medical Malpractice</a>
+    <a href="#services">Premises Liability</a>
+    <a href="#services">Wrongful Death</a></div>
+      <div class="footer-col"><h4>Contact</h4><a href="tel:(555) 400-5678">(555) 400-5678</a><a href="mailto:info@morrisonlaw.com">info@morrisonlaw.com</a><span style="font-size:14px;color:var(--muted)">321 Justice Plaza, Chicago IL 60601</span></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Morrison &amp; Associates. All rights reserved. Template by <a href="../en.html">Iluminity Inc.</a></p>
+      <a href="../templates/" style="font-size:13px;color:var(--muted)">← Template Library</a>
+    </div>
+  </div></footer>
+<script>const _obs=new IntersectionObserver(els=>els.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');_obs.unobserve(e.target);}}),{threshold:0.1});document.querySelectorAll('.reveal').forEach(el=>_obs.observe(el));document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();const inputs=this.querySelectorAll('[required]');let ok=true;inputs.forEach(inp=>{if(!inp.value.trim()){inp.style.borderColor='#ef4444';ok=false;}else{inp.style.borderColor='';}});const msg=document.getElementById('form-msg');if(ok){msg.className='form-msg success';msg.textContent="✓ Message sent! We'll be in touch shortly.";this.reset();}else{msg.className='form-msg error';msg.textContent='Please fill in all required fields.';}});</script>
+</body>
+</html>
