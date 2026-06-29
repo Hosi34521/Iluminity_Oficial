@@ -1,6 +1,19 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
+    { "source": "/templates", "destination": "/templates/index.html", "statusCode": 308 },
+    { "source": "/roofing", "destination": "/roofing/index.html", "statusCode": 308 },
+    { "source": "/dental", "destination": "/dental/index.html", "statusCode": 308 },
+    { "source": "/hvac", "destination": "/hvac/index.html", "statusCode": 308 },
+    { "source": "/realtor", "destination": "/realtor/index.html", "statusCode": 308 },
+    { "source": "/law", "destination": "/law/index.html", "statusCode": 308 },
+    { "source": "/restaurant", "destination": "/restaurant/index.html", "statusCode": 308 },
+    { "source": "/medspa", "destination": "/medspa/index.html", "statusCode": 308 },
+    { "source": "/electrician", "destination": "/electrician/index.html", "statusCode": 308 },
+    { "source": "/plumber", "destination": "/plumber/index.html", "statusCode": 308 },
+    { "source": "/landscaping", "destination": "/landscaping/index.html", "statusCode": 308 },
     {
       "source": "/",
       "has": [
